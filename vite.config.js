@@ -7,4 +7,5 @@ export default defineConfig({
   plugins: [react(),
     tailwindcss()
   ],
+  base: 'https://taller-usmp.github.io/taller_difusion',
 })
