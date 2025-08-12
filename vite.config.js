@@ -4,7 +4,9 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/taller_difusion/', //para q puede correr en github pages
+
   plugins: [react(),
-    tailwindcss()
+    tailwindcss(), 
   ],
 })
