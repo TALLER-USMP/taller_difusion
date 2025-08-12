@@ -1,12 +1,54 @@
-# React + Vite
+# Taller Difusión - Web de Difusión del Sistema de Gestión Académica
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![Repositorio del Proyecto Principal](https://img.shields.io/badge/Proyecto%20Principal-GitHub-blue)](https://github.com/TALLER-USMP/taller_2025_2)
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Descripción
 
-## Expanding the ESLint configuration
+Taller Difusión es una aplicación web creada para difundir y comunicar de manera clara y visual los avances, objetivos, arquitectura y progreso del **Sistema de Gestión Académica** desarrollado en el proyecto principal.  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Esta plataforma actúa como un canal de comunicación para stakeholders, integrantes del equipo, y público interesado, facilitando el seguimiento y la comprensión del proyecto en tiempo real.
+
+---
+
+## Proyecto Principal
+
+El **Sistema de Gestión Académica** busca automatizar la generación y gestión de sílabos, esquemas de evaluación, planes de estudio y mallas curriculares, reduciendo redundancias, errores y versiones desactualizadas.  
+Para más detalles, visita el repositorio oficial:  
+[https://github.com/TALLER-USMP/taller_2025_2](https://github.com/TALLER-USMP/taller_2025_2)
+
+---
+
+## Estructura de la Web de Difusión
+
+La web cuenta con las siguientes secciones principales:
+
+| Sección      | Funcionalidad                                             |
+|--------------|-----------------------------------------------------------|
+| **Inicio**   | Presentación atractiva del proyecto, noticias y CTA.      |
+| **Proyecto** | Descripción detallada, objetivos, alcance y roadmap.      |
+| **Equipo**   | Integrantes, roles, fotos y contactos.                    |
+| **Avances**  | Reportes periódicos, KPIs, milestones y galería.          |
+| **Arquitectura** | Diagramas interactivos con React Flow y explicación técnica. |
+| **Wiki**     | Documentación actualizable, manuales, FAQs y referencias. |
+
+---
+
+## Tecnologías Utilizadas
+
+- **Vite**: Bundler y servidor de desarrollo rápido.  
+- **React**: Framework para UI.  
+- **JavaScript (ES6+)** con **SWC** para compilación y Hot Reload.  
+- **React Flow** para diagramas interactivos.  
+- **TailwindCSS** para estilos (si aplica).  
+
+---
+
+## Instalación y Ejecución Local
+
+Para levantar la aplicación en tu entorno local:
+
+```bash
+npm install
+npm run dev
