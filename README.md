@@ -50,5 +50,17 @@ La web cuenta con las siguientes secciones principales:
 Para levantar la aplicación en tu entorno local:
 
 ```bash
+# Clona este repositorio (o el tuyo si es un fork)
+git clone https://github.com/TU_USUARIO/taller_difusion.git
+cd taller_difusion
+
+# Instala las dependencias
 npm install
+
+# Inicia el servidor de desarrollo
 npm run dev
+
+👤 Autor
+Desarrollado por José Leonardo Yupán Crúz
+Rol: Coordinador de colaboración y difusión
+Curso: Taller de Proyectos - 2025 II
