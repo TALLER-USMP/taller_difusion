@@ -1,13 +1,22 @@
-// src/data/semanas/avances-actuales.js
-
-export const avancesSemanas = [
+// src/data/semanas/reportes/semanas-01-02.js
+export const semanas0102 = [
     {
       id: 1,
       semana: "Semana 1",
+      numeroSemana: 1,
       fechas: "4 - 8 de Agosto 2025",
       titulo: "Capacitación y Definición de Roles",
       estado: "completado",
       progreso: 100,
+      fechaCreacion: "2025-08-09",
+      fechaActualizacion: "2025-08-09",
+      // Campos para admin panel (archivos multimedia)
+      archivosAdjuntos: [
+        // { tipo: "pdf", nombre: "reporte-semana-1.pdf", url: "/uploads/semana1/reporte.pdf" }
+      ],
+      imagenes: [
+        // { descripcion: "Organigrama del equipo", url: "/uploads/semana1/organigrama.png" }
+      ],
       objetivos: [
         "Capacitación del equipo en roles específicos",
         "Definición de responsabilidades por área",
@@ -51,15 +60,24 @@ export const avancesSemanas = [
         "Iniciar fase de planificación detallada",
         "Definir equipos de trabajo por líder",
         "Establecer cronograma detallado"
-      ]
+      ],
+      // Campos adicionales para admin
+      notas: "",
+      prioridad: "alta",
+      tags: ["setup", "capacitacion", "scrum"]
     },
     {
       id: 2,
       semana: "Semana 2",
+      numeroSemana: 2,
       fechas: "11 - 15 de Agosto 2025",
       titulo: "Planificación y Organización de Equipos",
       estado: "en_progreso",
       progreso: 75,
+      fechaCreacion: "2025-08-16",
+      fechaActualizacion: "2025-08-16",
+      archivosAdjuntos: [],
+      imagenes: [],
       objetivos: [
         "Planificación detallada por equipos",
         "Definición de funciones específicas",
@@ -125,62 +143,9 @@ export const avancesSemanas = [
         "Definir equipos específicos para líderes de desarrollo",
         "Iniciar desarrollo de prototipos",
         "Completar documentación técnica inicial"
-      ]
+      ],
+      notas: "Semana con buen progreso general, algunos blockers menores",
+      prioridad: "alta",
+      tags: ["planificacion", "equipos", "configuracion"]
     }
   ];
-  
-  // Estadísticas generales del proyecto
-  export const estadisticasGenerales = {
-    semanasTranscurridas: 2,
-    semanasPlaneadas: 16, // Estimación para un proyecto semestral
-    progresoGeneral: 37.5, // Promedio de ambas semanas
-    miembrosEquipo: 12,
-    areasActivas: 4,
-    hitos: {
-      completados: 2,
-      enProceso: 3,
-      pendientes: 8
-    }
-  };
-  
-  // Configuración de fases del proyecto
-  export const fasesProyecto = [
-    {
-      fase: "Planificación",
-      semanas: "1-3",
-      estado: "en_progreso",
-      progreso: 75
-    },
-    {
-      fase: "Diseño y Arquitectura",
-      semanas: "4-6",
-      estado: "pendiente",
-      progreso: 0
-    },
-    {
-      fase: "Desarrollo Backend",
-      semanas: "7-10",
-      estado: "pendiente",
-      progreso: 0
-    },
-    {
-      fase: "Desarrollo Frontend",
-      semanas: "8-12",
-      estado: "pendiente",
-      progreso: 0
-    },
-    {
-      fase: "Testing y QA",
-      semanas: "13-14",
-      estado: "pendiente",
-      progreso: 0
-    },
-    {
-      fase: "Despliegue",
-      semanas: "15-16",
-      estado: "pendiente",
-      progreso: 0
-    }
-  ];
-  
-  export default avancesSemanas;
