@@ -75,7 +75,7 @@ export const equipoData = [
       id: 8,
       nombre: "Marko Orihuela Carrasco",
       rol: "Ingeniero de Nube",
-      descripción: "Responsable de la infraestructura cloud, servicios de Azure y optimización de recursos en la nube.",
+      descripcion: "Responsable de la infraestructura cloud, servicios de Azure y optimización de recursos en la nube.",
       email: "marko.orihuela@sga-project.com",
       linkedin: "#",
       avatar: "/assets/images/team/marko.jpg",
