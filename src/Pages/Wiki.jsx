@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import WikiNav from '../components/wiki/WikiNav';
 import WikiArticle from '../components/wiki/WikiArticle';
 
-// Datos temporales de ejemplo - estos después los moverás a src/data/wiki/
+// Datos de la Wiki (actualizados Semana 3)
 const wikiData = {
   metodologia: {
     title: 'Metodología de Desarrollo',
     description: 'Implementación de Scrum en el Sistema de Gestión Académica',
-    lastUpdated: '2025-01-15',
+    lastUpdated: '2025-01-22',
     author: 'Equipo de Desarrollo',
     tags: ['Scrum', 'Agile', 'Metodología'],
     sections: [
@@ -54,7 +54,7 @@ const wikiData = {
   tecnologias: {
     title: 'Stack Tecnológico',
     description: 'Tecnologías utilizadas en el desarrollo del sistema',
-    lastUpdated: '2025-01-15',
+    lastUpdated: '2025-01-22',
     author: 'Equipo Técnico',
     tags: ['Backend', 'Frontend', 'Database', 'Cloud'],
     sections: [
@@ -107,7 +107,7 @@ const wikiData = {
   arquitectura: {
     title: 'Arquitectura del Sistema',
     description: 'Diseño y componentes del Sistema de Gestión Académica',
-    lastUpdated: '2025-01-15',
+    lastUpdated: '2025-01-22',
     author: 'Arquitecto de Software',
     tags: ['Arquitectura', 'Módulos', 'Componentes'],
     sections: [
@@ -126,14 +126,46 @@ const wikiData = {
         ]
       },
       {
+        title: 'Diagramas de Arquitectura (Semana 3)',
+        content: [
+          'Se añadieron diagramas interactivos con React Flow para visualizar la arquitectura del sistema:',
+          '- Arquitectura del Software (Frontend y Backend).',
+          '- Organigrama de Roles del equipo.',
+          '- Proceso de la Metodología Scrum.'
+        ],
+        note: 'Estos diagramas permiten entender mejor los componentes del sistema y su relación.'
+      },
+      {
         title: 'Flujo de Datos',
         content: [
           'Los datos fluyen desde la base de datos única hacia los diferentes módulos.',
           'Cada cambio en la fuente se propaga automáticamente a todos los documentos relacionados.'
         ]
+      }
+    ]
+  },
+
+  avances: {
+    title: 'Avances Semana 3',
+    description: 'Cambios y actualizaciones en la tercera semana del proyecto',
+    lastUpdated: '2025-01-22',
+    author: 'Equipo de Difusión',
+    tags: ['Avances', 'Semana 3'],
+    sections: [
+      {
+        title: 'Actualizaciones realizadas',
+        list: [
+          'Actualización de App.jsx con integración de rutas.',
+          'Creación de router/index.jsx para definir navegación.',
+          'Implementación de AdminPanel.jsx.',
+          'Implementación de Sidebar.jsx para el panel de administrador.',
+          'Diagramas agregados: ArquitecturaSoftware, ArquitecturaRoles, ArquitecturaMetodologia.',
+          'Componentes de flujo: ScrumFlow, OrganigramaFlow.',
+          'Datos de nodos añadidos: scrum-nodes.js, organigrama-nodes.js, frontend-nodes.js, backend-nodes.js.'
+        ]
       },
       {
-        warning: 'Los diagramas detallados de arquitectura se agregarán cuando estén disponibles con React Flow.'
+        note: 'Estos avances fortalecen la documentación y la visualización del sistema en desarrollo.'
       }
     ]
   },
