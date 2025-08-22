@@ -1,11 +1,11 @@
-
+// src/pages/Arquitectura.jsx
 import React, { useState } from 'react';
 import { Building, Code, Users, GitBranch, Layers } from 'lucide-react';
 
 // Importar los componentes de diagramas
 import ArquitecturaSoftware from '../components/charts/ArquitecturaSoftware';
-// import ArquitecturaMetodologia from '../components/charts/ArquitecturaMetodologia';
-// import ArquitecturaRoles from '../components/charts/ArquitecturaRoles';
+import ArquitecturaRoles from '../components/charts/ArquitecturaRoles';
+import ArquitecturaMetodologia from '../components/charts/ArquitecturaMetodologia';
 
 const Arquitectura = () => {
   const [activeMainTab, setActiveMainTab] = useState('software');
@@ -106,51 +106,11 @@ const Arquitectura = () => {
           <ArquitecturaSoftware />
         )}
         {activeMainTab === 'metodologia' && (
-          <ArquitecturaMetodologiaComponent />
+          <ArquitecturaMetodologia />
         )}
         {activeMainTab === 'roles' && (
-          <ArquitecturaRolesComponent />
+          <ArquitecturaRoles />
         )}
-      </div>
-    </div>
-  );
-};
-
-// Componente placeholder para Arquitectura Metodológica
-const ArquitecturaMetodologiaComponent = () => {
-  return (
-    <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
-      <div className="text-center">
-        <GitBranch className="w-16 h-16 text-green-500 mx-auto mb-4" />
-        <h3 className="text-xl font-semibold text-gray-700 mb-2">
-          Arquitectura Metodológica
-        </h3>
-        <p className="text-gray-500 mb-4">
-          Diagramas de procesos Scrum, Kanban, GitFlow y metodologías de testing
-        </p>
-        <p className="text-sm text-gray-400">
-          Componente ubicado en: /src/components/charts/ArquitecturaMetodologia.jsx
-        </p>
-      </div>
-    </div>
-  );
-};
-
-// Componente placeholder para Arquitectura de Roles
-const ArquitecturaRolesComponent = () => {
-  return (
-    <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
-      <div className="text-center">
-        <Users className="w-16 h-16 text-purple-500 mx-auto mb-4" />
-        <h3 className="text-xl font-semibold text-gray-700 mb-2">
-          Arquitectura de Roles
-        </h3>
-        <p className="text-gray-500 mb-4">
-          Organigrama del equipo, responsabilidades y flujos de comunicación
-        </p>
-        <p className="text-sm text-gray-400">
-          Componente ubicado en: /src/components/charts/ArquitecturaRoles.jsx
-        </p>
       </div>
     </div>
   );
