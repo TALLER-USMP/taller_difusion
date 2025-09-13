@@ -1,19 +1,97 @@
 // src/data/semanas/index.js (ARCHIVO PRINCIPAL)
 import { semanas0102 } from './reportes/semanas-01-02.js';
 import { semanas0304 } from './reportes/semanas-03-04.js';
-// import { semanas0506 } from './reportes/semanas-05-06.js';
+import { semanas0506 } from './reportes/semanas-05-06.js';
+// import { semanas0708 } from './reportes/semanas-07-08.js';
 // ... importar el resto cuando se creen
 
-import { fasesProyecto, obtenerFasePorSemana } from './fases.js';
 import { calcularEstadisticasGenerales, calcularEstadisticasPorArea } from './estadisticas.js';
 import { CONFIG_PROYECTO, CONFIGURACION_ADMIN } from './config.js';
+
+// Fases del proyecto actualizadas según el contenido real de las semanas
+export const fasesProyecto = [
+  {
+    id: 1,
+    fase: "Capacitación y Planificación",
+    descripcion: "Capacitación del equipo, definición de roles y planificación inicial de equipos",
+    semanas: "1-2",
+    fechaInicio: "4 Ago 2025",
+    fechaFin: "15 Ago 2025",
+    estado: "completado",
+    progreso: 100,
+    semanasIncluidas: [1, 2]
+  },
+  {
+    id: 2,
+    fase: "Arquitectura y Análisis de Procesos",
+    descripcion: "Refinamiento arquitectónico y análisis completo de procesos AS IS/TO BE de sílabos",
+    semanas: "3-4",
+    fechaInicio: "18 Ago 2025",
+    fechaFin: "29 Ago 2025",
+    estado: "completado",
+    progreso: 100,
+    semanasIncluidas: [3, 4]
+  },
+  {
+    id: 3,
+    fase: "Diseño UX/UI y Configuración",
+    descripcion: "Aprobación de procesos, diseño de prototipos Figma, configuración de herramientas QA y DevSecOps",
+    semanas: "5-6",
+    fechaInicio: "1 Sep 2025",
+    fechaFin: "12 Sep 2025",
+    estado: "completado",
+    progreso: 100,
+    semanasIncluidas: [5, 6]
+  },
+  {
+    id: 4,
+    fase: "Desarrollo e Implementación",
+    descripcion: "Sprints de desarrollo, implementación de módulos del sistema",
+    semanas: "7-12",
+    fechaInicio: "15 Sep 2025",
+    fechaFin: "24 Oct 2025",
+    estado: "en_progreso",
+    progreso: 15,
+    semanasIncluidas: [7, 8, 9, 10, 11, 12]
+  },
+  {
+    id: 5,
+    fase: "Testing e Integración",
+    descripcion: "Pruebas completas con SonarQube, integración de módulos, corrección de bugs",
+    semanas: "13-14",
+    fechaInicio: "27 Oct 2025",
+    fechaFin: "7 Nov 2025",
+    estado: "pendiente",
+    progreso: 0,
+    semanasIncluidas: [13, 14]
+  },
+  {
+    id: 6,
+    fase: "Entrega y Documentación Final",
+    descripcion: "Documentación final, presentaciones y cierre del proyecto",
+    semanas: "15-16",
+    fechaInicio: "10 Nov 2025",
+    fechaFin: "21 Nov 2025",
+    estado: "pendiente",
+    progreso: 0,
+    semanasIncluidas: [15, 16]
+  }
+];
+
+// Función para obtener fase por número de semana
+export const obtenerFasePorSemana = (numeroSemana) => {
+  return fasesProyecto.find(fase => 
+    fase.semanasIncluidas.includes(numeroSemana)
+  );
+};
 
 // Consolidar todas las semanas (solo las que existen)
 export const obtenerTodasLasSemanas = () => {
   return [
     ...semanas0102,
     ...semanas0304,
-    // ...semanas0506,
+    ...semanas0506,
+    // ...semanas0708,
     // ... agregar el resto conforme se vayan creando
   ].filter(semana => semana && semana.id); // Filtrar elementos vacíos/undefined
 };
@@ -22,7 +100,6 @@ export const obtenerTodasLasSemanas = () => {
 export const avancesSemanas = obtenerTodasLasSemanas();
 export const estadisticasGenerales = calcularEstadisticasGenerales();
 export const estadisticasPorArea = calcularEstadisticasPorArea();
-export { fasesProyecto };
 
 // Funciones utilitarias (útiles para el admin panel)
 export const obtenerSemanaPorId = (id) => {
@@ -44,8 +121,25 @@ export const obtenerSemanasPorFase = (faseName) => {
   const fase = fasesProyecto.find(f => f.fase === faseName);
   if (!fase) return [];
   
-  const [inicio, fin] = fase.semanas.split('-').map(Number);
-  return obtenerTodasLasSemanas().filter(s => s.numeroSemana >= inicio && s.numeroSemana <= fin);
+  return obtenerTodasLasSemanas().filter(s => 
+    fase.semanasIncluidas.includes(s.numeroSemana)
+  );
+};
+
+// Función para obtener estadísticas por fase
+export const obtenerEstadisticasPorFase = () => {
+  return fasesProyecto.map(fase => {
+    const semanasDeLaFase = obtenerSemanasPorFase(fase.fase);
+    const progresoPromedio = semanasDeLaFase.length > 0 
+      ? Math.round(semanasDeLaFase.reduce((sum, s) => sum + s.progreso, 0) / semanasDeLaFase.length)
+      : 0;
+    
+    return {
+      ...fase,
+      cantidadSemanas: semanasDeLaFase.length,
+      progresoCalculado: progresoPromedio
+    };
+  });
 };
 
 // Funciones para el futuro admin panel
@@ -57,9 +151,9 @@ export const ADMIN_FUNCTIONS = {
   },
   
   // Actualizar semana existente
-  actualizarSemana: (id, nuevosdatos) => {
+  actualizarSemana: (id, nuevosDatos) => {
     // Esta función se implementará en el admin panel
-    console.log("Función para actualizar semana:", id, nuevosData);
+    console.log("Función para actualizar semana:", id, nuevosDatos);
   },
   
   // Eliminar semana
@@ -67,7 +161,7 @@ export const ADMIN_FUNCTIONS = {
     // Esta función se implementará en el admin panel
     console.log("Función para eliminar semana:", id);
   },
-
+  
   // Subir archivo
   subirArchivo: (archivo, tipoArchivo, semanaId) => {
     // Esta función se implementará en el admin panel

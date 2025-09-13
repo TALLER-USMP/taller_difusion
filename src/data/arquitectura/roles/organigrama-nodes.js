@@ -59,7 +59,7 @@ export const organigramaNodes = [
       "y": 168.34412012988886
     },
     "data": {
-      "name": "JESUS LAZARO",
+      "name": "PIERO DAVILA",
       "position": "LÍDER FRONT",
       "role": "lead"
     },

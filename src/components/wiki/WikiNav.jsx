@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookOpen, Code, Layers, HelpCircle, ExternalLink, Settings, Users } from 'lucide-react';
+import { BookOpen, Code, Layers, HelpCircle, ExternalLink, Settings, Users, GitBranch, TrendingUp } from 'lucide-react';
 
 const WikiNav = ({ activeSection, onSectionChange }) => {
   const sections = [
@@ -7,37 +7,49 @@ const WikiNav = ({ activeSection, onSectionChange }) => {
       id: 'metodologia',
       title: 'Metodología',
       icon: Users,
-      description: 'Scrum y procesos de trabajo'
+      description: 'Scrum implementado y Planning Poker'
     },
     {
       id: 'tecnologias',
       title: 'Tecnologías',
       icon: Code,
-      description: 'Stack tecnológico del proyecto'
+      description: 'Stack confirmado: React, Node.js, Azure'
     },
     {
       id: 'arquitectura',
-      title: 'Arquitectura del Sistema',
+      title: 'Arquitectura',
       icon: Layers,
-      description: 'Módulos y componentes'
+      description: 'Diseño refinado y aprobado'
+    },
+    {
+      id: 'avances',
+      title: 'Avances del Proyecto',
+      icon: TrendingUp,
+      description: 'Progreso semanas 1-6 completadas'
+    },
+    {
+      id: 'procesos',
+      title: 'Procesos AS IS/TO BE',
+      icon: GitBranch,
+      description: 'Análisis completado y aprobado'
     },
     {
       id: 'glosario',
       title: 'Glosario',
       icon: BookOpen,
-      description: 'Términos técnicos'
+      description: 'Términos técnicos y académicos'
     },
     {
       id: 'faqs',
       title: 'FAQs',
       icon: HelpCircle,
-      description: 'Preguntas frecuentes'
+      description: 'Preguntas frecuentes del proyecto'
     },
     {
       id: 'recursos',
       title: 'Recursos',
       icon: ExternalLink,
-      description: 'Enlaces y referencias'
+      description: 'Herramientas y enlaces confirmados'
     }
   ];
 
@@ -50,8 +62,11 @@ const WikiNav = ({ activeSection, onSectionChange }) => {
           <h2 className="text-xl font-bold text-[#333333]">Wiki del Proyecto</h2>
         </div>
         <p className="text-sm text-gray-500">
-          Documentación del Sistema de Gestión Académica
+          Sistema de Gestión Académica
         </p>
+        <div className="mt-2 text-xs text-[#A4101A] font-medium">
+          📊 Semana 6/16 - Fase de Desarrollo
+        </div>
       </div>
 
       {/* Navigation Sections */}
@@ -96,15 +111,18 @@ const WikiNav = ({ activeSection, onSectionChange }) => {
         })}
       </div>
 
-      {/* Footer Info */}
+      {/* Footer Info Actualizado */}
       <div className="mt-8 pt-6 border-t border-gray-200">
-        <div className="text-xs text-gray-500 space-y-1">
-          <p className="font-medium">Última actualización:</p>
-          <p>{new Date().toLocaleDateString('es-ES', { 
-            year: 'numeric', 
-            month: 'long', 
-            day: 'numeric' 
-          })}</p>
+        <div className="text-xs text-gray-500 space-y-2">
+          <div>
+            <p className="font-medium text-[#A4101A]">Estado del Proyecto:</p>
+            <p className="text-gray-600">✅ 3 fases completadas</p>
+            <p className="text-gray-600">🚧 Desarrollo activo iniciando</p>
+          </div>
+          <div className="pt-2 border-t border-gray-100">
+            <p className="font-medium">Última actualización:</p>
+            <p>13 de Septiembre 2025</p>
+          </div>
         </div>
       </div>
     </nav>

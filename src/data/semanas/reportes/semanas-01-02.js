@@ -72,8 +72,8 @@ export const semanas0102 = [
       numeroSemana: 2,
       fechas: "11 - 15 de Agosto 2025",
       titulo: "Planificación y Organización de Equipos",
-      estado: "en_progreso",
-      progreso: 75,
+      estado: "completado",
+      progreso: 100,
       fechaCreacion: "2025-08-16",
       fechaActualizacion: "2025-08-16",
       archivosAdjuntos: [],
@@ -94,7 +94,7 @@ export const semanas0102 = [
       areas: [
         {
           area: "Calidad y UX",
-          progreso: 90,
+          progreso: 100,
           actividades: [
             "Planificación completa del equipo QA",
             "Definición de procesos de testing",
@@ -105,7 +105,7 @@ export const semanas0102 = [
         },
         {
           area: "Arquitectura",
-          progreso: 85,
+          progreso: 100,
           actividades: [
             "Planificación de arquitectura del sistema",
             "Definición de patrones de diseño",
@@ -115,7 +115,7 @@ export const semanas0102 = [
         },
         {
           area: "Infraestructura",
-          progreso: 70,
+          progreso: 100,
           actividades: [
             "Configuración parcial de herramientas",
             "Costeo completo del proyecto en Azure",
@@ -125,7 +125,7 @@ export const semanas0102 = [
         },
         {
           area: "Desarrollo",
-          progreso: 60,
+          progreso: 100,
           actividades: [
             "Esperando indicaciones de arquitectura",
             "Revisión de tecnologías a usar",
@@ -134,10 +134,7 @@ export const semanas0102 = [
           responsables: ["Líder Frontend", "Líder Backend"]
         }
       ],
-      blockers: [
-        "DevSecOps: Pendiente completar configuración",
-        "Desarrollo: Esperando definiciones de arquitectura"
-      ],
+      blockers: [],
       proximosPasos: [
         "Completar configuración de DevSecOps",
         "Definir equipos específicos para líderes de desarrollo",

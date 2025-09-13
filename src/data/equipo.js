@@ -53,10 +53,10 @@ export const equipoData = [
     },
     {
       id: 6,
-      nombre: "Jesús Lázaro Bravo",
+      nombre: "Piero Alonso Dávila Aguirre",
       rol: "Líder Frontend",
       descripcion: "Encargado del desarrollo y arquitectura del frontend, interfaces de usuario y experiencia interactiva del sistema.",
-      email: "jesus.lazaro@sga-project.com",
+      email: "piero.davila@sga-project.com",
       linkedin: "#",
       avatar: "/assets/images/team/jesus.jpg",
       especialidades: ["React", "JavaScript", "Tailwind CSS", "Frontend Architecture"]
