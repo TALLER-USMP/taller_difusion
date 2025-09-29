@@ -1,4 +1,4 @@
-// src/components/charts/software/FrontendFlow.jsx
+// src/components/charts/software/FullStackFlow.jsx
 import React, { useCallback, useMemo, useEffect, useState } from 'react';
 import {
   ReactFlow,
@@ -14,9 +14,11 @@ import {
   NodeResizer,
 } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
-import { frontendNodes, frontendEdges } from '../../../data/arquitectura/software/frontend-nodes';
 
-// Componente personalizado para los nodos con colores profesionales
+// IMPORTA LOS DATOS DESDE EL ARCHIVO EXTERNO
+import { fullStackNodes, fullStackEdges } from '../../../data/arquitectura/software/fullstack-nodes';
+
+// Componente personalizado para los nodos
 const CustomNode = ({ data }) => {
   // Función simplificada - todos los nodos son blancos con borde negro
   const getNodeStyle = (type) => {
@@ -25,36 +27,26 @@ const CustomNode = ({ data }) => {
 
   const getIconPlaceholder = (type) => {
     switch (type) {
-      case 'component':
-        return '🧩';
-      case 'page':
-        return '📄';
-      case 'layout':
-        return '🏗️';
-      case 'developer':
-        return '👨‍💻';
-      case 'context':
+      case 'client':
+        return '💻';
+      case 'gateway':
         return '🌐';
-      case 'router':
-        return '🛣️';
-      case 'state':
-        return '📊';
-      case 'ui':
-        return '🎨';
-      case 'form':
-        return '📝';
-      case 'api-client':
-        return '🔌';
-      case 'service':
+      case 'compute':
         return '⚙️';
-      case 'util':
-        return '🔧';
-      case 'store':
-        return '🏪';
-      case 'middleware':
-        return '🔄';
+      case 'serverless':
+        return '⚡';
+      case 'database':
+        return '🗄️';
+      case 'cache':
+        return '⚡';
+      case 'storage':
+        return '💾';
+      case 'security':
+        return '🔒';
+      case 'monitoring':
+        return '📊';
       default:
-        return '⚛️';
+        return '📦';
     }
   };
 
@@ -142,17 +134,17 @@ const CustomNode = ({ data }) => {
   );
 };
 
-// Componente para contenedores redimensionables con colores personalizables
+// Componente para contenedores con bordes animados
 const ContainerNode = ({ data, selected, id }) => {
   const getContainerStyle = (color) => {
     const colorStyles = {
-      '#DAE8FC': { bg: 'bg-blue-50/60', border: 'border-blue-300', text: 'text-blue-800', shadow: 'shadow-blue-100' },
-      '#FFE6CC': { bg: 'bg-orange-50/60', border: 'border-orange-300', text: 'text-orange-800', shadow: 'shadow-orange-100' },
-      '#E1D5E7': { bg: 'bg-purple-50/60', border: 'border-purple-300', text: 'text-purple-800', shadow: 'shadow-purple-100' },
-      '#BAC8D3': { bg: 'bg-slate-50/60', border: 'border-slate-300', text: 'text-slate-800', shadow: 'shadow-slate-100' },
-      '#B1DDF0': { bg: 'bg-sky-50/60', border: 'border-sky-300', text: 'text-sky-800', shadow: 'shadow-sky-100' },
-      '#B0E3E6': { bg: 'bg-teal-50/60', border: 'border-teal-300', text: 'text-teal-800', shadow: 'shadow-teal-100' },
-      '#FFFFFF': { bg: 'bg-white',  border: 'border-black', text: 'text-black', shadow: 'shadow-gray-200' },
+      '#DAE8FC': { bg: 'bg-blue-50/30', border: 'border-blue-300', text: 'text-blue-800', shadow: 'shadow-blue-100' },
+      '#FFE6CC': { bg: 'bg-orange-50/30', border: 'border-orange-300', text: 'text-orange-800', shadow: 'shadow-orange-100' },
+      '#E1D5E7': { bg: 'bg-purple-50/30', border: 'border-purple-300', text: 'text-purple-800', shadow: 'shadow-purple-100' },
+      '#BAC8D3': { bg: 'bg-slate-50/30', border: 'border-slate-300', text: 'text-slate-800', shadow: 'shadow-slate-100' },
+      '#B1DDF0': { bg: 'bg-sky-50/30', border: 'border-sky-300', text: 'text-sky-800', shadow: 'shadow-sky-100' },
+      '#B0E3E6': { bg: 'bg-teal-50/30', border: 'border-teal-300', text: 'text-teal-800', shadow: 'shadow-teal-100' },
+      '#FFFFFF': { bg: 'bg-white/30',  border: 'border-gray-300', text: 'text-gray-800', shadow: 'shadow-gray-100' },
     };
     return colorStyles[color] || colorStyles['#DAE8FC'];
   };
@@ -160,43 +152,58 @@ const ContainerNode = ({ data, selected, id }) => {
   const style = getContainerStyle(data.backgroundColor || '#DAE8FC');
 
   return (
-    <div 
-      className={`w-full h-full ${style.bg} ${style.border} border-2 border-dashed rounded-xl ${style.shadow} shadow-lg backdrop-blur-sm relative`}
-      style={{ backgroundColor: data.backgroundColor + '40' || '#DAE8FC40' }}
-    >
-      <NodeResizer
-        color={data.backgroundColor || '#1e40af'}
-        isVisible={selected}
-        minWidth={200}
-        minHeight={150}
-        keepAspectRatio={false}
-      />
-      
-      <Handle type="target" position={Position.Left} id="left" className="w-4 h-4 !bg-blue-500 border-2 border-white shadow-md opacity-75" />
-      <Handle type="source" position={Position.Right} id="right" className="w-4 h-4 !bg-blue-500 border-2 border-white shadow-md opacity-75" />
-      <Handle type="target" position={Position.Top} id="top" className="w-4 h-4 !bg-blue-500 border-2 border-white shadow-md opacity-75" />
-      <Handle type="source" position={Position.Bottom} id="bottom" className="w-4 h-4 !bg-blue-500 border-2 border-white shadow-md opacity-75" />
-
-      {data.label && (
-        <div className={`absolute top-2 left-3 ${style.text} font-bold text-sm uppercase tracking-wider px-2 py-1 bg-white/80 rounded-md shadow-sm`}>
-          {data.label}
+    <div className="w-full h-full relative">
+      {/* Contenedor principal con borde animado */}
+      <div 
+        className={`w-full h-full ${style.bg} rounded-xl ${style.shadow} shadow-lg backdrop-blur-sm relative overflow-hidden`}
+        style={{ backgroundColor: data.backgroundColor + '20' || '#DAE8FC20' }}
+      >
+        {/* Borde animado usando gradiente rotativo */}
+        <div className="absolute inset-0 rounded-xl p-[2px] bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 animate-spin-slow">
+          <div className={`w-full h-full ${style.bg} rounded-xl`}
+               style={{ backgroundColor: data.backgroundColor + '40' || '#DAE8FC40' }}>
+          </div>
         </div>
-      )}
 
-      {selected && (
-        <div className="absolute top-2 right-3 text-blue-500 text-xs font-medium bg-white/90 px-2 py-1 rounded-md shadow-sm">
-          Redimensionable ↗️
+        {/* Contenido del contenedor */}
+        <div className="relative z-10 w-full h-full">
+          <NodeResizer
+            color={data.backgroundColor || '#1e40af'}
+            isVisible={selected}
+            minWidth={200}
+            minHeight={150}
+            keepAspectRatio={false}
+          />
+          
+          <Handle type="target" position={Position.Left} id="left" className="w-4 h-4 !bg-blue-500 border-2 border-white shadow-md opacity-75" />
+          <Handle type="source" position={Position.Right} id="right" className="w-4 h-4 !bg-blue-500 border-2 border-white shadow-md opacity-75" />
+          <Handle type="target" position={Position.Top} id="top" className="w-4 h-4 !bg-blue-500 border-2 border-white shadow-md opacity-75" />
+          <Handle type="source" position={Position.Bottom} id="bottom" className="w-4 h-4 !bg-blue-500 border-2 border-white shadow-md opacity-75" />
+
+          {data.label && (
+            <div className={`absolute top-2 left-3 ${style.text} font-bold text-sm uppercase tracking-wider px-2 py-1 bg-white/80 rounded-md shadow-sm`}>
+              {data.label}
+            </div>
+          )}
+
+          {selected && (
+            <div className="absolute top-2 right-3 text-blue-500 text-xs font-medium bg-white/90 px-2 py-1 rounded-md shadow-sm">
+              Redimensionable ↗️
+            </div>
+          )}
         </div>
-      )}
+      </div>
     </div>
   );
 };
 
-const FrontendFlow = () => {
-  const [nodes, setNodes, onNodesChange] = useNodesState(frontendNodes);
-  const [edges, setEdges, onEdgesChange] = useEdgesState(frontendEdges);
+const FullStackFlow = () => {
+  // USA LOS DATOS IMPORTADOS EN LUGAR DE LOS DEFINIDOS LOCALMENTE
+  const [nodes, setNodes, onNodesChange] = useNodesState(fullStackNodes);
+  const [edges, setEdges, onEdgesChange] = useEdgesState(fullStackEdges);
+  
   const [containerCounter, setContainerCounter] = useState(1);
-  const [nodeCounter, setNodeCounter] = useState(1);
+  const [nodeCounter, setNodeCounter] = useState(26);
   const [containerName, setContainerName] = useState('');
   const [selectedEdge, setSelectedEdge] = useState(null);
   const [edgeLabel, setEdgeLabel] = useState('');
@@ -205,7 +212,7 @@ const FrontendFlow = () => {
   
   // Estados para añadir nodos
   const [newNodeName, setNewNodeName] = useState('');
-  const [newNodeType, setNewNodeType] = useState('component');
+  const [newNodeType, setNewNodeType] = useState('compute');
   const [newNodeDescription, setNewNodeDescription] = useState('');
 
   // Colores disponibles para contenedores
@@ -219,22 +226,17 @@ const FrontendFlow = () => {
     { value: '#FFFFFF', label: 'Blanco', preview: 'bg-white border border-gray-300' }
   ];
   
-  // Lista de tipos de nodos disponibles para frontend
+  // Lista de tipos de nodos disponibles
   const nodeTypeOptions = [
-    { value: 'component', label: '🧩 Component', color: 'blue' },
-    { value: 'page', label: '📄 Page', color: 'green' },
-    { value: 'layout', label: '🏗️ Layout', color: 'slate' },
-    { value: 'hook', label: '🪝 Hook', color: 'purple' },
-    { value: 'context', label: '🌐 Context', color: 'red' },
-    { value: 'router', label: '🛣️ Router', color: 'orange' },
-    { value: 'state', label: '📊 State', color: 'yellow' },
-    { value: 'ui', label: '🎨 UI', color: 'pink' },
-    { value: 'form', label: '📝 Form', color: 'cyan' },
-    { value: 'api-client', label: '🔌 API Client', color: 'indigo' },
-    { value: 'service', label: '⚙️ Service', color: 'teal' },
-    { value: 'util', label: '🔧 Util', color: 'emerald' },
-    { value: 'store', label: '🏪 Store', color: 'violet' },
-    { value: 'middleware', label: '🔄 Middleware', color: 'rose' },
+    { value: 'client', label: '💻 Cliente', color: 'slate' },
+    { value: 'gateway', label: '🌐 Gateway', color: 'purple' },
+    { value: 'compute', label: '⚙️ Cómputo', color: 'blue' },
+    { value: 'serverless', label: '⚡ Serverless', color: 'cyan' },
+    { value: 'database', label: '🗄️ Base de datos', color: 'emerald' },
+    { value: 'cache', label: '⚡ Cache', color: 'orange' },
+    { value: 'storage', label: '💾 Almacenamiento', color: 'amber' },
+    { value: 'security', label: '🔒 Seguridad', color: 'red' },
+    { value: 'monitoring', label: '📊 Monitoreo', color: 'indigo' },
   ];
   
   // Callback para conectar nodos
@@ -244,8 +246,8 @@ const FrontendFlow = () => {
       ...params,
       type: 'smoothstep',
       animated: true,
-      style: { stroke: '#1e40af', strokeWidth: 2 },
-      markerEnd: { type: 'arrowclosed', color: '#1e40af' },
+      style: { stroke: '#ffffff', strokeWidth: 2 },
+      markerEnd: { type: 'arrowclosed', color: '#ffffff' },
       label: '',
       labelStyle: { fontSize: 12, fontWeight: 600 },
     };
@@ -253,7 +255,7 @@ const FrontendFlow = () => {
     setEdges((els) => addEdge(newEdge, els));
   }, [setEdges]);
 
-  // Función para manejar click en edges (para editar etiquetas)
+  // Función para manejar click en edges
   const onEdgeClick = useCallback((event, edge) => {
     event.stopPropagation();
     setSelectedEdge(edge);
@@ -377,14 +379,14 @@ const FrontendFlow = () => {
         targetHandle: edge.targetHandle,
         type: edge.type || 'smoothstep',
         animated: edge.animated || true,
-        style: edge.style || { stroke: '#1e40af', strokeWidth: 2 },
-        markerEnd: edge.markerEnd || { type: 'arrowclosed', color: '#1e40af' },
+        style: edge.style || { stroke: '#000000', strokeWidth: 2 },
+        markerEnd: edge.markerEnd || { type: 'arrowclosed', color: '#000000' },
         label: edge.label || '',
         labelStyle: edge.labelStyle || { fontSize: 12, fontWeight: 600 },
       }))
     };
     
-    console.log('Datos actualizados Frontend:', exportData);
+    console.log('Datos actualizados Full Stack:', exportData);
     
     const formatWithTemplateLiterals = (obj, indent = 0) => {
       const spaces = '  '.repeat(indent);
@@ -420,12 +422,12 @@ const FrontendFlow = () => {
     const formattedNodes = formatWithTemplateLiterals(exportData.nodes);
     const formattedEdges = formatWithTemplateLiterals(exportData.edges);
     
-    const code = `// Exportado desde el editor Frontend
+    const code = `// Exportado desde el editor Full Stack
 const BASE_URL = import.meta.env.BASE_URL;
 
-export const frontendNodes = ${formattedNodes};
+export const fullStackNodes = ${formattedNodes};
 
-export const frontendEdges = ${formattedEdges};
+export const fullStackEdges = ${formattedEdges};
 
 export const nodeTypes = {
   custom: 'customNode',
@@ -433,15 +435,16 @@ export const nodeTypes = {
 };`;
     
     navigator.clipboard.writeText(code);
-    alert('¡Datos Frontend copiados al clipboard! Pégalos en tu archivo frontend-nodes.js');
+    alert('¡Datos de Full Stack copiados al clipboard! Pégalos en tu archivo fullstack-nodes.js');
   }, [nodes, edges]);
 
   // Función para resetear a valores originales
   const resetChanges = useCallback(() => {
-    setNodes(frontendNodes);
-    setEdges(frontendEdges);
+    // USA LOS DATOS IMPORTADOS PARA RESETEAR
+    setNodes(fullStackNodes);
+    setEdges(fullStackEdges);
     setContainerCounter(1);
-    setNodeCounter(1);
+    setNodeCounter(26);
     setContainerName('');
     setNewNodeName('');
     setNewNodeDescription('');
@@ -458,58 +461,123 @@ export const nodeTypes = {
 
   return (
     <div className="space-y-6">
+      {/* Estilos CSS para animaciones personalizadas */}
+      <style jsx>{`
+        @keyframes spin-slow {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+        
+        @keyframes float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-10px); }
+        }
+        
+        @keyframes pulse-glow {
+          0%, 100% { opacity: 0.3; }
+          50% { opacity: 0.8; }
+        }
+
+        @keyframes matrix-rain {
+          0% { transform: translateY(-100vh); opacity: 0; }
+          10% { opacity: 1; }
+          90% { opacity: 1; }
+          100% { transform: translateY(100vh); opacity: 0; }
+        }
+
+        .animate-spin-slow {
+          animation: spin-slow 8s linear infinite;
+        }
+        
+        .animate-float {
+          animation: float 3s ease-in-out infinite;
+        }
+        
+        .animate-pulse-glow {
+          animation: pulse-glow 2s ease-in-out infinite;
+        }
+
+        .matrix-bg::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-image: 
+            radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 75% 75%, rgba(168, 85, 247, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 50% 50%, rgba(34, 197, 94, 0.05) 0%, transparent 50%);
+          pointer-events: none;
+        }
+
+        .tech-pattern::after {
+          content: '< /> { } [ ] => != === && || ++ -- async await function class import export const let var';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          font-family: 'Courier New', monospace;
+          font-size: 12px;
+          color: rgba(59, 130, 246, 0.05);
+          white-space: pre-wrap;
+          word-wrap: break-word;
+          overflow: hidden;
+          pointer-events: none;
+          line-height: 20px;
+          padding: 20px;
+        }
+      `}</style>
+
       {/* Panel de información superior */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-        {/* Arquitectura Frontend */}
+        {/* Tecnologías Aprendidas */}
         <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-slate-200">
           <h3 className="font-bold text-base text-slate-800 mb-3 flex items-center gap-2">
-            <span className="w-3 h-3 bg-gradient-to-r from-blue-500 to-emerald-500 rounded-full"></span>
-            Arquitectura Frontend
+            <span className="w-3 h-3 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full animate-pulse-glow"></span>
+            Tecnologías Aprendidas
           </h3>
           <div className="space-y-2 text-sm">
             <div className="flex items-center gap-3">
-              <div className="w-4 h-4 bg-blue-600 rounded-full shadow-sm"></div>
-              <span className="text-slate-700 font-medium">Componentes UI</span>
+              <div className="w-4 h-4 bg-yellow-400 rounded-full shadow-sm"></div>
+              <span className="text-slate-700 font-medium">Frontend: React, TypeScript, Vite</span>
             </div>
             <div className="flex items-center gap-3">
-              <div className="w-4 h-4 bg-purple-600 rounded-full shadow-sm"></div>
-              <span className="text-slate-700 font-medium">Estado Global</span>
+              <div className="w-4 h-4 bg-green-500 rounded-full shadow-sm"></div>
+              <span className="text-slate-700 font-medium">Backend: Node.js, JavaScript</span>
             </div>
             <div className="flex items-center gap-3">
-              <div className="w-4 h-4 bg-green-600 rounded-full shadow-sm"></div>
-              <span className="text-slate-700 font-medium">Routing & Pages</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <div className="w-4 h-4 bg-orange-600 rounded-full shadow-sm"></div>
-              <span className="text-slate-700 font-medium">API Integration</span>
+              <div className="w-4 h-4 bg-blue-500 rounded-full shadow-sm"></div>
+              <span className="text-slate-700 font-medium">Cloud: Microsoft Azure</span>
             </div>
           </div>
         </div>
 
-        {/* Stack Tecnológico Frontend */}
+        {/* Herramientas de Desarrollo */}
         <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-slate-200">
           <div className="text-sm text-slate-700">
             <div className="font-bold text-slate-800 mb-2 flex items-center gap-2">
-              <span className="text-lg">⚛️</span> Stack Tecnológico
+              <span className="text-lg animate-float">🛠️</span> Herramientas de Desarrollo
             </div>
             <div className="space-y-2">
               <div className="flex flex-wrap gap-1">
-                {['React', 'TypeScript', 'Vite', 'Tailwind'].map((tech) => (
+                {['Visual Studio Code', 'GitHub', 'Figma'].map((tech) => (
+                  <span key={tech} className="px-2 py-1 bg-slate-100 text-slate-800 rounded-md text-xs font-medium">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+              <div className="flex flex-wrap gap-1">
+                {['Supabase', 'Docker', 'Tailwind CSS'].map((tech) => (
                   <span key={tech} className="px-2 py-1 bg-blue-100 text-blue-800 rounded-md text-xs font-medium">
                     {tech}
                   </span>
                 ))}
               </div>
               <div className="flex flex-wrap gap-1">
-                {['Jest', 'Cypress', 'Playwright', 'Testing Library'].map((tech) => (
-                  <span key={tech} className="px-2 py-1 bg-green-100 text-green-800 rounded-md text-xs font-medium">
-                    {tech}
-                  </span>
-                ))}
-              </div>
-              <div className="flex flex-wrap gap-1">
-                {['Figma', 'GitHub Actions', 'ESLint', 'Prettier'].map((tech) => (
-                  <span key={tech} className="px-2 py-1 bg-purple-100 text-purple-800 rounded-md text-xs font-medium">
+                {['Cypress', 'Jest', 'Playwright'].map((tech) => (
+                  <span key={tech} className="px-2 py-1 bg-emerald-100 text-emerald-800 rounded-md text-xs font-medium">
                     {tech}
                   </span>
                 ))}
@@ -518,32 +586,32 @@ export const nodeTypes = {
           </div>
         </div>
 
-        {/* Metodologías Frontend */}
+        {/* Metodologías y Procesos  */}
         <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-slate-200">
           <div className="text-sm text-slate-600 font-medium">
             <div className="font-bold text-slate-800 mb-2 flex items-center gap-2">
-              <span className="text-lg">🎯</span> Metodologías
+              <span className="text-lg">⚡</span> Metodologías
             </div>
             <div className="flex items-center gap-2 mb-1">
-              <span className="text-blue-600">•</span>
-              <span>Scrum Development</span>
+              <span className="text-slate-600">•</span>
+              <span>CI/CD con GitHub Actions</span>
             </div>
             <div className="flex items-center gap-2 mb-1">
-              <span className="text-green-600">•</span>
-              <span>Test-Driven Development</span>
+              <span className="text-black">•</span>
+              <span>Testing Automatizado</span>
             </div>
             <div className="flex items-center gap-2 mb-1">
-              <span className="text-purple-600">•</span>
-              <span>Component-Based Design</span>
+              <span className="text-black">•</span>
+              <span>DevOps y Monitoreo</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="text-orange-600">•</span>
-              <span>CI/CD Pipeline</span>
+              <span className="text-black">•</span>
+              <span>UI/UX Design Thinking</span>
             </div>
           </div>
         </div>
 
-        {/* CONTENEDORES
+        {/* CONTENEDORES - COMENTADO
         <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-slate-200">
           <div className="font-bold text-slate-800 mb-3 flex items-center gap-2">
             <span className="text-lg">📦</span> Contenedores
@@ -557,7 +625,7 @@ export const nodeTypes = {
               className="w-full px-2 py-1 border border-gray-300 rounded text-xs focus:outline-none focus:border-blue-500"
             />
             
-            * Selector de color *
+            Selector de color
             <div>
               <label className="block text-xs font-medium text-gray-700 mb-1">Color de fondo:</label>
               <div className="grid grid-cols-3 gap-1">
@@ -587,12 +655,12 @@ export const nodeTypes = {
             </button>
           </div>
           <div className="mt-2 text-xs text-slate-600">
-            <p>• Escoge el color de fondo</p>
+            <p>• Bordes animados automáticos</p>
             <p>• Selecciona para redimensionar</p>
           </div>
-        </div>*/}
+        </div> */}
 
-        {/* AÑADIR NODOS
+        {/* AÑADIR NODOS - COMENTADO
         <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-slate-200">
           <div className="font-bold text-slate-800 mb-3 flex items-center gap-2">
             <span className="text-lg">🎯</span> Añadir Nodos
@@ -644,7 +712,7 @@ export const nodeTypes = {
           </div>
         </div>*/}
 
-        {/* EDITOR 
+        {/* EDITOR - COMENTADO
         <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-slate-200">
           <div className="font-bold text-slate-800 mb-3 flex items-center gap-2">
             <span className="text-lg">✏️</span> Editor
@@ -666,11 +734,10 @@ export const nodeTypes = {
           <div className="mt-3 text-xs text-slate-600">
             <p>• Haz clic en líneas para editarlas</p>
             <p>• Arrastra nodos para mover</p>
-            <p>• Conecta desde los handles circulares</p>
+            <p>• 25 nodos iniciales incluidos</p>
             <p>• Guarda para exportar código</p>
           </div>
         </div>*/}
-
       </div>
 
       {/* Modal para editar etiquetas de conexiones */}
@@ -695,7 +762,7 @@ export const nodeTypes = {
                 <textarea
                   value={edgeLabel}
                   onChange={(e) => setEdgeLabel(e.target.value)}
-                  placeholder="Ej: props\ndata flow"
+                  placeholder="Ej: envía datos\n<https>"
                   rows={3}
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
                 />
@@ -723,8 +790,33 @@ export const nodeTypes = {
         </div>
       )}
 
-      {/* Contenedor del diagrama */}
-      <div className="w-full h-[700px] bg-gradient-to-br from-slate-50 via-white to-blue-50 rounded-xl border border-slate-200 overflow-hidden shadow-sm relative">
+      {/* Contenedor del diagrama con fondo profesional full stack */}
+      <div className="w-full h-[700px] bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 rounded-xl border border-slate-700 overflow-hidden shadow-2xl relative matrix-bg tech-pattern">
+        {/* Elementos de fondo decorativos */}
+        <div className="absolute inset-0 opacity-10">
+          {/* Círculos flotantes */}
+          <div className="absolute top-10 left-10 w-32 h-32 bg-blue-500 rounded-full blur-xl animate-float"></div>
+          <div className="absolute top-32 right-20 w-24 h-24 bg-purple-500 rounded-full blur-xl animate-float" style={{animationDelay: '1s'}}></div>
+          <div className="absolute bottom-20 left-1/4 w-28 h-28 bg-cyan-500 rounded-full blur-xl animate-float" style={{animationDelay: '2s'}}></div>
+          <div className="absolute bottom-32 right-1/3 w-20 h-20 bg-green-500 rounded-full blur-xl animate-float" style={{animationDelay: '0.5s'}}></div>
+        </div>
+
+        {/* Grid de puntos tecnológicos */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="w-full h-full" 
+               style={{
+                 backgroundImage: `
+                   radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.3) 0%, transparent 2px),
+                   radial-gradient(circle at 40% 40%, rgba(168, 85, 247, 0.3) 0%, transparent 2px),
+                   radial-gradient(circle at 60% 60%, rgba(34, 197, 94, 0.3) 0%, transparent 2px),
+                   radial-gradient(circle at 80% 80%, rgba(249, 115, 22, 0.3) 0%, transparent 2px)
+                 `,
+                 backgroundSize: '100px 100px, 150px 150px, 200px 200px, 120px 120px',
+                 animation: 'pulse-glow 4s ease-in-out infinite'
+               }}>
+          </div>
+        </div>
+
         <ReactFlow
           nodes={nodes}
           edges={edges}
@@ -742,15 +834,21 @@ export const nodeTypes = {
           nodesConnectable={false}
           elementsSelectable={false}
           connectionLineType="smoothstep"
-          connectionLineStyle={{ stroke: '#1e40af', strokeWidth: 2 }}
+          connectionLineStyle={{ stroke: '#ffffff', strokeWidth: 2 }}
           defaultEdgeOptions={{
             type: 'smoothstep',
             animated: true,
-            style: { stroke: '#1e40af', strokeWidth: 2 },
-            markerEnd: { type: 'arrowclosed', color: '#1e40af' },
+            style: { stroke: '#ffffff', strokeWidth: 2 },
+            markerEnd: { type: 'arrowclosed', color: '#ffffff' },
           }}
         >
-          <Background variant="dots" gap={25} size={1.5} color="#cbd5e1" />
+          <Background 
+            variant="dots" 
+            gap={30} 
+            size={2} 
+            color="rgba(59, 130, 246, 0.3)" 
+            className="opacity-50"
+          />
           <Controls
             showZoom={true}
             showFitView={true}
@@ -758,16 +856,14 @@ export const nodeTypes = {
             className="bg-white/95 backdrop-blur-sm border border-slate-300 rounded-lg shadow-lg"
           />
           <MiniMap
-            nodeStrokeColor={(n) => {
-              if (n.type === 'container') return '#1e40af';
-              return '#000000';
-            }}
+            nodeStrokeColor={(n) => '#000000'}
             nodeColor={(n) => {
               if (n.type === 'container') return n.data.backgroundColor || '#dbeafe';
               return '#ffffff';
             }}
             nodeBorderRadius={12}
             className="bg-white/95 backdrop-blur-sm border border-slate-300 rounded-lg shadow-lg"
+            maskColor="rgba(15, 23, 42, 0.8)"
           />
         </ReactFlow>
       </div>
@@ -775,4 +871,4 @@ export const nodeTypes = {
   );
 };
 
-export default FrontendFlow;
+export default FullStackFlow;

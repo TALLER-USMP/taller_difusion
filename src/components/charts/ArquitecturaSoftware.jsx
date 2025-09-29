@@ -6,9 +6,9 @@ import { Code, Server, Shield, Layers, Cloud } from 'lucide-react';
 // Importar los componentes de diagramas
 import FrontendFlow from './software/FrontendFlow';
 import BackendFlow from './software/BackendFlow';
-// import DevSecOpsFlow from './software/DevSecOpsFlow';
-// import MicroserviciosFlow from './software/MicroserviciosFlow';
-// import InfraestructuraFlow from './software/InfraestructuraFlow';
+import DevSecOpsFlow from './software/DevSecOpsFlow';
+import FullStackFlow from './software/FullStackFlow';
+import InfraestructuraFlow from './software/InfraestructuraFlow';
 
 const ArquitecturaSoftware = () => {
   const [activeSubTab, setActiveSubTab] = useState('frontend');
@@ -28,7 +28,7 @@ const ArquitecturaSoftware = () => {
       label: 'Backend', 
       icon: Server,
       description: 'APIs REST, Node.js y lógica de negocio',
-      component: BackendFlow, // Placeholder
+      component: BackendFlow,
       technologies: ['Node.js', 'Express', 'Azure Functions', 'Cosmos DB']
     },
     { 
@@ -36,15 +36,15 @@ const ArquitecturaSoftware = () => {
       label: 'DevSecOps', 
       icon: Shield,
       description: 'Pipeline CI/CD, seguridad y despliegue automático',
-      component: null, // Placeholder
-      technologies: ['Azure DevOps', 'GitHub Actions', 'Docker', 'Azure AD']
+      component: DevSecOpsFlow, // ✅ IMPLEMENTADO
+      technologies: ['GitHub Actions', 'Azure DevOps', 'Docker', 'GitHub Secrets', 'Azure AD']
     },
     { 
-      id: 'microservicios', 
-      label: 'Microservicios', 
+      id: 'fullstack', 
+      label: 'Full Stack', 
       icon: Layers,
       description: 'Arquitectura distribuida y funciones independientes',
-      component: null, // Placeholder
+      component: FullStackFlow, // Placeholder
       technologies: ['Azure Functions', 'API Gateway', 'Service Bus', 'Redis']
     },
     { 
@@ -52,7 +52,7 @@ const ArquitecturaSoftware = () => {
       label: 'Infraestructura', 
       icon: Cloud,
       description: 'Servicios Azure, almacenamiento y networking',
-      component: null, // Placeholder
+      component: InfraestructuraFlow, // Placeholder
       technologies: ['Azure App Service', 'Cosmos DB', 'Azure Storage', 'Front Door']
     }
   ];

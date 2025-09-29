@@ -37,7 +37,7 @@ const WikiArticle = ({ article }) => {
           {article.lastUpdated && (
             <div className="flex items-center gap-2">
               <Calendar className="w-4 h-4" />
-              <span>Actualizado: 12 de Setiembre de 2025</span>
+              <span>Actualizado: 22 de Setiembre de 2025</span>
             </div>
           )}
           

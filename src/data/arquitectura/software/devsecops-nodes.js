@@ -1,403 +1,605 @@
-// src/data/arquitectura/software/devsecops-nodes.js
-export const frontendNodes = [
+// Exportado desde el editor DevSecOps
+const BASE_URL = import.meta.env.BASE_URL;
+
+export const devsecopsNodes = [
   {
-    "id": "developer-frontend",
+    "id": "custom-node-3",
     "type": "custom",
     "position": {
-      "x": -140.0794862315522,
-      "y": 260.42880316308793
+      "x": -1136.5438537855496,
+      "y": -303.24030707830093
     },
     "data": {
-      "label": "DEVELOPER FRONTEND",
-      "icon": "/assets/images/icons/developer.svg",
-      "type": "person",
-      "description": "Desarrollador Frontend"
+      "label": "SCRUM",
+      "type": "scrum",
+      "icon": "/assets/images/icons/devsecops/scrum.svg"
+    },
+    "style": undefined,
+    "width": undefined,
+    "height": undefined,
+    "measured": {
+      "width": 200,
+      "height": 120
     }
   },
   {
-    "id": "github",
+    "id": "custom-node-6",
     "type": "custom",
     "position": {
-      "x": 206.47955872196422,
-      "y": 252.69850634295221
+      "x": -838.0615433338149,
+      "y": -152.3492350228023
     },
     "data": {
-      "label": "GitHub",
-      "icon": "/taller_difusion/assets/images/icons/github.svg",
-      "type": "service",
-      "description": "Control de versiones"
+      "label": "Branch",
+      "type": "process",
+      "icon": "/assets/images/icons/devsecops/branch.svg",
+      "description": "Rama Prueba"
+    },
+    "style": undefined,
+    "width": undefined,
+    "height": undefined,
+    "measured": {
+      "width": 200,
+      "height": 140
     }
   },
   {
-    "id": "azure-devops",
+    "id": "custom-node-7",
     "type": "custom",
     "position": {
-      "x": 207.17192761106372,
-      "y": 514.653765799134
+      "x": -515.7620945205658,
+      "y": -152.5742795342261
     },
     "data": {
-      "label": "Azure DevOps",
-      "icon": "/taller_difusion/assets/images/icons/azure-devops.svg",
-      "type": "service",
-      "description": "CI/CD Pipeline"
+      "label": "Approval Process",
+      "type": "process",
+      "icon": null,
+      "description": "Tareas"
+    },
+    "style": undefined,
+    "width": undefined,
+    "height": undefined,
+    "measured": {
+      "width": 200,
+      "height": 124
     }
   },
   {
-    "id": "azure-ad",
+    "id": "custom-node-8",
     "type": "custom",
     "position": {
-      "x": 545.4797503744812,
-      "y": 722.3765145665932
+      "x": -186.91458498869594,
+      "y": -144.20689634814755
     },
     "data": {
-      "label": "AZURE AD",
-      "icon": "/taller_difusion/assets/images/icons/azure-ad.svg",
-      "type": "service",
-      "description": "Autenticación"
+      "label": "Pull Request",
+      "type": "process",
+      "icon": "/assets/images/icons/devsecops/request.svg"
+    },
+    "style": undefined,
+    "width": undefined,
+    "height": undefined,
+    "measured": {
+      "width": 200,
+      "height": 120
     }
   },
   {
-    "id": "azure-key-vault",
+    "id": "custom-node-9",
     "type": "custom",
     "position": {
-      "x": 695.6886323832197,
-      "y": 972.7432749135851
+      "x": 159.9453904074157,
+      "y": -152.13650330606575
     },
     "data": {
-      "label": "AZURE KEY VAULT",
-      "icon": "/taller_difusion/assets/images/icons/azure-key-vault.svg",
-      "type": "service",
-      "description": "Gestión de secretos"
+      "label": "Branch",
+      "type": "process",
+      "icon": "/assets/images/icons/devsecops/branch.svg",
+      "description": "Rama Main"
+    },
+    "style": undefined,
+    "width": undefined,
+    "height": undefined,
+    "measured": {
+      "width": 200,
+      "height": 140
     }
   },
   {
-    "id": "azure-container-registry",
+    "id": "custom-node-10",
     "type": "custom",
     "position": {
-      "x": 327.4788359647362,
-      "y": 973.3379249990513
+      "x": -336.00374715184677,
+      "y": 37.51904353955119
     },
     "data": {
-      "label": "AZURE CONTAINER REGISTRY",
-      "icon": "/taller_difusion/assets/images/icons/azure-container-registry.svg",
-      "type": "service",
-      "description": "Registro de contenedores"
+      "label": "GitHub Secrets",
+      "type": "process",
+      "icon": "/assets/images/icons/devsecops/secrets.svg"
+    },
+    "style": undefined,
+    "width": undefined,
+    "height": undefined,
+    "measured": {
+      "width": 200,
+      "height": 120
     }
   },
   {
-    "id": "azure-monitor",
+    "id": "custom-node-11",
     "type": "custom",
     "position": {
-      "x": -114.69981624567492,
-      "y": 730.7931199190342
+      "x": 111.29732569551845,
+      "y": 66.5986771838299
     },
     "data": {
-      "label": "AZURE MONITOR",
-      "icon": "/taller_difusion/assets/images/icons/azure-monitor.svg",
-      "type": "service",
-      "description": "Monitoreo y telemetría"
+      "label": "GitHub Actions Test + Plan",
+      "type": "process",
+      "icon": "/assets/images/icons/devsecops/actions.svg"
+    },
+    "style": undefined,
+    "width": undefined,
+    "height": undefined,
+    "measured": {
+      "width": 263,
+      "height": 120
     }
   },
   {
-    "id": "azure-app-insights",
+    "id": "custom-node-12",
     "type": "custom",
     "position": {
-      "x": -117.66087956125604,
-      "y": 510.34031805509005
+      "x": -769.5094785967242,
+      "y": 210.81521415979773
     },
     "data": {
-      "label": "APPLICATION INSIGHTS",
-      "icon": "/taller_difusion/assets/images/icons/azure-app-insights.svg",
-      "type": "service",
-      "description": "Análisis de rendimiento"
+      "label": "Repositorio",
+      "type": "repository",
+      "icon": "/assets/images/icons/devsecops/github.svg"
+    },
+    "style": undefined,
+    "width": undefined,
+    "height": undefined,
+    "measured": {
+      "width": 200,
+      "height": 120
     }
   },
   {
-    "id": "azure-test-plans",
+    "id": "custom-node-13",
     "type": "custom",
     "position": {
-      "x": 207.50456760957286,
-      "y": 722.9046962642234
+      "x": -443.4692138307204,
+      "y": 296.05638479723956
     },
     "data": {
-      "label": "AZURE TEST PLANS",
-      "icon": "/taller_difusion/assets/images/icons/azure-test-plans.svg",
-      "type": "service",
-      "description": "Testing automatizado"
+      "label": "GitHub Secrets",
+      "type": "process",
+      "icon": "/assets/images/icons/devsecops/secrets.svg"
+    },
+    "style": undefined,
+    "width": undefined,
+    "height": undefined,
+    "measured": {
+      "width": 200,
+      "height": 120
     }
   },
   {
-    "id": "microfrontends",
+    "id": "custom-node-14",
     "type": "custom",
     "position": {
-      "x": 589.0412583534119,
-      "y": 254.26299930149105
+      "x": -3.0230559571724314,
+      "y": 298.1620019058782
     },
     "data": {
-      "label": "MICROFRONTENDS",
-      "icon": "/taller_difusion/assets/images/icons/microfrontends.svg",
-      "type": "architecture",
-      "description": "Arquitectura modular"
+      "label": "GitHub Actions Deplyment",
+      "type": "process",
+      "icon": "/assets/images/icons/devsecops/actions.svg"
+    },
+    "style": undefined,
+    "width": undefined,
+    "height": undefined,
+    "measured": {
+      "width": 257,
+      "height": 120
     }
   },
   {
-    "id": "azure-front-door",
+    "id": "custom-node-15",
     "type": "custom",
     "position": {
-      "x": 589.2028764769983,
-      "y": 42.99509305040171
+      "x": -1153.1575613463492,
+      "y": 298.50822548018766
     },
     "data": {
-      "label": "AZURE FRONT DOOR",
-      "icon": "/taller_difusion/assets/images/icons/azure-front-door.svg",
-      "type": "service",
-      "description": "CDN y Load Balancer"
+      "label": "Developer Frontend",
+      "type": "developer",
+      "icon": null,
+      "description": undefined
+    },
+    "style": undefined,
+    "width": undefined,
+    "height": undefined,
+    "measured": {
+      "width": 207,
+      "height": 104
     }
   },
   {
-    "id": "web-application",
+    "id": "custom-node-16",
     "type": "custom",
     "position": {
-      "x": 201.78730962380524,
-      "y": 43.69560066855169
+      "x": 965.3697944151452,
+      "y": -557.1479550006959
     },
     "data": {
-      "label": "WEB APPLICATION",
-      "icon": "/taller_difusion/assets/images/icons/web-app.svg",
-      "type": "application",
-      "description": "Aplicación desplegada"
+      "label": "EQUIPO QA",
+      "type": "ci-cd",
+      "icon": "/assets/images/icons/devsecops/scrum.svg"
+    },
+    "style": undefined,
+    "width": undefined,
+    "height": undefined,
+    "measured": {
+      "width": 200,
+      "height": 120
     }
   },
   {
-    "id": "users",
+    "id": "custom-node-17",
     "type": "custom",
     "position": {
-      "x": -158.52673437493794,
-      "y": 43.81641285759146
+      "x": 673.9893043823075,
+      "y": -194.83881652622148
     },
     "data": {
-      "label": "Users",
-      "icon": "/taller_difusion/assets/images/icons/users.svg",
-      "type": "person",
-      "description": "Usuarios finales"
+      "type": "ci-cd",
+      "icon": "/assets/images/icons/devsecops/issues.svg"
+    },
+    "style": undefined,
+    "width": undefined,
+    "height": undefined,
+    "measured": {
+      "width": 265,
+      "height": 108
+    }
+  },
+  {
+    "id": "custom-node-18",
+    "type": "custom",
+    "position": {
+      "x": 865.624864426177,
+      "y": -28.839987411842788
+    },
+    "data": {
+      "type": "security",
+      "icon": "/assets/images/icons/devsecops/selenium.svg"
+    },
+    "style": undefined,
+    "width": undefined,
+    "height": undefined,
+    "measured": {
+      "width": 251,
+      "height": 87
+    }
+  },
+  {
+    "id": "custom-node-19",
+    "type": "custom",
+    "position": {
+      "x": 921.2857625949407,
+      "y": 341.4848279915791
+    },
+    "data": {
+      "type": "repository",
+      "icon": "/assets/images/icons/devsecops/prometheus.svg"
+    },
+    "style": undefined,
+    "width": undefined,
+    "height": undefined,
+    "measured": {
+      "width": 168,
+      "height": 102
+    }
+  },
+  {
+    "id": "custom-node-20",
+    "type": "custom",
+    "position": {
+      "x": 967.2968870389977,
+      "y": -182.25005408267424
+    },
+    "data": {
+      "type": "deployment",
+      "icon": "/assets/images/icons/devsecops/postman.svg"
+    },
+    "style": undefined,
+    "width": undefined,
+    "height": undefined,
+    "measured": {
+      "width": 154,
+      "height": 113
+    }
+  },
+  {
+    "id": "custom-node-21",
+    "type": "custom",
+    "position": {
+      "x": 672.0036324243822,
+      "y": -347.42323135192765
+    },
+    "data": {
+      "type": "monitoring",
+      "icon": "/assets/images/icons/devsecops/playwright.svg"
+    },
+    "style": undefined,
+    "width": undefined,
+    "height": undefined,
+    "measured": {
+      "width": 164,
+      "height": 126
+    }
+  },
+  {
+    "id": "custom-node-22",
+    "type": "custom",
+    "position": {
+      "x": 910.6165969130199,
+      "y": -339.17823845209216
+    },
+    "data": {
+      "type": "monitoring",
+      "icon": "/assets/images/icons/devsecops/cypress.svg"
+    },
+    "style": undefined,
+    "width": undefined,
+    "height": undefined,
+    "measured": {
+      "width": 213,
+      "height": 117
+    }
+  },
+  {
+    "id": "custom-node-23",
+    "type": "custom",
+    "position": {
+      "x": 651.0424525592599,
+      "y": 343.07298230039515
+    },
+    "data": {
+      "type": "security",
+      "icon": "/assets/images/icons/devsecops/grafana.svg"
+    },
+    "style": undefined,
+    "width": undefined,
+    "height": undefined,
+    "measured": {
+      "width": 223,
+      "height": 100
+    }
+  },
+  {
+    "id": "custom-node-24",
+    "type": "custom",
+    "position": {
+      "x": 677.960514263421,
+      "y": -55.946514152668954
+    },
+    "data": {
+      "type": "deployment",
+      "icon": "/assets/images/icons/devsecops/jest.svg"
+    },
+    "style": undefined,
+    "width": undefined,
+    "height": undefined,
+    "measured": {
+      "width": 128,
+      "height": 133
+    }
+  },
+  {
+    "id": "container-1",
+    "type": "container",
+    "position": {
+      "x": 617.5371272810693,
+      "y": 288.85297935989155
+    },
+    "data": {
+      "label": "Monitoreo",
+      "backgroundColor": "#FFFFFF",
+      "icon": undefined
+    },
+    "style": {
+      "width": 300,
+      "height": 200,
+      "zIndex": -1
+    },
+    "width": 522,
+    "height": 196,
+    "measured": {
+      "width": 522,
+      "height": 196
+    }
+  },
+  {
+    "id": "container-2",
+    "type": "container",
+    "position": {
+      "x": 636.6681832547915,
+      "y": -398.27147811877927
+    },
+    "data": {
+      "label": "QA-Test",
+      "backgroundColor": "#FFFFFF",
+      "icon": undefined
+    },
+    "style": {
+      "width": 300,
+      "height": 200,
+      "zIndex": -1
+    },
+    "width": 527,
+    "height": 511,
+    "measured": {
+      "width": 527,
+      "height": 511
+    }
+  },
+  {
+    "id": "container-6",
+    "type": "container",
+    "position": {
+      "x": -1187.728835681826,
+      "y": -322.5986142259926
+    },
+    "data": {
+      "label": "",
+      "backgroundColor": "#FFFFFF",
+      "icon": undefined
+    },
+    "style": {
+      "width": 300,
+      "height": 200,
+      "zIndex": -1
+    },
+    "width": 1653,
+    "height": 848,
+    "measured": {
+      "width": 1653,
+      "height": 848
+    }
+  },
+  {
+    "id": "container-7",
+    "type": "container",
+    "position": {
+      "x": -896.564769872954,
+      "y": -194.59315243055858
+    },
+    "data": {
+      "label": "",
+      "backgroundColor": "#FFFFFF",
+      "icon": undefined
+    },
+    "style": {
+      "width": 300,
+      "height": 200,
+      "zIndex": -1
+    },
+    "width": 1322,
+    "height": 677,
+    "measured": {
+      "width": 1322,
+      "height": 677
     }
   }
 ];
 
-export const frontendEdges = [
+export const devsecopsEdges = [
   {
-    "id": "users-to-monitor",
-    "source": "users",
-    "target": "azure-monitor",
-    "sourceHandle": "top",
-    "targetHandle": "bottom",
-    "type": "smoothstep",
-    "animated": true,
-    "style": {
-      "stroke": "#059669",
-      "strokeWidth": 3
-    },
-    "markerEnd": {
-      "type": "arrowclosed",
-      "color": "#059669"
-    },
-    "label": "User Metrics",
-    "labelStyle": {
-      "fontSize": 18,
-      "fontWeight": 600
-    }
-  },
-  {
-    "id": "test-plans-to-microfrontends",
-    "source": "azure-test-plans",
-    "target": "microfrontends",
-    "sourceHandle": "left",
-    "targetHandle": "right",
+    "id": "xy-edge__custom-node-3right-custom-node-7top",
+    "source": "custom-node-3",
+    "target": "custom-node-7",
+    "sourceHandle": "right",
+    "targetHandle": "top",
     "type": "smoothstep",
     "animated": true,
     "style": {
       "stroke": "#1e40af",
-      "strokeWidth": 3
+      "strokeWidth": 2
     },
     "markerEnd": {
       "type": "arrowclosed",
       "color": "#1e40af"
     },
-    "label": "Deploy to Modules",
+    "label": "Asigna Tareas",
     "labelStyle": {
-      "fontSize": 18,
+      "fontSize": 12,
       "fontWeight": 600
     }
   },
   {
-    "id": "front-door-to-webapp",
-    "source": "azure-front-door",
-    "target": "web-application",
-    "sourceHandle": "left",
-    "targetHandle": "right",
-    "type": "smoothstep",
-    "animated": true,
-    "style": {
-      "stroke": "#059669",
-      "strokeWidth": 3
-    },
-    "markerEnd": {
-      "type": "arrowclosed",
-      "color": "#059669"
-    },
-    "label": "Route Traffic",
-    "labelStyle": {
-      "fontSize": 18,
-      "fontWeight": 600
-    }
-  },
-  {
-    "id": "xy-edge__developer-frontendright-githubleft",
-    "source": "developer-frontend",
-    "target": "github",
+    "id": "xy-edge__custom-node-6right-custom-node-7left",
+    "source": "custom-node-6",
+    "target": "custom-node-7",
     "sourceHandle": "right",
     "targetHandle": "left",
     "type": "smoothstep",
     "animated": true,
     "style": {
-      "stroke": "#0891b2",
+      "stroke": "#1e40af",
       "strokeWidth": 2
     },
     "markerEnd": {
       "type": "arrowclosed",
-      "color": "#0891b2"
+      "color": "#1e40af"
     },
-    "label": "",
+    "label": "cumple <https>",
     "labelStyle": {
       "fontSize": 12,
       "fontWeight": 600
     }
   },
   {
-    "id": "xy-edge__githubbottom-azure-app-insightstop",
-    "source": "github",
-    "target": "azure-app-insights",
-    "sourceHandle": "bottom",
-    "targetHandle": "top",
-    "type": "smoothstep",
-    "animated": true,
-    "style": {
-      "stroke": "#0891b2",
-      "strokeWidth": 2
-    },
-    "markerEnd": {
-      "type": "arrowclosed",
-      "color": "#0891b2"
-    },
-    "label": "",
-    "labelStyle": {
-      "fontSize": 12,
-      "fontWeight": 600
-    }
-  },
-  {
-    "id": "xy-edge__azure-monitorright-azure-test-plansleft",
-    "source": "azure-monitor",
-    "target": "azure-test-plans",
+    "id": "xy-edge__custom-node-7right-custom-node-8left",
+    "source": "custom-node-7",
+    "target": "custom-node-8",
     "sourceHandle": "right",
     "targetHandle": "left",
     "type": "smoothstep",
     "animated": true,
     "style": {
-      "stroke": "#0891b2",
+      "stroke": "#1e40af",
       "strokeWidth": 2
     },
     "markerEnd": {
       "type": "arrowclosed",
-      "color": "#0891b2"
+      "color": "#1e40af"
     },
-    "label": "",
+    "label": "realiza <https>",
     "labelStyle": {
       "fontSize": 12,
       "fontWeight": 600
     }
   },
   {
-    "id": "xy-edge__azure-test-plansright-azure-adleft",
-    "source": "azure-test-plans",
-    "target": "azure-ad",
+    "id": "xy-edge__custom-node-8right-custom-node-9left",
+    "source": "custom-node-8",
+    "target": "custom-node-9",
     "sourceHandle": "right",
     "targetHandle": "left",
     "type": "smoothstep",
     "animated": true,
     "style": {
-      "stroke": "#0891b2",
+      "stroke": "#1e40af",
       "strokeWidth": 2
     },
     "markerEnd": {
       "type": "arrowclosed",
-      "color": "#0891b2"
+      "color": "#1e40af"
     },
-    "label": "",
+    "label": "merge a <https>",
     "labelStyle": {
       "fontSize": 12,
       "fontWeight": 600
     }
   },
   {
-    "id": "xy-edge__azure-adbottom-azure-container-registrytop",
-    "source": "azure-ad",
-    "target": "azure-container-registry",
-    "sourceHandle": "bottom",
-    "targetHandle": "top",
-    "type": "smoothstep",
-    "animated": true,
-    "style": {
-      "stroke": "#0891b2",
-      "strokeWidth": 2
-    },
-    "markerEnd": {
-      "type": "arrowclosed",
-      "color": "#0891b2"
-    },
-    "label": "",
-    "labelStyle": {
-      "fontSize": 12,
-      "fontWeight": 600
-    }
-  },
-  {
-    "id": "xy-edge__azure-adbottom-azure-key-vaulttop",
-    "source": "azure-ad",
-    "target": "azure-key-vault",
-    "sourceHandle": "bottom",
-    "targetHandle": "top",
-    "type": "smoothstep",
-    "animated": true,
-    "style": {
-      "stroke": "#0891b2",
-      "strokeWidth": 2
-    },
-    "markerEnd": {
-      "type": "arrowclosed",
-      "color": "#0891b2"
-    },
-    "label": "",
-    "labelStyle": {
-      "fontSize": 12,
-      "fontWeight": 600
-    }
-  },
-  {
-    "id": "xy-edge__usersright-web-applicationleft",
-    "source": "users",
-    "target": "web-application",
+    "id": "xy-edge__custom-node-12right-custom-node-6left",
+    "source": "custom-node-12",
+    "target": "custom-node-6",
     "sourceHandle": "right",
     "targetHandle": "left",
     "type": "smoothstep",
     "animated": true,
     "style": {
-      "stroke": "#0891b2",
+      "stroke": "#1e40af",
       "strokeWidth": 2
     },
     "markerEnd": {
       "type": "arrowclosed",
-      "color": "#0891b2"
+      "color": "#1e40af"
     },
     "label": "",
     "labelStyle": {
@@ -406,42 +608,174 @@ export const frontendEdges = [
     }
   },
   {
-    "id": "xy-edge__web-applicationright-azure-front-doorleft",
-    "source": "web-application",
-    "target": "azure-front-door",
+    "id": "xy-edge__custom-node-13right-custom-node-14left",
+    "source": "custom-node-13",
+    "target": "custom-node-14",
     "sourceHandle": "right",
     "targetHandle": "left",
     "type": "smoothstep",
     "animated": true,
     "style": {
-      "stroke": "#0891b2",
+      "stroke": "#1e40af",
       "strokeWidth": 2
     },
     "markerEnd": {
       "type": "arrowclosed",
-      "color": "#0891b2"
+      "color": "#1e40af"
     },
-    "label": "",
+    "label": "despliegue continuo <https>",
     "labelStyle": {
       "fontSize": 12,
       "fontWeight": 600
     }
   },
   {
-    "id": "xy-edge__githubright-microfrontendsleft",
-    "source": "github",
-    "target": "microfrontends",
+    "id": "xy-edge__custom-node-15right-custom-node-12left",
+    "source": "custom-node-15",
+    "target": "custom-node-12",
     "sourceHandle": "right",
     "targetHandle": "left",
     "type": "smoothstep",
     "animated": true,
     "style": {
-      "stroke": "#0891b2",
+      "stroke": "#1e40af",
       "strokeWidth": 2
     },
     "markerEnd": {
       "type": "arrowclosed",
-      "color": "#0891b2"
+      "color": "#1e40af"
+    },
+    "label": "sube codigo <https>",
+    "labelStyle": {
+      "fontSize": 12,
+      "fontWeight": 600
+    }
+  },
+  {
+    "id": "xy-edge__custom-node-11bottom-custom-node-12top",
+    "source": "custom-node-11",
+    "target": "custom-node-12",
+    "sourceHandle": "bottom",
+    "targetHandle": "top",
+    "type": "smoothstep",
+    "animated": true,
+    "style": {
+      "stroke": "#1e40af",
+      "strokeWidth": 2
+    },
+    "markerEnd": {
+      "type": "arrowclosed",
+      "color": "#1e40af"
+    },
+    "label": "resultados <https>",
+    "labelStyle": {
+      "fontSize": 12,
+      "fontWeight": 600
+    }
+  },
+  {
+    "id": "xy-edge__custom-node-9bottom-custom-node-10left",
+    "source": "custom-node-9",
+    "target": "custom-node-10",
+    "sourceHandle": "bottom",
+    "targetHandle": "left",
+    "type": "smoothstep",
+    "animated": true,
+    "style": {
+      "stroke": "#1e40af",
+      "strokeWidth": 2
+    },
+    "markerEnd": {
+      "type": "arrowclosed",
+      "color": "#1e40af"
+    },
+    "label": "Activar",
+    "labelStyle": {
+      "fontSize": 12,
+      "fontWeight": 600
+    }
+  },
+  {
+    "id": "xy-edge__custom-node-16bottom-container-2top",
+    "source": "custom-node-16",
+    "target": "container-2",
+    "sourceHandle": "bottom",
+    "targetHandle": "top",
+    "type": "smoothstep",
+    "animated": true,
+    "style": {
+      "stroke": "#1e40af",
+      "strokeWidth": 2
+    },
+    "markerEnd": {
+      "type": "arrowclosed",
+      "color": "#1e40af"
+    },
+    "label": "HTTPS/PRUEBAS",
+    "labelStyle": {
+      "fontSize": 12,
+      "fontWeight": 600
+    }
+  },
+  {
+    "id": "xy-edge__custom-node-11right-container-2left",
+    "source": "custom-node-11",
+    "target": "container-2",
+    "sourceHandle": "right",
+    "targetHandle": "left",
+    "type": "smoothstep",
+    "animated": true,
+    "style": {
+      "stroke": "#1e40af",
+      "strokeWidth": 2
+    },
+    "markerEnd": {
+      "type": "arrowclosed",
+      "color": "#1e40af"
+    },
+    "label": "HTTPS/REST",
+    "labelStyle": {
+      "fontSize": 12,
+      "fontWeight": 600
+    }
+  },
+  {
+    "id": "xy-edge__container-2bottom-custom-node-11top",
+    "source": "container-2",
+    "target": "custom-node-11",
+    "sourceHandle": "bottom",
+    "targetHandle": "top",
+    "type": "smoothstep",
+    "animated": true,
+    "style": {
+      "stroke": "#1e40af",
+      "strokeWidth": 2
+    },
+    "markerEnd": {
+      "type": "arrowclosed",
+      "color": "#1e40af"
+    },
+    "label": "HTTPS/REST",
+    "labelStyle": {
+      "fontSize": 12,
+      "fontWeight": 600
+    }
+  },
+  {
+    "id": "xy-edge__custom-node-10right-custom-node-11left",
+    "source": "custom-node-10",
+    "target": "custom-node-11",
+    "sourceHandle": "right",
+    "targetHandle": "left",
+    "type": "smoothstep",
+    "animated": true,
+    "style": {
+      "stroke": "#1e40af",
+      "strokeWidth": 2
+    },
+    "markerEnd": {
+      "type": "arrowclosed",
+      "color": "#1e40af"
     },
     "label": "",
     "labelStyle": {
@@ -450,66 +784,88 @@ export const frontendEdges = [
     }
   },
   {
-    "id": "xy-edge__azure-front-doorbottom-microfrontendstop",
-    "source": "azure-front-door",
-    "target": "microfrontends",
-    "sourceHandle": "bottom",
-    "targetHandle": "top",
+    "id": "xy-edge__custom-node-14right-container-1left",
+    "source": "custom-node-14",
+    "target": "container-1",
+    "sourceHandle": "right",
+    "targetHandle": "left",
     "type": "smoothstep",
     "animated": true,
     "style": {
-      "stroke": "#0891b2",
+      "stroke": "#1e40af",
       "strokeWidth": 2
     },
     "markerEnd": {
       "type": "arrowclosed",
-      "color": "#0891b2"
+      "color": "#1e40af"
     },
-    "label": "",
+    "label": "Metrics Export",
     "labelStyle": {
       "fontSize": 12,
       "fontWeight": 600
     }
   },
   {
-    "id": "xy-edge__azure-app-insightsbottom-azure-monitortop",
-    "source": "azure-app-insights",
-    "target": "azure-monitor",
+    "id": "xy-edge__custom-node-11bottom-container-1top",
+    "source": "custom-node-11",
+    "target": "container-1",
     "sourceHandle": "bottom",
     "targetHandle": "top",
     "type": "smoothstep",
     "animated": true,
     "style": {
-      "stroke": "#0891b2",
+      "stroke": "#1e40af",
       "strokeWidth": 2
     },
     "markerEnd": {
       "type": "arrowclosed",
-      "color": "#0891b2"
+      "color": "#1e40af"
     },
-    "label": "",
+    "label": "Metrics Export",
     "labelStyle": {
       "fontSize": 12,
       "fontWeight": 600
     }
   },
   {
-    "id": "xy-edge__githubbottom-azure-devopstop",
-    "source": "github",
-    "target": "azure-devops",
+    "id": "xy-edge__custom-node-12bottom-custom-node-13left",
+    "source": "custom-node-12",
+    "target": "custom-node-13",
+    "sourceHandle": "bottom",
+    "targetHandle": "left",
+    "type": "smoothstep",
+    "animated": true,
+    "style": {
+      "stroke": "#1e40af",
+      "strokeWidth": 2
+    },
+    "markerEnd": {
+      "type": "arrowclosed",
+      "color": "#1e40af"
+    },
+    "label": "Activar",
+    "labelStyle": {
+      "fontSize": 12,
+      "fontWeight": 600
+    }
+  },
+  {
+    "id": "xy-edge__custom-node-7bottom-custom-node-15top",
+    "source": "custom-node-7",
+    "target": "custom-node-15",
     "sourceHandle": "bottom",
     "targetHandle": "top",
     "type": "smoothstep",
     "animated": true,
     "style": {
-      "stroke": "#0891b2",
+      "stroke": "#1e40af",
       "strokeWidth": 2
     },
     "markerEnd": {
       "type": "arrowclosed",
-      "color": "#0891b2"
+      "color": "#1e40af"
     },
-    "label": "",
+    "label": "realiza tareas <https>",
     "labelStyle": {
       "fontSize": 12,
       "fontWeight": 600
@@ -518,5 +874,6 @@ export const frontendEdges = [
 ];
 
 export const nodeTypes = {
-  custom: 'customNode'
+  custom: 'customNode',
+  container: 'containerNode'
 };

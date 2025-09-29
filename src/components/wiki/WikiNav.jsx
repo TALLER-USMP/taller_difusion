@@ -65,7 +65,7 @@ const WikiNav = ({ activeSection, onSectionChange }) => {
           Sistema de Gestión Académica
         </p>
         <div className="mt-2 text-xs text-[#A4101A] font-medium">
-          📊 Semana 6/16 - Fase de Desarrollo
+          📊 Semana 7/16 - Fase de Desarrollo
         </div>
       </div>
 
@@ -121,7 +121,7 @@ const WikiNav = ({ activeSection, onSectionChange }) => {
           </div>
           <div className="pt-2 border-t border-gray-100">
             <p className="font-medium">Última actualización:</p>
-            <p>13 de Septiembre 2025</p>
+            <p>22 de Setiembre 2025</p>
           </div>
         </div>
       </div>

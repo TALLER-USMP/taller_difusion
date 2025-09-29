@@ -22,7 +22,7 @@ const Arquitectura = () => {
     },
     {
       id: 'metodologia',
-      label: 'Arquitectura Metodológica',
+      label: 'Metodológica Scrum',
       icon: GitBranch,
       description: 'Procesos, metodologías ágiles y flujos de trabajo del equipo',
       color: 'bg-green-600',
@@ -30,7 +30,7 @@ const Arquitectura = () => {
     },
     {
       id: 'roles',
-      label: 'Arquitectura de Roles',
+      label: 'Mapa de Roles',
       icon: Users,
       description: 'Organización del equipo, responsabilidades y comunicación',
       color: 'bg-purple-600',
