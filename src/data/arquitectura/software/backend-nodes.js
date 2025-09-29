@@ -12,7 +12,7 @@ export const backendNodes = [
     "data": {
       "label": "SCRUM",
       "type": "scrum",
-      "icon": "/assets/images/icons/devsecops/scrum.svg"
+      "icon": `${BASE_URL}assets/images/icons/devsecops/scrum.svg`
     },
     "style": undefined,
     "width": undefined,
@@ -32,7 +32,7 @@ export const backendNodes = [
     "data": {
       "label": "Branch",
       "type": "process",
-      "icon": "/assets/images/icons/devsecops/branch.svg",
+      "icon": `${BASE_URL}assets/images/icons/devsecops/branch.svg`,
       "description": "Rama Prueba"
     },
     "style": undefined,
@@ -74,7 +74,7 @@ export const backendNodes = [
     "data": {
       "label": "Pull Request",
       "type": "process",
-      "icon": "/assets/images/icons/devsecops/request.svg"
+      "icon": `${BASE_URL}assets/images/icons/devsecops/request.svg`,
     },
     "style": undefined,
     "width": undefined,
@@ -94,7 +94,7 @@ export const backendNodes = [
     "data": {
       "label": "Branch",
       "type": "process",
-      "icon": "/assets/images/icons/devsecops/branch.svg",
+      "icon": `${BASE_URL}assets/images/icons/devsecops/branch.svg`,
       "description": "Rama Main"
     },
     "style": undefined,
@@ -115,7 +115,7 @@ export const backendNodes = [
     "data": {
       "label": "GitHub Secrets",
       "type": "process",
-      "icon": "/assets/images/icons/devsecops/secrets.svg"
+      "icon": `${BASE_URL}assets/images/icons/devsecops/secrets.svg`,
     },
     "style": undefined,
     "width": undefined,
@@ -135,7 +135,7 @@ export const backendNodes = [
     "data": {
       "label": "GitHub Actions Test + Plan",
       "type": "process",
-      "icon": "/assets/images/icons/devsecops/actions.svg"
+      "icon": `${BASE_URL}assets/images/icons/devsecops/actions.svg`,
     },
     "style": undefined,
     "width": undefined,
@@ -155,7 +155,7 @@ export const backendNodes = [
     "data": {
       "label": "Repositorio",
       "type": "repository",
-      "icon": "/assets/images/icons/devsecops/github.svg"
+      "icon": `${BASE_URL}assets/images/icons/devsecops/github.svg`,
     },
     "style": undefined,
     "width": undefined,
@@ -175,7 +175,7 @@ export const backendNodes = [
     "data": {
       "label": "GitHub Secrets",
       "type": "process",
-      "icon": "/assets/images/icons/devsecops/secrets.svg"
+      "icon": `${BASE_URL}assets/images/icons/devsecops/secrets.svg`,
     },
     "style": undefined,
     "width": undefined,
@@ -195,7 +195,7 @@ export const backendNodes = [
     "data": {
       "label": "GitHub Actions Deplyment",
       "type": "process",
-      "icon": "/assets/images/icons/devsecops/actions.svg"
+      "icon": `${BASE_URL}assets/images/icons/devsecops/actions.svg`,
     },
     "style": undefined,
     "width": undefined,
@@ -236,7 +236,7 @@ export const backendNodes = [
     "data": {
       "label": "EQUIPO QA",
       "type": "ci-cd",
-      "icon": "/assets/images/icons/devsecops/scrum.svg"
+      "icon": `${BASE_URL}assets/images/icons/devsecops/scrum.svg`,
     },
     "style": undefined,
     "width": undefined,
@@ -255,7 +255,7 @@ export const backendNodes = [
     },
     "data": {
       "type": "ci-cd",
-      "icon": "/assets/images/icons/devsecops/issues.svg"
+      "icon": `${BASE_URL}assets/images/icons/devsecops/issues.svg`,
     },
     "style": undefined,
     "width": undefined,
@@ -274,7 +274,7 @@ export const backendNodes = [
     },
     "data": {
       "type": "security",
-      "icon": "/assets/images/icons/devsecops/selenium.svg"
+      "icon": `${BASE_URL}assets/images/icons/devsecops/selenium.svg`,
     },
     "style": undefined,
     "width": undefined,
@@ -293,7 +293,7 @@ export const backendNodes = [
     },
     "data": {
       "type": "repository",
-      "icon": "/assets/images/icons/devsecops/prometheus.svg"
+      "icon": `${BASE_URL}assets/images/icons/devsecops/prometheus.svg`,
     },
     "style": undefined,
     "width": undefined,
@@ -312,7 +312,7 @@ export const backendNodes = [
     },
     "data": {
       "type": "deployment",
-      "icon": "/assets/images/icons/devsecops/postman.svg"
+      "icon": `${BASE_URL}assets/images/icons/devsecops/postman.svg`,
     },
     "style": undefined,
     "width": undefined,
@@ -331,7 +331,7 @@ export const backendNodes = [
     },
     "data": {
       "type": "monitoring",
-      "icon": "/assets/images/icons/devsecops/playwright.svg"
+      "icon": `${BASE_URL}assets/images/icons/devsecops/playwright.svg`,
     },
     "style": undefined,
     "width": undefined,
@@ -350,7 +350,7 @@ export const backendNodes = [
     },
     "data": {
       "type": "monitoring",
-      "icon": "/assets/images/icons/devsecops/cypress.svg"
+      "icon": `${BASE_URL}assets/images/icons/devsecops/cypress.svg`,
     },
     "style": undefined,
     "width": undefined,
@@ -369,7 +369,7 @@ export const backendNodes = [
     },
     "data": {
       "type": "security",
-      "icon": "/assets/images/icons/devsecops/grafana.svg"
+      "icon": `${BASE_URL}assets/images/icons/devsecops/grafana.svg`,
     },
     "style": undefined,
     "width": undefined,
@@ -388,7 +388,7 @@ export const backendNodes = [
     },
     "data": {
       "type": "deployment",
-      "icon": "/assets/images/icons/devsecops/jest.svg"
+      "icon": `${BASE_URL}assets/images/icons/devsecops/jest.svg`,
     },
     "style": undefined,
     "width": undefined,
@@ -408,7 +408,7 @@ export const backendNodes = [
     "data": {
       "label": "PROY USMP FIA EPICS",
       "type": "process",
-      "icon": "/assets/images/icons/backend/proyecto-usmp.svg"
+      "icon": `${BASE_URL}assets/images/icons/backend/proyecto-usmp.svg`,
     },
     "style": undefined,
     "width": undefined,
@@ -428,7 +428,7 @@ export const backendNodes = [
     "data": {
       "label": "function usmp fia",
       "type": "monitoring",
-      "icon": "/assets/images/icons/infraestructura/fuction.svg"
+      "icon": `${BASE_URL}assets/images/icons/infraestructura/fuction.svg`,
     },
     "style": undefined,
     "width": undefined,
@@ -448,7 +448,7 @@ export const backendNodes = [
     "data": {
       "label": "storage usmp fia",
       "type": "repository",
-      "icon": "/assets/images/icons/fullstack/store.svg"
+      "icon": `${BASE_URL}assets/images/icons/fullstack/store.svg`,
     },
     "style": undefined,
     "width": undefined,
@@ -467,7 +467,7 @@ export const backendNodes = [
     },
     "data": {
       "type": "developer",
-      "icon": "/assets/images/icons/fullstack/supabase.svg"
+      "icon": `${BASE_URL}assets/images/icons/fullstack/supabase.svg`,
     },
     "style": undefined,
     "width": undefined,
