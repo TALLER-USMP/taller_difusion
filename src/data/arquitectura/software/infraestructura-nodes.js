@@ -12,7 +12,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "Internet (HTTP)",
       "type": "client",
-      "icon": "/assets/images/icons/infraestructura/internet.svg"
+      "icon": `${BASE_URL}assets/images/icons/infraestructura/internet.svg`,
     },
     "style": undefined,
     "width": undefined,
@@ -32,7 +32,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "Director Admin",
       "type": "client",
-      "icon": "/assets/images/icons/infraestructura/directorAdmin.svg"
+      "icon": `${BASE_URL}assets/images/icons/infraestructura/directorAdmin.svg`,
     },
     "style": undefined,
     "width": undefined,
@@ -52,7 +52,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "Function Silabo",
       "type": "storage",
-      "icon": "/assets/images/icons/infraestructura/fuction.svg"
+      "icon": `${BASE_URL}assets/images/icons/infraestructura/fuction.svg`,
     },
     "style": undefined,
     "width": undefined,
@@ -72,7 +72,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "Web App 1 SGA - USMP",
       "type": "gateway",
-      "icon": "/assets/images/icons/infraestructura/sga.svg"
+      "icon": `${BASE_URL}assets/images/icons/infraestructura/sga.svg`,
     },
     "style": undefined,
     "width": undefined,
@@ -92,7 +92,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "Usuario 3",
       "type": "compute",
-      "icon": "/assets/images/icons/infraestructura/userAzure.svg"
+      "icon": `${BASE_URL}assets/images/icons/infraestructura/userAzure.svg`,
     },
     "style": undefined,
     "width": undefined,
@@ -112,7 +112,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "Usuario 2",
       "type": "compute",
-      "icon": "/assets/images/icons/infraestructura/userAzure.svg"
+      "icon": `${BASE_URL}assets/images/icons/infraestructura/userAzure.svg`,
     },
     "style": undefined,
     "width": undefined,
@@ -132,7 +132,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "Usuario 1",
       "type": "compute",
-      "icon": "/assets/images/icons/infraestructura/userAzure.svg"
+      "icon": `${BASE_URL}assets/images/icons/infraestructura/userAzure.svg`,
     },
     "style": undefined,
     "width": undefined,
@@ -152,7 +152,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "Worked 1",
       "type": "serverless",
-      "icon": "/assets/images/icons/infraestructura/worked.svg"
+      "icon": `${BASE_URL}assets/images/icons/infraestructura/worked.svg`,
     },
     "style": undefined,
     "width": undefined,
@@ -172,7 +172,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "Grupo de Recursos - Sistema de Gestión Académica - USMP",
       "type": "serverless",
-      "icon": "/assets/images/icons/infraestructura/recursosAzure.svg"
+      "icon": `${BASE_URL}assets/images/icons/infraestructura/recursosAzure.svg`,
     },
     "style": undefined,
     "width": undefined,
@@ -192,7 +192,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "GitHub",
       "type": "storage",
-      "icon": "/assets/images/icons/fullstack/github.svg"
+      "icon": `${BASE_URL}assets/images/icons/fullstack/github.svg`,
     },
     "style": undefined,
     "width": undefined,
@@ -212,7 +212,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "Almacenamiento",
       "type": "storage",
-      "icon": "/assets/images/icons/infraestructura/almacenamiento.svg"
+      "icon": `${BASE_URL}assets/images/icons/infraestructura/almacenamiento.svg`,
     },
     "style": undefined,
     "width": undefined,
@@ -232,7 +232,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "Worked 3",
       "type": "serverless",
-      "icon": "/assets/images/icons/infraestructura/worked.svg"
+      "icon": `${BASE_URL}assets/images/icons/infraestructura/worked.svg`,
     },
     "style": undefined,
     "width": undefined,
@@ -252,7 +252,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "Blob Storage sga usmp",
       "type": "storage",
-      "icon": "/assets/images/icons/fullstack/store.svg"
+      "icon": `${BASE_URL}assets/images/icons/fullstack/store.svg`,
     },
     "style": undefined,
     "width": undefined,
@@ -272,7 +272,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "Worked 2",
       "type": "serverless",
-      "icon": "/assets/images/icons/infraestructura/worked.svg"
+      "icon": `${BASE_URL}assets/images/icons/infraestructura/worked.svg`,
     },
     "style": undefined,
     "width": undefined,
@@ -292,7 +292,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "Suscripción Azure - Sistema de Gestión Académica - USMP",
       "type": "security",
-      "icon": "/assets/images/icons/infraestructura/keyAzure.svg"
+      "icon": `${BASE_URL}assets/images/icons/infraestructura/keyAzure.svg`,
     },
     "style": undefined,
     "width": undefined,
@@ -312,7 +312,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "db-supabase-usmp-fia",
       "type": "database",
-      "icon": "/assets/images/icons/infraestructura/fuction.svg"
+      "icon": `${BASE_URL}assets/images/icons/infraestructura/fuction.svg`,
     },
     "style": undefined,
     "width": undefined,
@@ -332,7 +332,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "SRV - App Service",
       "type": "gateway",
-      "icon": "/assets/images/icons/infraestructura/recursosAzure.svg"
+      "icon": `${BASE_URL}assets/images/icons/infraestructura/recursosAzure.svg`,
     },
     "style": undefined,
     "width": undefined,

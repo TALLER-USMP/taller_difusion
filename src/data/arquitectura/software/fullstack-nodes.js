@@ -288,7 +288,7 @@ export const fullStackNodes = [
     },
     "data": {
       "type": "compute",
-      "icon": "/assets/images/icons/devsecops/postman.svg"
+      "icon": `${BASE_URL}assets/images/icons/devsecops/postman.svg`,
     },
     "style": undefined,
     "width": undefined,
