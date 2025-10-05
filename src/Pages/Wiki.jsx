@@ -184,11 +184,11 @@ const wikiData = {
   },
 
   avances: {
-    title: 'Avances del Proyecto (Semanas 1-6)',
-    description: 'Progreso detallado y logros alcanzados en las primeras 6 semanas',
-    lastUpdated: '2025-09-13',
+    title: 'Avances del Proyecto (Semanas 1-9)',
+    description: 'Progreso detallado y logros alcanzados hasta la Semana 9',
+    lastUpdated: '2025-10-04',
     author: 'Equipo de Desarrollo',
-    tags: ['Avances', 'Semanas 1-6', 'Logros', 'Fases'],
+    tags: ['Avances', 'Semanas 1-9', 'Logros', 'Fases'],
     sections: [
       {
         title: 'Fase 1: Capacitación y Planificación (Semanas 1-2) ✅',
@@ -237,28 +237,44 @@ const wikiData = {
         ]
       },
       {
-        title: 'Fase 4: Desarrollo Activo (Semana 7+) 🚧',
+        title: 'Fase 4: Pausa Académica y Retorno (Semanas 7-9) ✅',
         content: [
-          'Transición exitosa hacia fase de desarrollo activo.',
-          'Equipos listos para iniciar primer sprint de desarrollo.',
-          'Configuración de herramientas QA y pipelines CI/CD en progreso.'
+          'Semanas 7-8: Período de exámenes sin actividades del proyecto (decisión de la profesora).',
+          'Semana 9: Retorno exitoso con implementación de procesos de calidad y comunicación.',
+          'Slack implementado como herramienta principal de comunicación.',
+          'Procesos DevSecOps y QA establecidos con aprobaciones obligatorias.'
         ],
         list: [
-          '🔄 Primer sprint de desarrollo iniciando',
-          '🔄 Configuración completa de SonarQube',
-          '🔄 Desarrollo de componentes base',
-          '🔄 Establecimiento de pipelines CI/CD'
+          '✅ Período académico respetado (semanas 7-8)',
+          '✅ Slack configurado con integración GitHub',
+          '✅ Flujos de trabajo y políticas de branches definidos',
+          '✅ Checkpoints de calidad establecidos',
+          '⚠️ Identificadas mejoras en coordinación entre equipos'
         ]
       },
       {
-        title: 'Métricas de Progreso Real',
+        title: 'Fase 5: Desarrollo Activo (Semana 10+) 🚧',
         content: [
-          'Progreso temporal: 37.5% (6 de 16 semanas completadas)',
-          'Fases completadas: 3 de 6 fases (50%)',
-          'Equipo activo: 12+ miembros en 6 áreas especializadas',
-          'Sin blockers críticos identificados'
+          'Inicio de desarrollo siguiendo flujos establecidos.',
+          'Monitoreo de adopción de nuevas herramientas y procesos.',
+          'Refinamiento continuo de prototipos UX pendientes.'
         ],
-        note: 'El proyecto mantiene un ritmo constante con entregas incrementales cada 2 semanas.'
+        list: [
+          '🔄 Desarrollo de módulos prioritarios',
+          '🔄 Implementación de pipelines CI/CD completos',
+          '🔄 Retrospectivas y mejora continua',
+          '🔄 Finalización de prototipos UX de alta prioridad'
+        ]
+      },
+      {
+        title: 'Métricas de Progreso Actual',
+        content: [
+          'Progreso temporal: 56.25% (9 de 16 semanas completadas)',
+          'Fases completadas: 4 de 7 fases (57%)',
+          'Equipo activo: 12+ miembros en 6 áreas especializadas',
+          'Herramientas clave implementadas: Slack, SonarQube, GitHub'
+        ],
+        note: 'Pausa académica permitió al equipo renovar energías. Retorno en Semana 9 con procesos robustos de comunicación y calidad.'
       }
     ]
   },
@@ -388,16 +404,16 @@ const wikiData = {
       {
         title: '¿En qué fase está el proyecto actualmente?',
         content: [
-          'Estamos en la Semana 6 de 16, iniciando la Fase 4: Desarrollo Activo.',
-          'Las primeras 3 fases están completadas: Capacitación (1-2), Arquitectura y Análisis (3-4), y Diseño UX/UI (5-6).',
-          'Los equipos fullstack ya están organizados y listos para el primer sprint de desarrollo.'
+          'Estamos en la Semana 9 de 16, en plena Fase 5: Desarrollo Activo.',
+          'Las primeras 4 fases están completadas, incluyendo el período de exámenes y retorno con implementación de herramientas de calidad.',
+          'Acabamos de implementar Slack, procesos DevSecOps y estándares QA en la Semana 9.'
         ],
         list: [
-          '✅ Procesos AS IS y TO BE aprobados formalmente',
-          '✅ Arquitectura del sistema refinada y validada',  
-          '✅ Prototipos de Figma completados',
-          '✅ Planning Poker realizado con estimaciones',
-          '🚧 Desarrollo activo iniciando'
+          '✅ Procesos AS IS y TO BE aprobados (Semanas 4-5)',
+          '✅ Arquitectura refinada y prototipos Figma (Semanas 3-6)',
+          '✅ Pausa académica respetada (Semanas 7-8)',
+          '✅ Slack y procesos de calidad implementados (Semana 9)',
+          '🚧 Desarrollo de módulos en progreso'
         ]
       },
       {

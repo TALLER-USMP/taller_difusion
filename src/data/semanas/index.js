@@ -1,9 +1,12 @@
-// src/data/semanas/index.js (ARCHIVO PRINCIPAL)
+// src/data/semanas/index.js (ARCHIVO PRINCIPAL ACTUALIZADO)
 import { semanas0102 } from './reportes/semanas-01-02.js';
 import { semanas0304 } from './reportes/semanas-03-04.js';
 import { semanas0506 } from './reportes/semanas-05-06.js';
-// import { semanas0708 } from './reportes/semanas-07-08.js';
-// ... importar el resto cuando se creen
+import { semanas0708 } from './reportes/semanas-07-08.js';
+import { semanas0910 } from './reportes/semanas-09-10.js';
+// import { semanas1112 } from './reportes/semanas-11-12.js';
+// import { semanas1314 } from './reportes/semanas-13-14.js';
+// import { semanas1516 } from './reportes/semanas-15-16.js';
 
 import { calcularEstadisticasGenerales, calcularEstadisticasPorArea } from './estadisticas.js';
 import { CONFIG_PROYECTO, CONFIGURACION_ADMIN } from './config.js';
@@ -45,17 +48,28 @@ export const fasesProyecto = [
   },
   {
     id: 4,
-    fase: "Desarrollo e Implementación",
-    descripcion: "Sprints de desarrollo, implementación de módulos del sistema",
-    semanas: "7-12",
+    fase: "Pausa Académica y Retorno",
+    descripcion: "Periodo de exámenes y retorno a actividades con implementación de procesos de calidad",
+    semanas: "7-9",
     fechaInicio: "15 Sep 2025",
-    fechaFin: "24 Oct 2025",
-    estado: "en_progreso",
-    progreso: 15,
-    semanasIncluidas: [7, 8, 9, 10, 11, 12]
+    fechaFin: "3 Oct 2025",
+    estado: "completado",
+    progreso: 95,
+    semanasIncluidas: [7, 8, 9]
   },
   {
     id: 5,
+    fase: "Desarrollo e Implementación",
+    descripcion: "Sprints de desarrollo activo, implementación de módulos del sistema",
+    semanas: "10-12",
+    fechaInicio: "6 Oct 2025",
+    fechaFin: "24 Oct 2025",
+    estado: "en_progreso",
+    progreso: 10,
+    semanasIncluidas: [10, 11, 12]
+  },
+  {
+    id: 6,
     fase: "Testing e Integración",
     descripcion: "Pruebas completas con SonarQube, integración de módulos, corrección de bugs",
     semanas: "13-14",
@@ -66,7 +80,7 @@ export const fasesProyecto = [
     semanasIncluidas: [13, 14]
   },
   {
-    id: 6,
+    id: 7,
     fase: "Entrega y Documentación Final",
     descripcion: "Documentación final, presentaciones y cierre del proyecto",
     semanas: "15-16",
@@ -91,8 +105,11 @@ export const obtenerTodasLasSemanas = () => {
     ...semanas0102,
     ...semanas0304,
     ...semanas0506,
-    // ...semanas0708,
-    // ... agregar el resto conforme se vayan creando
+    ...semanas0708,
+    ...semanas0910,
+    // ...semanas1112,
+    // ...semanas1314,
+    // ...semanas1516,
   ].filter(semana => semana && semana.id); // Filtrar elementos vacíos/undefined
 };
 

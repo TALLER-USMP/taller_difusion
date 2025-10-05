@@ -65,7 +65,7 @@ const WikiNav = ({ activeSection, onSectionChange }) => {
           Sistema de Gestión Académica
         </p>
         <div className="mt-2 text-xs text-[#A4101A] font-medium">
-          📊 Semana 7/16 - Fase de Desarrollo
+          📊 Semana 9/16 - Fase de Desarrollo
         </div>
       </div>
 
@@ -115,13 +115,13 @@ const WikiNav = ({ activeSection, onSectionChange }) => {
       <div className="mt-8 pt-6 border-t border-gray-200">
         <div className="text-xs text-gray-500 space-y-2">
           <div>
-            <p className="font-medium text-[#A4101A]">Estado del Proyecto:</p>
-            <p className="text-gray-600">✅ 3 fases completadas</p>
-            <p className="text-gray-600">🚧 Desarrollo activo iniciando</p>
+          <p className="font-medium text-[#A4101A]">Estado del Proyecto:</p>
+          <p className="text-gray-600">✅ 4 fases completadas</p>
+          <p className="text-gray-600">🚧 Sprint de desarrollo activo</p>
           </div>
           <div className="pt-2 border-t border-gray-100">
             <p className="font-medium">Última actualización:</p>
-            <p>22 de Setiembre 2025</p>
+            <p>4 de Octubre 2025</p>
           </div>
         </div>
       </div>
