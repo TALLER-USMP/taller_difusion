@@ -61,7 +61,7 @@ function Home() {
         {/* Logo con rotación y ajuste de posición */}
         <div className="absolute inset-0 bg-left bg-no-repeat bg-contain opacity-20"
           style={{ 
-            backgroundImage: "url('/assets/images/logo/usmp_white.png')",
+            backgroundImage: `url('${BASE_URL}assets/images/logo/usmp_white.png')`,
             backgroundPosition: 'left 40%',
             transform: 'rotate(-5deg) translateY(-50px)'
           }}>
@@ -177,15 +177,15 @@ function Home() {
         </div>
       </section>
 
-{/* Docentes del Proyecto */}
-<section className="py-20 pt-0 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#333333] mb-4">Docentes del Proyecto</h2>
-            <p className="text-xl text-gray-600">
-              Profesores guía del curso "Taller de Proyectos"
-            </p>
-          </div>
+        {/* Docentes del Proyecto */}
+        <section className="py-20 pt-0 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-[#333333] mb-4">Docentes del Proyecto</h2>
+              <p className="text-xl text-gray-600">
+                Profesores guía del curso "Taller de Proyectos"
+              </p>
+            </div>
           
           <div className="flex flex-wrap justify-center gap-8">
             {/* Docente Principal */}

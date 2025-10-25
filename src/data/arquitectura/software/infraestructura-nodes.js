@@ -12,7 +12,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "Internet (HTTP)",
       "type": "client",
-      "icon": "/assets/images/icons/infraestructura/internet.svg"
+      "icon": `${BASE_URL}assets/images/icons/infraestructura/internet.svg`
     },
     "style": undefined,
     "width": undefined,
@@ -32,7 +32,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "Director Admin",
       "type": "client",
-      "icon": "/assets/images/icons/infraestructura/directorAdmin.svg"
+      "icon": `${BASE_URL}assets/images/icons/infraestructura/directorAdmin.svg`
     },
     "style": undefined,
     "width": undefined,
@@ -52,7 +52,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "SGA_Functions",
       "type": "storage",
-      "icon": "/assets/images/icons/infraestructura/fuction.svg"
+      "icon": `${BASE_URL}assets/images/icons/infraestructura/fuction.svg`
     },
     "style": undefined,
     "width": undefined,
@@ -72,7 +72,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "Bicep",
       "type": "gateway",
-      "icon": "/assets/images/icons/fullstack/Bicep.svg"
+      "icon": `${BASE_URL}assets/images/icons/fullstack/Bicep.svg`
     },
     "style": undefined,
     "width": undefined,
@@ -92,7 +92,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "Usuario 3",
       "type": "compute",
-      "icon": "/assets/images/icons/infraestructura/userAzure.svg"
+      "icon": `${BASE_URL}assets/images/icons/infraestructura/userAzure.svg`
     },
     "style": undefined,
     "width": undefined,
@@ -112,7 +112,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "Usuario 2",
       "type": "compute",
-      "icon": "/assets/images/icons/infraestructura/userAzure.svg"
+      "icon": `${BASE_URL}assets/images/icons/infraestructura/userAzure.svg`
     },
     "style": undefined,
     "width": undefined,
@@ -132,7 +132,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "Usuario 1",
       "type": "compute",
-      "icon": "/assets/images/icons/infraestructura/userAzure.svg"
+      "icon": `${BASE_URL}assets/images/icons/infraestructura/userAzure.svg`
     },
     "style": undefined,
     "width": undefined,
@@ -152,7 +152,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "Login-SGA",
       "type": "serverless",
-      "icon": "/assets/images/icons/infraestructura/code.svg"
+      "icon": `${BASE_URL}assets/images/icons/infraestructura/code.svg`
     },
     "style": undefined,
     "width": undefined,
@@ -172,7 +172,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "Grupo de Recursos - Sistema de Gestión Académica - USMP",
       "type": "serverless",
-      "icon": "/assets/images/icons/infraestructura/recursosAzure.svg"
+      "icon": `${BASE_URL}assets/images/icons/infraestructura/recursosAzure.svg`
     },
     "style": undefined,
     "width": undefined,
@@ -192,7 +192,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "GitHub",
       "type": "storage",
-      "icon": "/assets/images/icons/fullstack/github.svg"
+      "icon": `${BASE_URL}assets/images/icons/fullstack/github.svg`
     },
     "style": undefined,
     "width": undefined,
@@ -212,7 +212,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "Almacenamiento",
       "type": "storage",
-      "icon": "/assets/images/icons/infraestructura/almacenamiento.svg"
+      "icon": `${BASE_URL}assets/images/icons/infraestructura/almacenamiento.svg`
     },
     "style": undefined,
     "width": undefined,
@@ -232,7 +232,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "docente_create",
       "type": "serverless",
-      "icon": "/assets/images/icons/infraestructura/http.svg"
+      "icon": `${BASE_URL}assets/images/icons/infraestructura/http.svg`
     },
     "style": undefined,
     "width": undefined,
@@ -252,7 +252,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "Blob Storage sga usmp",
       "type": "storage",
-      "icon": "/assets/images/icons/fullstack/store.svg"
+      "icon": `${BASE_URL}assets/images/icons/fullstack/store.svg`
     },
     "style": undefined,
     "width": undefined,
@@ -272,7 +272,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "Dashboards-SGA",
       "type": "serverless",
-      "icon": "/assets/images/icons/infraestructura/code.svg"
+      "icon": `${BASE_URL}assets/images/icons/infraestructura/code.svg`
     },
     "style": undefined,
     "width": undefined,
@@ -292,7 +292,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "Suscripción Azure - Sistema de Gestión Académica - USMP",
       "type": "security",
-      "icon": "/assets/images/icons/infraestructura/keyAzure.svg"
+      "icon": `${BASE_URL}assets/images/icons/infraestructura/keyAzure.svg`
     },
     "style": undefined,
     "width": undefined,
@@ -311,7 +311,7 @@ export const infraestructuraNodes = [
     },
     "data": {
       "type": "database",
-      "icon": "/assets/images/icons/fullstack/supabase.svg",
+      "icon": `${BASE_URL}assets/images/icons/fullstack/supabase.svg`,
       "description": "Supabase SGA_2025",
     },
     "style": undefined,
@@ -332,7 +332,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "SRV - App Service",
       "type": "gateway",
-      "icon": "/assets/images/icons/infraestructura/recursosAzure.svg"
+      "icon": `${BASE_URL}assets/images/icons/infraestructura/recursosAzure.svg`
     },
     "style": undefined,
     "width": undefined,
@@ -568,7 +568,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "docente_ delete",
       "type": "compute",
-      "icon": "/assets/images/icons/infraestructura/http.svg",
+      "icon": `${BASE_URL}assets/images/icons/infraestructura/http.svg`,
       "description": undefined
     },
     "style": undefined,
@@ -589,7 +589,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "docente_ getOne",
       "type": "compute",
-      "icon": "/assets/images/icons/infraestructura/http.svg",
+      "icon": `${BASE_URL}assets/images/icons/infraestructura/http.svg`,
       "description": undefined
     },
     "style": undefined,
@@ -610,7 +610,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "docente_list",
       "type": "compute",
-      "icon": "/assets/images/icons/infraestructura/http.svg",
+      "icon": `${BASE_URL}assets/images/icons/infraestructura/http.svg`,
       "description": undefined
     },
     "style": undefined,
@@ -631,7 +631,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "docente_ listAllAsignaturas",
       "type": "compute",
-      "icon": "/assets/images/icons/infraestructura/http.svg",
+      "icon": `${BASE_URL}assets/images/icons/infraestructura/http.svg`,
       "description": undefined
     },
     "style": undefined,
@@ -652,7 +652,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "docente_ listAsignaturas",
       "type": "compute",
-      "icon": "/assets/images/icons/infraestructura/http.svg",
+      "icon": `${BASE_URL}assets/images/icons/infraestructura/http.svg`,
       "description": undefined
     },
     "style": undefined,
@@ -673,7 +673,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "docente_ update",
       "type": "compute",
-      "icon": "/assets/images/icons/infraestructura/http.svg",
+      "icon": `${BASE_URL}assets/images/icons/infraestructura/http.svg`,
       "description": undefined
     },
     "style": undefined,
@@ -694,7 +694,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "health",
       "type": "compute",
-      "icon": "/assets/images/icons/infraestructura/http.svg",
+      "icon": `${BASE_URL}assets/images/icons/infraestructura/http.svg`,
       "description": undefined
     },
     "style": undefined,
@@ -715,7 +715,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "login",
       "type": "compute",
-      "icon": "/assets/images/icons/infraestructura/http.svg",
+      "icon": `${BASE_URL}assets/images/icons/infraestructura/http.svg`,
       "description": undefined
     },
     "style": undefined,
@@ -736,7 +736,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "protect_ protected",
       "type": "compute",
-      "icon": "/assets/images/icons/infraestructura/http.svg",
+      "icon": `${BASE_URL}assets/images/icons/infraestructura/http.svg`,
       "description": undefined
     },
     "style": undefined,
@@ -757,7 +757,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "session_ sessionCreate",
       "type": "compute",
-      "icon": "/assets/images/icons/infraestructura/http.svg",
+      "icon": `${BASE_URL}assets/images/icons/infraestructura/http.svg`,
       "description": undefined
     },
     "style": undefined,
@@ -778,7 +778,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "session_ sessionLogout",
       "type": "compute",
-      "icon": "/assets/images/icons/infraestructura/http.svg",
+      "icon": `${BASE_URL}assets/images/icons/infraestructura/http.svg`,
       "description": undefined
     },
     "style": undefined,
@@ -799,7 +799,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "session_ sessionMe",
       "type": "compute",
-      "icon": "/assets/images/icons/infraestructura/http.svg",
+      "icon": `${BASE_URL}assets/images/icons/infraestructura/http.svg`,
       "description": undefined
     },
     "style": undefined,
@@ -820,7 +820,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "silabo_ updateAporte",
       "type": "compute",
-      "icon": "/assets/images/icons/infraestructura/http.svg",
+      "icon": `${BASE_URL}assets/images/icons/infraestructura/http.svg`,
       "description": undefined
     },
     "style": undefined,
@@ -841,7 +841,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "syllabus_update",
       "type": "compute",
-      "icon": "/assets/images/icons/infraestructura/http.svg",
+      "icon": `${BASE_URL}assets/images/icons/infraestructura/http.svg`,
       "description": undefined
     },
     "style": undefined,
@@ -862,7 +862,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "syllabus_ create",
       "type": "compute",
-      "icon": "/assets/images/icons/infraestructura/http.svg",
+      "icon": `${BASE_URL}assets/images/icons/infraestructura/http.svg`,
       "description": undefined
     },
     "style": undefined,
@@ -883,7 +883,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "syllabus_ delete",
       "type": "compute",
-      "icon": "/assets/images/icons/infraestructura/http.svg",
+      "icon": `${BASE_URL}assets/images/icons/infraestructura/http.svg`,
       "description": undefined
     },
     "style": undefined,
@@ -904,7 +904,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "syllabus_ updateSumilla",
       "type": "compute",
-      "icon": "/assets/images/icons/infraestructura/http.svg",
+      "icon": `${BASE_URL}assets/images/icons/infraestructura/http.svg`,
       "description": undefined
     },
     "style": undefined,
@@ -925,7 +925,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "syllabus_ updateEvaluation",
       "type": "compute",
-      "icon": "/assets/images/icons/infraestructura/http.svg",
+      "icon": `${BASE_URL}assets/images/icons/infraestructura/http.svg`,
       "description": undefined
     },
     "style": undefined,
@@ -946,7 +946,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "user_list",
       "type": "compute",
-      "icon": "/assets/images/icons/infraestructura/http.svg",
+      "icon": `${BASE_URL}assets/images/icons/infraestructura/http.svg`,
       "description": undefined
     },
     "style": undefined,

@@ -12,7 +12,7 @@ export const fullStackNodes = [
     "data": {
       "label": "FULL STACK DEVELOPER",
       "type": "client",
-      "icon": "/assets/images/icons/fullstack/fullstack.svg"
+      "icon": `${BASE_URL}assets/images/icons/fullstack/fullstack.svg`,
     },
     "style": undefined,
     "width": undefined,
@@ -31,7 +31,7 @@ export const fullStackNodes = [
     },
     "data": {
       "type": "client",
-      "icon": "/assets/images/icons/fullstack/azure.svg"
+      "icon": `${BASE_URL}assets/images/icons/fullstack/azure.svg`
     },
     "style": undefined,
     "width": undefined,
@@ -50,7 +50,7 @@ export const fullStackNodes = [
     },
     "data": {
       "type": "client",
-      "icon": "/assets/images/icons/fullstack/developer.svg"
+      "icon": `${BASE_URL}assets/images/icons/fullstack/developer.svg`
     },
     "style": undefined,
     "width": undefined,
@@ -90,7 +90,7 @@ export const fullStackNodes = [
     "data": {
       "label": "NODE.JS",
       "type": "gateway",
-      "icon": "/assets/images/icons/fullstack/node.svg"
+      "icon": `${BASE_URL}assets/images/icons/fullstack/node.svg`
     },
     "style": undefined,
     "width": undefined,
@@ -110,7 +110,7 @@ export const fullStackNodes = [
     "data": {
       "label": "TAILWIND CSS",
       "type": "gateway",
-      "icon": "/assets/images/icons/fullstack/talwind.svg"
+      "icon": `${BASE_URL}assets/images/icons/fullstack/talwind.svg`
     },
     "style": undefined,
     "width": undefined,
@@ -130,7 +130,7 @@ export const fullStackNodes = [
     "data": {
       "label": "REACT 18",
       "type": "security",
-      "icon": "/assets/images/icons/fullstack/react.svg"
+      "icon": `${BASE_URL}assets/images/icons/fullstack/react.svg`
     },
     "style": undefined,
     "width": undefined,
@@ -150,7 +150,7 @@ export const fullStackNodes = [
     "data": {
       "label": "JAVASCRIPT",
       "type": "compute",
-      "icon": "/assets/images/icons/fullstack/js.svg"
+      "icon": `${BASE_URL}assets/images/icons/fullstack/js.svg`
     },
     "style": undefined,
     "width": undefined,
@@ -170,7 +170,7 @@ export const fullStackNodes = [
     "data": {
       "label": "JAVASCRIPT",
       "type": "compute",
-      "icon": "/assets/images/icons/fullstack/js.svg"
+      "icon": `${BASE_URL}assets/images/icons/fullstack/js.svg`
     },
     "style": undefined,
     "width": undefined,
@@ -190,7 +190,7 @@ export const fullStackNodes = [
     "data": {
       "label": "Blob Storage",
       "type": "compute",
-      "icon": "/assets/images/icons/fullstack/store.svg"
+      "icon": `${BASE_URL}assets/images/icons/fullstack/store.svg`
     },
     "style": undefined,
     "width": undefined,
@@ -210,7 +210,7 @@ export const fullStackNodes = [
     "data": {
       "label": "TYPESCRIPT",
       "type": "serverless",
-      "icon": "/assets/images/icons/fullstack/ts.svg"
+      "icon": `${BASE_URL}assets/images/icons/fullstack/ts.svg`
     },
     "style": undefined,
     "width": undefined,
@@ -230,7 +230,7 @@ export const fullStackNodes = [
     "data": {
       "label": "TYPESCRIPT",
       "type": "compute",
-      "icon": "/assets/images/icons/fullstack/ts.svg"
+      "icon": `${BASE_URL}assets/images/icons/fullstack/ts.svg`
     },
     "style": undefined,
     "width": undefined,
@@ -250,7 +250,7 @@ export const fullStackNodes = [
     "data": {
       "label": "GITHUB",
       "type": "serverless",
-      "icon": "/assets/images/icons/fullstack/github.svg"
+      "icon": `${BASE_URL}assets/images/icons/fullstack/github.svg`
     },
     "style": undefined,
     "width": undefined,
@@ -269,7 +269,7 @@ export const fullStackNodes = [
     },
     "data": {
       "type": "compute",
-      "icon": "/assets/images/icons/devsecops/cypress.svg"
+      "icon": `${BASE_URL}assets/images/icons/devsecops/cypress.svg`
     },
     "style": undefined,
     "width": undefined,
@@ -288,7 +288,7 @@ export const fullStackNodes = [
     },
     "data": {
       "type": "compute",
-      "icon": "/assets/images/icons/devsecops/postman.svg"
+      "icon": `${BASE_URL}assets/images/icons/devsecops/postman.svg`
     },
     "style": undefined,
     "width": undefined,
@@ -307,7 +307,7 @@ export const fullStackNodes = [
     },
     "data": {
       "type": "serverless",
-      "icon": "/assets/images/icons/devsecops/jest.svg"
+      "icon": `${BASE_URL}assets/images/icons/devsecops/jest.svg`
     },
     "style": undefined,
     "width": undefined,
@@ -326,7 +326,7 @@ export const fullStackNodes = [
     },
     "data": {
       "type": "database",
-      "icon": "/assets/images/icons/devsecops/grafana.svg"
+      "icon": `${BASE_URL}assets/images/icons/devsecops/grafana.svg`
     },
     "style": undefined,
     "width": undefined,
@@ -345,7 +345,7 @@ export const fullStackNodes = [
     },
     "data": {
       "type": "database",
-      "icon": "/assets/images/icons/devsecops/prometheus.svg"
+      "icon": `${BASE_URL}assets/images/icons/devsecops/prometheus.svg`
     },
     "style": undefined,
     "width": undefined,
@@ -364,7 +364,7 @@ export const fullStackNodes = [
     },
     "data": {
       "type": "database",
-      "icon": "/assets/images/icons/devsecops/issues.svg"
+      "icon": `${BASE_URL}assets/images/icons/devsecops/issues.svg`
     },
     "style": undefined,
     "width": undefined,
@@ -383,7 +383,7 @@ export const fullStackNodes = [
     },
     "data": {
       "type": "cache",
-      "icon": "/assets/images/icons/fullstack/figma.svg"
+      "icon": `${BASE_URL}assets/images/icons/fullstack/figma.svg`
     },
     "style": undefined,
     "width": undefined,
@@ -402,7 +402,7 @@ export const fullStackNodes = [
     },
     "data": {
       "type": "storage",
-      "icon": "/assets/images/icons/devsecops/selenium.svg"
+      "icon": `${BASE_URL}assets/images/icons/devsecops/selenium.svg`
     },
     "style": undefined,
     "width": undefined,
@@ -421,7 +421,7 @@ export const fullStackNodes = [
     },
     "data": {
       "type": "storage",
-      "icon": "/assets/images/icons/devsecops/playwright.svg"
+      "icon": `${BASE_URL}assets/images/icons/devsecops/playwright.svg`
     },
     "style": undefined,
     "width": undefined,
@@ -441,7 +441,7 @@ export const fullStackNodes = [
     "data": {
       "label": "Visual Studio Code",
       "type": "monitoring",
-      "icon": "/assets/images/icons/fullstack/visual.svg"
+      "icon": `${BASE_URL}assets/images/icons/fullstack/visual.svg`
     },
     "style": undefined,
     "width": undefined,
@@ -460,7 +460,7 @@ export const fullStackNodes = [
     },
     "data": {
       "type": "security",
-      "icon": "/assets/images/icons/fullstack/balsamiq.svg"
+      "icon": `${BASE_URL}assets/images/icons/fullstack/balsamiq.svg`
     },
     "style": undefined,
     "width": undefined,
@@ -479,7 +479,7 @@ export const fullStackNodes = [
     },
     "data": {
       "type": "security",
-      "icon": "/assets/images/icons/fullstack/supabase.svg"
+      "icon": `${BASE_URL}assets/images/icons/fullstack/supabase.svg`
     },
     "style": undefined,
     "width": undefined,
@@ -978,7 +978,7 @@ export const fullStackNodes = [
     },
     "data": {
       "type": "compute",
-      "icon": "/assets/images/icons/fullstack/slack.svg",
+      "icon": `${BASE_URL}assets/images/icons/fullstack/slack.svg`,
       "description": undefined
     },
     "style": undefined,
@@ -998,7 +998,7 @@ export const fullStackNodes = [
     },
     "data": {
       "type": "compute",
-      "icon": "/assets/images/icons/fullstack/Bicep.svg",
+      "icon": `${BASE_URL}assets/images/icons/fullstack/Bicep.svg`,
       "description": undefined
     },
     "style": undefined,
