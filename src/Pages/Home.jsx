@@ -5,7 +5,7 @@ import { ChevronRight, Users, Target, Code, Calendar, ArrowRight, Zap, Database,
 
 function Home() {
   const [currentNews, setCurrentNews] = useState(0)
-  
+  const BASE_URL = import.meta.env.BASE_URL; // ← AGREGADO
   // Datos temporales - estos irán en src/data/proyecto-info.js
   const projectInfo = {
     title: "Sistema de Gestión Académica",
@@ -192,7 +192,7 @@ function Home() {
             <div className="bg-gray-50 rounded-xl p-6 text-center hover:shadow-lg transition-shadow w-full sm:w-80">
               <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden bg-gray-200 border-4 border-[#A4101A]">
                 <img 
-                  src="/assets/docente.jpg" 
+                  src={`${BASE_URL}assets/docente.jpg`}
                   alt="Norma Virginia León Lescano"
                   className="w-full h-full object-cover"
                 />
@@ -217,7 +217,7 @@ function Home() {
             <div className="bg-gray-50 rounded-xl p-6 text-center hover:shadow-lg transition-shadow w-full sm:w-80">
               <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden bg-gray-200 border-4 border-[#A4101A]">
                 <img 
-                  src="/assets/decano.jpg" 
+                  src={`${BASE_URL}assets/decano.jpg`}
                   alt="Rubén García Farje"
                   className="w-full h-full object-cover"
                 />
