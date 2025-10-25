@@ -4,7 +4,7 @@ import { semanas0304 } from './reportes/semanas-03-04.js';
 import { semanas0506 } from './reportes/semanas-05-06.js';
 import { semanas0708 } from './reportes/semanas-07-08.js';
 import { semanas0910 } from './reportes/semanas-09-10.js';
-// import { semanas1112 } from './reportes/semanas-11-12.js';
+import { semanas1112 } from './reportes/semanas-11-12.js';
 // import { semanas1314 } from './reportes/semanas-13-14.js';
 // import { semanas1516 } from './reportes/semanas-15-16.js';
 
@@ -107,7 +107,7 @@ export const obtenerTodasLasSemanas = () => {
     ...semanas0506,
     ...semanas0708,
     ...semanas0910,
-    // ...semanas1112,
+    ...semanas1112,
     // ...semanas1314,
     // ...semanas1516,
   ].filter(semana => semana && semana.id); // Filtrar elementos vacíos/undefined

@@ -83,12 +83,12 @@ export const equipoData = [
     },
     {
       id: 9,
-      nombre: "Ángel Palomino Falcón",
+      nombre: "Andrea Nikole Alva",
       rol: "Product Owner",
       descripcion: "Encargado de definir los requisitos del producto, priorizar funcionalidades y ser el enlace con los stakeholders.",
-      email: "angel.palomino@sga-project.com",
+      email: "Andrea.alva@sga-project.com",
       linkedin: "#",
-      avatar: "/assets/images/team/angel.jpg",
+      avatar: "/assets/images/team/Andrea.jpg",
       especialidades: ["Gestión de Producto", "Requisitos", "Stakeholders", "Roadmap"]
     },
     {

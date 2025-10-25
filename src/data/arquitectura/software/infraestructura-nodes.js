@@ -12,7 +12,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "Internet (HTTP)",
       "type": "client",
-      "icon": `${BASE_URL}assets/images/icons/infraestructura/internet.svg`,
+      "icon": "/assets/images/icons/infraestructura/internet.svg"
     },
     "style": undefined,
     "width": undefined,
@@ -32,7 +32,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "Director Admin",
       "type": "client",
-      "icon": `${BASE_URL}assets/images/icons/infraestructura/directorAdmin.svg`,
+      "icon": "/assets/images/icons/infraestructura/directorAdmin.svg"
     },
     "style": undefined,
     "width": undefined,
@@ -46,13 +46,13 @@ export const infraestructuraNodes = [
     "id": "3",
     "type": "custom",
     "position": {
-      "x": 1372.3146409171181,
-      "y": 521.8847863602408
+      "x": 918.826649250321,
+      "y": 444.92699778314494
     },
     "data": {
-      "label": "Function Silabo",
+      "label": "SGA_Functions",
       "type": "storage",
-      "icon": `${BASE_URL}assets/images/icons/infraestructura/fuction.svg`,
+      "icon": "/assets/images/icons/infraestructura/fuction.svg"
     },
     "style": undefined,
     "width": undefined,
@@ -66,13 +66,13 @@ export const infraestructuraNodes = [
     "id": "4",
     "type": "custom",
     "position": {
-      "x": 418.5914906757916,
-      "y": 574.6459521552833
+      "x": 1544.173254459792,
+      "y": 1612.4413659217394
     },
     "data": {
-      "label": "Web App 1 SGA - USMP",
+      "label": "Bicep",
       "type": "gateway",
-      "icon": `${BASE_URL}assets/images/icons/infraestructura/sga.svg`,
+      "icon": "/assets/images/icons/fullstack/Bicep.svg"
     },
     "style": undefined,
     "width": undefined,
@@ -92,14 +92,14 @@ export const infraestructuraNodes = [
     "data": {
       "label": "Usuario 3",
       "type": "compute",
-      "icon": `${BASE_URL}assets/images/icons/infraestructura/userAzure.svg`,
+      "icon": "/assets/images/icons/infraestructura/userAzure.svg"
     },
     "style": undefined,
     "width": undefined,
     "height": undefined,
     "measured": {
       "width": 200,
-      "height": 108
+      "height": 120
     }
   },
   {
@@ -112,14 +112,14 @@ export const infraestructuraNodes = [
     "data": {
       "label": "Usuario 2",
       "type": "compute",
-      "icon": `${BASE_URL}assets/images/icons/infraestructura/userAzure.svg`,
+      "icon": "/assets/images/icons/infraestructura/userAzure.svg"
     },
     "style": undefined,
     "width": undefined,
     "height": undefined,
     "measured": {
       "width": 200,
-      "height": 108
+      "height": 120
     }
   },
   {
@@ -132,27 +132,27 @@ export const infraestructuraNodes = [
     "data": {
       "label": "Usuario 1",
       "type": "compute",
-      "icon": `${BASE_URL}assets/images/icons/infraestructura/userAzure.svg`,
+      "icon": "/assets/images/icons/infraestructura/userAzure.svg"
     },
     "style": undefined,
     "width": undefined,
     "height": undefined,
     "measured": {
       "width": 200,
-      "height": 108
+      "height": 120
     }
   },
   {
     "id": "8",
     "type": "custom",
     "position": {
-      "x": 810.4506358010747,
-      "y": 353.2811544946398
+      "x": 290.475643946585,
+      "y": 770.8683920780518
     },
     "data": {
-      "label": "Worked 1",
+      "label": "Login-SGA",
       "type": "serverless",
-      "icon": `${BASE_URL}assets/images/icons/infraestructura/worked.svg`,
+      "icon": "/assets/images/icons/infraestructura/code.svg"
     },
     "style": undefined,
     "width": undefined,
@@ -172,7 +172,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "Grupo de Recursos - Sistema de Gestión Académica - USMP",
       "type": "serverless",
-      "icon": `${BASE_URL}assets/images/icons/infraestructura/recursosAzure.svg`,
+      "icon": "/assets/images/icons/infraestructura/recursosAzure.svg"
     },
     "style": undefined,
     "width": undefined,
@@ -186,13 +186,13 @@ export const infraestructuraNodes = [
     "id": "10",
     "type": "custom",
     "position": {
-      "x": -142.19289776723716,
-      "y": 1123.6049067594174
+      "x": -112.6767875568525,
+      "y": 1581.267472682525
     },
     "data": {
       "label": "GitHub",
       "type": "storage",
-      "icon": `${BASE_URL}assets/images/icons/fullstack/github.svg`,
+      "icon": "/assets/images/icons/fullstack/github.svg"
     },
     "style": undefined,
     "width": undefined,
@@ -206,13 +206,13 @@ export const infraestructuraNodes = [
     "id": "11",
     "type": "custom",
     "position": {
-      "x": 315.12040729456015,
-      "y": 1123.8033759816078
+      "x": 472.599903576764,
+      "y": 1581.60419613032
     },
     "data": {
       "label": "Almacenamiento",
       "type": "storage",
-      "icon": `${BASE_URL}assets/images/icons/infraestructura/almacenamiento.svg`,
+      "icon": "/assets/images/icons/infraestructura/almacenamiento.svg"
     },
     "style": undefined,
     "width": undefined,
@@ -226,13 +226,13 @@ export const infraestructuraNodes = [
     "id": "12",
     "type": "custom",
     "position": {
-      "x": 811.1778671927036,
-      "y": 718.5215389891772
+      "x": 1260.9812471109738,
+      "y": 558.5751121804566
     },
     "data": {
-      "label": "Worked 3",
+      "label": "docente_create",
       "type": "serverless",
-      "icon": `${BASE_URL}assets/images/icons/infraestructura/worked.svg`,
+      "icon": "/assets/images/icons/infraestructura/http.svg"
     },
     "style": undefined,
     "width": undefined,
@@ -246,13 +246,13 @@ export const infraestructuraNodes = [
     "id": "13",
     "type": "custom",
     "position": {
-      "x": 1696.7768711463427,
-      "y": 650.8345815665907
+      "x": 1518.7015167763009,
+      "y": 320.6531953388048
     },
     "data": {
       "label": "Blob Storage sga usmp",
       "type": "storage",
-      "icon": `${BASE_URL}assets/images/icons/fullstack/store.svg`,
+      "icon": "/assets/images/icons/fullstack/store.svg"
     },
     "style": undefined,
     "width": undefined,
@@ -266,13 +266,13 @@ export const infraestructuraNodes = [
     "id": "14",
     "type": "custom",
     "position": {
-      "x": 809.4220461816758,
-      "y": 530.6975943523296
+      "x": 546.3085669187644,
+      "y": 642.6234485160797
     },
     "data": {
-      "label": "Worked 2",
+      "label": "Dashboards-SGA",
       "type": "serverless",
-      "icon": `${BASE_URL}assets/images/icons/infraestructura/worked.svg`,
+      "icon": "/assets/images/icons/infraestructura/code.svg"
     },
     "style": undefined,
     "width": undefined,
@@ -292,7 +292,7 @@ export const infraestructuraNodes = [
     "data": {
       "label": "Suscripción Azure - Sistema de Gestión Académica - USMP",
       "type": "security",
-      "icon": `${BASE_URL}assets/images/icons/infraestructura/keyAzure.svg`,
+      "icon": "/assets/images/icons/infraestructura/keyAzure.svg"
     },
     "style": undefined,
     "width": undefined,
@@ -306,13 +306,13 @@ export const infraestructuraNodes = [
     "id": "16",
     "type": "custom",
     "position": {
-      "x": 1693.1162307538568,
-      "y": 369.53827009913056
+      "x": 1229.3783287485396,
+      "y": 282.3555445221309
     },
     "data": {
-      "label": "db-supabase-usmp-fia",
       "type": "database",
-      "icon": `${BASE_URL}assets/images/icons/infraestructura/fuction.svg`,
+      "icon": "/assets/images/icons/fullstack/supabase.svg",
+      "description": "Supabase SGA_2025",
     },
     "style": undefined,
     "width": undefined,
@@ -326,13 +326,13 @@ export const infraestructuraNodes = [
     "id": "17",
     "type": "custom",
     "position": {
-      "x": 345.4248480964126,
-      "y": 270.5437539876199
+      "x": 261.45373139941427,
+      "y": 534.3075206869514
     },
     "data": {
       "label": "SRV - App Service",
       "type": "gateway",
-      "icon": `${BASE_URL}assets/images/icons/infraestructura/recursosAzure.svg`,
+      "icon": "/assets/images/icons/infraestructura/recursosAzure.svg"
     },
     "style": undefined,
     "width": undefined,
@@ -359,11 +359,11 @@ export const infraestructuraNodes = [
       "height": 200,
       "zIndex": -1
     },
-    "width": 3059,
-    "height": 1526,
+    "width": 3731,
+    "height": 2008,
     "measured": {
-      "width": 3059,
-      "height": 1526
+      "width": 3731,
+      "height": 2008
     }
   },
   {
@@ -383,11 +383,11 @@ export const infraestructuraNodes = [
       "height": 200,
       "zIndex": -1
     },
-    "width": 2405,
-    "height": 1264,
+    "width": 3068,
+    "height": 1735,
     "measured": {
-      "width": 2405,
-      "height": 1264
+      "width": 3068,
+      "height": 1735
     }
   },
   {
@@ -407,11 +407,11 @@ export const infraestructuraNodes = [
       "height": 200,
       "zIndex": -1
     },
-    "width": 2092,
-    "height": 1184,
+    "width": 2765,
+    "height": 1657,
     "measured": {
-      "width": 2092,
-      "height": 1184
+      "width": 2765,
+      "height": 1657
     }
   },
   {
@@ -431,11 +431,11 @@ export const infraestructuraNodes = [
       "height": 200,
       "zIndex": -1
     },
-    "width": 1990,
-    "height": 954,
+    "width": 2667,
+    "height": 1430,
     "measured": {
-      "width": 1990,
-      "height": 954
+      "width": 2667,
+      "height": 1430
     }
   },
   {
@@ -455,19 +455,19 @@ export const infraestructuraNodes = [
       "height": 200,
       "zIndex": -1
     },
-    "width": 1916,
-    "height": 750,
+    "width": 2600,
+    "height": 1224,
     "measured": {
-      "width": 1916,
-      "height": 750
+      "width": 2600,
+      "height": 1224
     }
   },
   {
     "id": "container-19",
     "type": "container",
     "position": {
-      "x": 302.4376406419395,
-      "y": 243.40751961747242
+      "x": 227.948148950774,
+      "y": 504.80648624214126
     },
     "data": {
       "label": "",
@@ -479,19 +479,19 @@ export const infraestructuraNodes = [
       "height": 200,
       "zIndex": -1
     },
-    "width": 819,
-    "height": 683,
+    "width": 575,
+    "height": 457,
     "measured": {
-      "width": 819,
-      "height": 683
+      "width": 575,
+      "height": 457
     }
   },
   {
     "id": "container-20",
     "type": "container",
     "position": {
-      "x": 1264.863640320684,
-      "y": 251.27962197718114
+      "x": 887.5491976158394,
+      "y": 232.29373189285087
     },
     "data": {
       "label": "",
@@ -503,148 +503,463 @@ export const infraestructuraNodes = [
       "height": 200,
       "zIndex": -1
     },
-    "width": 736,
-    "height": 670,
+    "width": 1802,
+    "height": 1162,
     "measured": {
-      "width": 736,
-      "height": 670
+      "width": 1802,
+      "height": 1162
+    }
+  },
+  {
+    "id": "container-1",
+    "type": "container",
+    "position": {
+      "x": 1192.1687101399846,
+      "y": 251.88322169028447
+    },
+    "data": {
+      "label": "",
+      "backgroundColor": "#D5E8D4",
+      "icon": undefined
+    },
+    "style": {
+      "width": 300,
+      "height": 200,
+      "zIndex": -1
+    },
+    "width": 615,
+    "height": 222,
+    "measured": {
+      "width": 615,
+      "height": 222
+    }
+  },
+  {
+    "id": "container-2",
+    "type": "container",
+    "position": {
+      "x": 1195.4528197677544,
+      "y": 498.47302365888675
+    },
+    "data": {
+      "label": "",
+      "backgroundColor": "#D5E8D4",
+      "icon": undefined
+    },
+    "style": {
+      "width": 300,
+      "height": 200,
+      "zIndex": -1
+    },
+    "width": 1463,
+    "height": 864,
+    "measured": {
+      "width": 1463,
+      "height": 864
+    }
+  },
+  {
+    "id": "custom-node-18",
+    "type": "custom",
+    "position": {
+      "x": 1513.9295641072572,
+      "y": 565.390521996416
+    },
+    "data": {
+      "label": "docente_ delete",
+      "type": "compute",
+      "icon": "/assets/images/icons/infraestructura/http.svg",
+      "description": undefined
+    },
+    "style": undefined,
+    "width": undefined,
+    "height": undefined,
+    "measured": {
+      "width": 200,
+      "height": 104
+    }
+  },
+  {
+    "id": "custom-node-19",
+    "type": "custom",
+    "position": {
+      "x": 1777.7558537191258,
+      "y": 567.3050192547445
+    },
+    "data": {
+      "label": "docente_ getOne",
+      "type": "compute",
+      "icon": "/assets/images/icons/infraestructura/http.svg",
+      "description": undefined
+    },
+    "style": undefined,
+    "width": undefined,
+    "height": undefined,
+    "measured": {
+      "width": 200,
+      "height": 104
+    }
+  },
+  {
+    "id": "custom-node-20",
+    "type": "custom",
+    "position": {
+      "x": 2040.5346267313462,
+      "y": 565.330343349427
+    },
+    "data": {
+      "label": "docente_list",
+      "type": "compute",
+      "icon": "/assets/images/icons/infraestructura/http.svg",
+      "description": undefined
+    },
+    "style": undefined,
+    "width": undefined,
+    "height": undefined,
+    "measured": {
+      "width": 200,
+      "height": 104
+    }
+  },
+  {
+    "id": "custom-node-21",
+    "type": "custom",
+    "position": {
+      "x": 2309.117070165541,
+      "y": 558.6596922687722
+    },
+    "data": {
+      "label": "docente_ listAllAsignaturas",
+      "type": "compute",
+      "icon": "/assets/images/icons/infraestructura/http.svg",
+      "description": undefined
+    },
+    "style": undefined,
+    "width": undefined,
+    "height": undefined,
+    "measured": {
+      "width": 279,
+      "height": 104
+    }
+  },
+  {
+    "id": "custom-node-22",
+    "type": "custom",
+    "position": {
+      "x": 1298.2064205415543,
+      "y": 769.8918762009391
+    },
+    "data": {
+      "label": "docente_ listAsignaturas",
+      "type": "compute",
+      "icon": "/assets/images/icons/infraestructura/http.svg",
+      "description": undefined
+    },
+    "style": undefined,
+    "width": undefined,
+    "height": undefined,
+    "measured": {
+      "width": 252,
+      "height": 104
+    }
+  },
+  {
+    "id": "custom-node-23",
+    "type": "custom",
+    "position": {
+      "x": 1614.3861012451684,
+      "y": 765.0755437316238
+    },
+    "data": {
+      "label": "docente_ update",
+      "type": "compute",
+      "icon": "/assets/images/icons/infraestructura/http.svg",
+      "description": undefined
+    },
+    "style": undefined,
+    "width": undefined,
+    "height": undefined,
+    "measured": {
+      "width": 200,
+      "height": 104
+    }
+  },
+  {
+    "id": "custom-node-24",
+    "type": "custom",
+    "position": {
+      "x": 1876.1775363047302,
+      "y": 767.9172002956218
+    },
+    "data": {
+      "label": "health",
+      "type": "compute",
+      "icon": "/assets/images/icons/infraestructura/http.svg",
+      "description": undefined
+    },
+    "style": undefined,
+    "width": undefined,
+    "height": undefined,
+    "measured": {
+      "width": 200,
+      "height": 104
+    }
+  },
+  {
+    "id": "custom-node-25",
+    "type": "custom",
+    "position": {
+      "x": 2140.0640045635873,
+      "y": 768.8443596012914
+    },
+    "data": {
+      "label": "login",
+      "type": "compute",
+      "icon": "/assets/images/icons/infraestructura/http.svg",
+      "description": undefined
+    },
+    "style": undefined,
+    "width": undefined,
+    "height": undefined,
+    "measured": {
+      "width": 200,
+      "height": 104
+    }
+  },
+  {
+    "id": "custom-node-26",
+    "type": "custom",
+    "position": {
+      "x": 2387.4064422152023,
+      "y": 771.7461948122786
+    },
+    "data": {
+      "label": "protect_ protected",
+      "type": "compute",
+      "icon": "/assets/images/icons/infraestructura/http.svg",
+      "description": undefined
+    },
+    "style": undefined,
+    "width": undefined,
+    "height": undefined,
+    "measured": {
+      "width": 200,
+      "height": 104
+    }
+  },
+  {
+    "id": "custom-node-27",
+    "type": "custom",
+    "position": {
+      "x": 1267.3761387308627,
+      "y": 959.8928760027735
+    },
+    "data": {
+      "label": "session_ sessionCreate",
+      "type": "compute",
+      "icon": "/assets/images/icons/infraestructura/http.svg",
+      "description": undefined
+    },
+    "style": undefined,
+    "width": undefined,
+    "height": undefined,
+    "measured": {
+      "width": 227,
+      "height": 104
+    }
+  },
+  {
+    "id": "custom-node-28",
+    "type": "custom",
+    "position": {
+      "x": 1545.220780452602,
+      "y": 967.3240890460024
+    },
+    "data": {
+      "label": "session_ sessionLogout",
+      "type": "compute",
+      "icon": "/assets/images/icons/infraestructura/http.svg",
+      "description": undefined
+    },
+    "style": undefined,
+    "width": undefined,
+    "height": undefined,
+    "measured": {
+      "width": 234,
+      "height": 104
+    }
+  },
+  {
+    "id": "custom-node-29",
+    "type": "custom",
+    "position": {
+      "x": 1825.5885679664882,
+      "y": 970.2539610412957
+    },
+    "data": {
+      "label": "session_ sessionMe",
+      "type": "compute",
+      "icon": "/assets/images/icons/infraestructura/http.svg",
+      "description": undefined
+    },
+    "style": undefined,
+    "width": undefined,
+    "height": undefined,
+    "measured": {
+      "width": 200,
+      "height": 104
+    }
+  },
+  {
+    "id": "custom-node-30",
+    "type": "custom",
+    "position": {
+      "x": 2075.5885679664884,
+      "y": 970.2539610412956
+    },
+    "data": {
+      "label": "silabo_ updateAporte",
+      "type": "compute",
+      "icon": "/assets/images/icons/infraestructura/http.svg",
+      "description": undefined
+    },
+    "style": undefined,
+    "width": undefined,
+    "height": undefined,
+    "measured": {
+      "width": 218,
+      "height": 104
+    }
+  },
+  {
+    "id": "custom-node-31",
+    "type": "custom",
+    "position": {
+      "x": 2361.8277209247963,
+      "y": 971.177135932977
+    },
+    "data": {
+      "label": "syllabus_update",
+      "type": "compute",
+      "icon": "/assets/images/icons/infraestructura/http.svg",
+      "description": undefined
+    },
+    "style": undefined,
+    "width": undefined,
+    "height": undefined,
+    "measured": {
+      "width": 200,
+      "height": 104
+    }
+  },
+  {
+    "id": "custom-node-32",
+    "type": "custom",
+    "position": {
+      "x": 1257.7261365082788,
+      "y": 1158.184539974471
+    },
+    "data": {
+      "label": "syllabus_ create",
+      "type": "compute",
+      "icon": "/assets/images/icons/infraestructura/http.svg",
+      "description": undefined
+    },
+    "style": undefined,
+    "width": undefined,
+    "height": undefined,
+    "measured": {
+      "width": 200,
+      "height": 104
+    }
+  },
+  {
+    "id": "custom-node-33",
+    "type": "custom",
+    "position": {
+      "x": 1507.99872640814,
+      "y": 1166.2018952411768
+    },
+    "data": {
+      "label": "syllabus_ delete",
+      "type": "compute",
+      "icon": "/assets/images/icons/infraestructura/http.svg",
+      "description": undefined
+    },
+    "style": undefined,
+    "width": undefined,
+    "height": undefined,
+    "measured": {
+      "width": 200,
+      "height": 104
+    }
+  },
+  {
+    "id": "custom-node-34",
+    "type": "custom",
+    "position": {
+      "x": 1756.2205240997423,
+      "y": 1166.629408949535
+    },
+    "data": {
+      "label": "syllabus_ updateSumilla",
+      "type": "compute",
+      "icon": "/assets/images/icons/infraestructura/http.svg",
+      "description": undefined
+    },
+    "style": undefined,
+    "width": undefined,
+    "height": undefined,
+    "measured": {
+      "width": 245,
+      "height": 104
+    }
+  },
+  {
+    "id": "custom-node-35",
+    "type": "custom",
+    "position": {
+      "x": 2075.3654966830263,
+      "y": 1163.2960756162017
+    },
+    "data": {
+      "label": "syllabus_ updateEvaluation",
+      "type": "compute",
+      "icon": "/assets/images/icons/infraestructura/http.svg",
+      "description": undefined
+    },
+    "style": undefined,
+    "width": undefined,
+    "height": undefined,
+    "measured": {
+      "width": 273,
+      "height": 104
+    }
+  },
+  {
+    "id": "custom-node-36",
+    "type": "custom",
+    "position": {
+      "x": 2393.742218183125,
+      "y": 1159.107714866152
+    },
+    "data": {
+      "label": "user_list",
+      "type": "compute",
+      "icon": "/assets/images/icons/infraestructura/http.svg",
+      "description": undefined
+    },
+    "style": undefined,
+    "width": undefined,
+    "height": undefined,
+    "measured": {
+      "width": 200,
+      "height": 104
     }
   }
 ];
 
 export const infraestructuraEdges = [
-  {
-    "id": "xy-edge__1right-4left",
-    "source": "1",
-    "target": "4",
-    "sourceHandle": "right",
-    "targetHandle": "left",
-    "type": "smoothstep",
-    "animated": true,
-    "style": {
-      "stroke": "#1e40af",
-      "strokeWidth": 2
-    },
-    "markerEnd": {
-      "type": "arrowclosed",
-      "color": "#1e40af"
-    },
-    "label": "",
-    "labelStyle": {
-      "fontSize": 12,
-      "fontWeight": 600
-    }
-  },
-  {
-    "id": "xy-edge__4right-8left",
-    "source": "4",
-    "target": "8",
-    "sourceHandle": "right",
-    "targetHandle": "left",
-    "type": "smoothstep",
-    "animated": true,
-    "style": {
-      "stroke": "#1e40af",
-      "strokeWidth": 2
-    },
-    "markerEnd": {
-      "type": "arrowclosed",
-      "color": "#1e40af"
-    },
-    "label": "",
-    "labelStyle": {
-      "fontSize": 12,
-      "fontWeight": 600
-    }
-  },
-  {
-    "id": "xy-edge__4right-14left",
-    "source": "4",
-    "target": "14",
-    "sourceHandle": "right",
-    "targetHandle": "left",
-    "type": "smoothstep",
-    "animated": true,
-    "style": {
-      "stroke": "#1e40af",
-      "strokeWidth": 2
-    },
-    "markerEnd": {
-      "type": "arrowclosed",
-      "color": "#1e40af"
-    },
-    "label": "",
-    "labelStyle": {
-      "fontSize": 12,
-      "fontWeight": 600
-    }
-  },
-  {
-    "id": "xy-edge__4right-12left",
-    "source": "4",
-    "target": "12",
-    "sourceHandle": "right",
-    "targetHandle": "left",
-    "type": "smoothstep",
-    "animated": true,
-    "style": {
-      "stroke": "#1e40af",
-      "strokeWidth": 2
-    },
-    "markerEnd": {
-      "type": "arrowclosed",
-      "color": "#1e40af"
-    },
-    "label": "",
-    "labelStyle": {
-      "fontSize": 12,
-      "fontWeight": 600
-    }
-  },
-  {
-    "id": "xy-edge__3right-16left",
-    "source": "3",
-    "target": "16",
-    "sourceHandle": "right",
-    "targetHandle": "left",
-    "type": "smoothstep",
-    "animated": true,
-    "style": {
-      "stroke": "#1e40af",
-      "strokeWidth": 2
-    },
-    "markerEnd": {
-      "type": "arrowclosed",
-      "color": "#1e40af"
-    },
-    "label": "",
-    "labelStyle": {
-      "fontSize": 12,
-      "fontWeight": 600
-    }
-  },
-  {
-    "id": "xy-edge__3right-13left",
-    "source": "3",
-    "target": "13",
-    "sourceHandle": "right",
-    "targetHandle": "left",
-    "type": "smoothstep",
-    "animated": true,
-    "style": {
-      "stroke": "#1e40af",
-      "strokeWidth": 2
-    },
-    "markerEnd": {
-      "type": "arrowclosed",
-      "color": "#1e40af"
-    },
-    "label": "",
-    "labelStyle": {
-      "fontSize": 12,
-      "fontWeight": 600
-    }
-  },
   {
     "id": "xy-edge__10right-11left",
     "source": "10",
@@ -761,6 +1076,94 @@ export const infraestructuraEdges = [
     "target": "container-19",
     "sourceHandle": "right",
     "targetHandle": "left",
+    "type": "smoothstep",
+    "animated": true,
+    "style": {
+      "stroke": "#1e40af",
+      "strokeWidth": 2
+    },
+    "markerEnd": {
+      "type": "arrowclosed",
+      "color": "#1e40af"
+    },
+    "label": "",
+    "labelStyle": {
+      "fontSize": 12,
+      "fontWeight": 600
+    }
+  },
+  {
+    "id": "xy-edge__3right-container-1left",
+    "source": "3",
+    "target": "container-1",
+    "sourceHandle": "right",
+    "targetHandle": "left",
+    "type": "smoothstep",
+    "animated": true,
+    "style": {
+      "stroke": "#1e40af",
+      "strokeWidth": 2
+    },
+    "markerEnd": {
+      "type": "arrowclosed",
+      "color": "#1e40af"
+    },
+    "label": "",
+    "labelStyle": {
+      "fontSize": 12,
+      "fontWeight": 600
+    }
+  },
+  {
+    "id": "xy-edge__3right-container-2left",
+    "source": "3",
+    "target": "container-2",
+    "sourceHandle": "right",
+    "targetHandle": "left",
+    "type": "smoothstep",
+    "animated": true,
+    "style": {
+      "stroke": "#1e40af",
+      "strokeWidth": 2
+    },
+    "markerEnd": {
+      "type": "arrowclosed",
+      "color": "#1e40af"
+    },
+    "label": "",
+    "labelStyle": {
+      "fontSize": 12,
+      "fontWeight": 600
+    }
+  },
+  {
+    "id": "xy-edge__1right-container-19left",
+    "source": "1",
+    "target": "container-19",
+    "sourceHandle": "right",
+    "targetHandle": "left",
+    "type": "smoothstep",
+    "animated": true,
+    "style": {
+      "stroke": "#1e40af",
+      "strokeWidth": 2
+    },
+    "markerEnd": {
+      "type": "arrowclosed",
+      "color": "#1e40af"
+    },
+    "label": "",
+    "labelStyle": {
+      "fontSize": 12,
+      "fontWeight": 600
+    }
+  },
+  {
+    "id": "xy-edge__container-2bottom-4top",
+    "source": "container-2",
+    "target": "4",
+    "sourceHandle": "bottom",
+    "targetHandle": "top",
     "type": "smoothstep",
     "animated": true,
     "style": {

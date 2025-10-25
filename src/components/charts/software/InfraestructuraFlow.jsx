@@ -136,6 +136,7 @@ const ContainerNode = ({ data, selected, id }) => {
   const getContainerStyle = (color) => {
     const colorStyles = {
       '#DAE8FC': { bg: 'bg-blue-100', border: 'border-blue-400', text: 'text-blue-900', shadow: 'shadow-blue-200' },
+      '#D5E8D4': { bg: 'bg-green-100', border: 'border-green-400', text: 'text-green-900', shadow: 'shadow-green-200' },
       '#FFE6CC': { bg: 'bg-orange-100', border: 'border-orange-400', text: 'text-orange-900', shadow: 'shadow-orange-200' },
       '#E1D5E7': { bg: 'bg-purple-100', border: 'border-purple-400', text: 'text-purple-900', shadow: 'shadow-purple-200' },
       '#BAC8D3': { bg: 'bg-slate-100', border: 'border-slate-400', text: 'text-slate-900', shadow: 'shadow-slate-200' },
@@ -201,6 +202,7 @@ const InfraestructuraFlow = () => {
   // Colores disponibles para contenedores
   const containerColorOptions = [
     { value: '#DAE8FC', label: 'Azul', preview: 'bg-blue-200' },
+    { value: '#D5E8D4', label: 'Verde', preview: 'bg-green-200' },
     { value: '#FFE6CC', label: 'Naranja', preview: 'bg-orange-200' },
     { value: '#E1D5E7', label: 'Púrpura', preview: 'bg-purple-200' },
     { value: '#BAC8D3', label: 'Gris', preview: 'bg-slate-200' },
@@ -208,7 +210,6 @@ const InfraestructuraFlow = () => {
     { value: '#B0E3E6', label: 'Verde azulado', preview: 'bg-teal-200' },
     { value: '#FFFFFF', label: 'Blanco', preview: 'bg-white border border-gray-300' }
   ];
-  
   // Lista de tipos de nodos disponibles
   const nodeTypeOptions = [
     { value: 'client', label: '💻 Cliente', color: 'slate' },
@@ -446,31 +447,30 @@ export const nodeTypes = {
     <div className="space-y-6">
       {/* Panel de información superior */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-
         {/* Componentes Principales */}
         <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-slate-200">
-        <h3 className="font-bold text-base text-slate-800 mb-3 flex items-center gap-2">
-            <span className="w-3 h-3 bg-gradient-to-r from-blue-500 to-emerald-500 rounded-full"></span>
-            Componentes Principales
-        </h3>
-        <div className="space-y-2 text-sm">
-            <div className="flex items-center gap-3">
-            <div className="w-4 h-4 bg-blue-600 rounded-full shadow-sm"></div>
-            <span className="text-slate-700 font-medium">Web App SGA</span>
-            </div>
-            <div className="flex items-center gap-3">
-            <div className="w-4 h-4 bg-cyan-600 rounded-full shadow-sm"></div>
-            <span className="text-slate-700 font-medium">Azure Functions</span>
-            </div>
-            <div className="flex items-center gap-3">
-            <div className="w-4 h-4 bg-green-600 rounded-full shadow-sm"></div>
-            <span className="text-slate-700 font-medium">Base de Datos</span>
-            </div>
-            <div className="flex items-center gap-3">
-            <div className="w-4 h-4 bg-yellow-600 rounded-full shadow-sm"></div>
-            <span className="text-slate-700 font-medium">Almacenamiento</span>
-            </div>
-        </div>
+          <h3 className="font-bold text-base text-slate-800 mb-3 flex items-center gap-2">
+              <span className="w-3 h-3 bg-gradient-to-r from-blue-500 to-emerald-500 rounded-full"></span>
+              Componentes Principales
+          </h3>
+          <div className="space-y-2 text-sm">
+              <div className="flex items-center gap-3">
+              <div className="w-4 h-4 bg-blue-600 rounded-full shadow-sm"></div>
+              <span className="text-slate-700 font-medium">Web App SGA</span>
+              </div>
+              <div className="flex items-center gap-3">
+              <div className="w-4 h-4 bg-cyan-600 rounded-full shadow-sm"></div>
+              <span className="text-slate-700 font-medium">Azure Functions</span>
+              </div>
+              <div className="flex items-center gap-3">
+              <div className="w-4 h-4 bg-green-600 rounded-full shadow-sm"></div>
+              <span className="text-slate-700 font-medium">Base de Datos</span>
+              </div>
+              <div className="flex items-center gap-3">
+              <div className="w-4 h-4 bg-yellow-600 rounded-full shadow-sm"></div>
+              <span className="text-slate-700 font-medium">Almacenamiento</span>
+              </div>
+          </div>
         </div>
 
         {/* Roles y Acceso */}
@@ -503,7 +503,7 @@ export const nodeTypes = {
                 </div>
                 </div>
             </div>
-            </div>
+          </div>
 
         {/* Flujo de Datos */}
         <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-slate-200">
@@ -529,6 +529,131 @@ export const nodeTypes = {
                 </div>
             </div>
         </div>
+
+        {/* CONTENEDORES 
+        <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-slate-200">
+          <div className="font-bold text-slate-800 mb-3 flex items-center gap-2">
+            <span className="text-lg">📦</span> Contenedores
+          </div>
+          <div className="space-y-3">
+            <input
+              type="text"
+              value={containerName}
+              onChange={(e) => setContainerName(e.target.value)}
+              placeholder="Nombre del contenedor (opcional)"
+              className="w-full px-2 py-1 border border-gray-300 rounded text-xs focus:outline-none focus:border-blue-500"
+            />
+            
+             Selector de color
+            <div>
+              <label className="block text-xs font-medium text-gray-700 mb-1">Color de fondo:</label>
+              <div className="grid grid-cols-3 gap-1">
+                {containerColorOptions.map((colorOption) => (
+                  <button
+                    key={colorOption.value}
+                    onClick={() => setContainerColor(colorOption.value)}
+                    className={`p-2 rounded border-2 transition-all duration-200 ${
+                      containerColor === colorOption.value 
+                        ? 'border-blue-500 shadow-md' 
+                        : 'border-gray-300 hover:border-gray-400'
+                    }`}
+                    title={colorOption.label}
+                  >
+                    <div className={`w-full h-4 rounded ${colorOption.preview}`}></div>
+                    <div className="text-xs mt-1 text-center">{colorOption.label}</div>
+                  </button>
+                ))}
+              </div>
+            </div>
+            
+            <button
+              onClick={addContainer}
+              className="w-full bg-blue-500 hover:bg-blue-600 text-white px-3 py-2 rounded-lg text-sm font-medium transition-colors"
+            >
+              ➕ Añadir Contenedor
+            </button>
+          </div>
+          <div className="mt-2 text-xs text-slate-600">
+            <p>• Selecciona para redimensionar</p>
+          </div>
+        </div>
+
+         AÑADIR NODOS 
+        <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-slate-200">
+          <div className="font-bold text-slate-800 mb-3 flex items-center gap-2">
+            <span className="text-lg">🎯</span> Añadir Nodos
+          </div>
+          <div className="space-y-3">
+            * Nombre del nodo *
+            <input
+              type="text"
+              value={newNodeName}
+              onChange={(e) => setNewNodeName(e.target.value)}
+              placeholder="Nombre del nodo"
+              className="w-full px-2 py-1 border border-gray-300 rounded text-xs focus:outline-none focus:border-blue-500"
+            />
+            
+            * Descripción opcional *
+            <input
+              type="text"
+              value={newNodeDescription}
+              onChange={(e) => setNewNodeDescription(e.target.value)}
+              placeholder="Descripción (opcional)"
+              className="w-full px-2 py-1 border border-gray-300 rounded text-xs focus:outline-none focus:border-blue-500"
+            />
+            
+            * Selector de tipo *
+            <select
+              value={newNodeType}
+              onChange={(e) => setNewNodeType(e.target.value)}
+              className="w-full px-2 py-1 border border-gray-300 rounded text-xs focus:outline-none focus:border-blue-500"
+            >
+              {nodeTypeOptions.map((option) => (
+                <option key={option.value} value={option.value}>
+                  {option.label}
+                </option>
+              ))}
+            </select>
+            
+            <button
+              onClick={addCustomNode}
+              disabled={!newNodeName.trim()}
+              className="w-full bg-green-500 hover:bg-green-600 disabled:bg-gray-300 disabled:cursor-not-allowed text-white px-3 py-2 rounded-lg text-sm font-medium transition-colors"
+            >
+              ➕ Añadir Nodo
+            </button>
+          </div>
+          <div className="mt-2 text-xs text-slate-600">
+            <p>• Nombre obligatorio</p>
+            <p>• Arrastra handles para conectar</p>
+          </div>
+        </div>
+
+        {/* EDITOR 
+        <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-slate-200">
+          <div className="font-bold text-slate-800 mb-3 flex items-center gap-2">
+            <span className="text-lg">✏️</span> Editor
+          </div>
+          <div className="space-y-2">
+            <button
+              onClick={saveChanges}
+              className="w-full bg-green-500 hover:bg-green-600 text-white px-3 py-2 rounded-lg text-sm font-medium transition-colors"
+            >
+              💾 Guardar Cambios
+            </button>
+            <button
+              onClick={resetChanges}
+              className="w-full bg-red-500 hover:bg-red-600 text-white px-3 py-2 rounded-lg text-sm font-medium transition-colors"
+            >
+              🔄 Resetear
+            </button>
+          </div>
+          <div className="mt-3 text-xs text-slate-600">
+            <p>• Haz clic en líneas para editarlas</p>
+            <p>• Arrastra nodos para mover</p>
+            <p>• Guarda para exportar código</p>
+          </div>
+        </div>*/}
 
       </div>
 

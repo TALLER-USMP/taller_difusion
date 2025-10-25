@@ -55,8 +55,18 @@ function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-[#A4101A] via-[#B91C2C] to-[#DC2626] text-white py-20">
+      <section className="relative bg-gradient-to-br from-[#A4101A] via-[#B91C2C] to-[#DC2626] text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black opacity-10"></div>
+        
+        {/* Logo con rotación y ajuste de posición */}
+        <div className="absolute inset-0 bg-left bg-no-repeat bg-contain opacity-20"
+          style={{ 
+            backgroundImage: "url('/assets/images/logo/usmp_white.png')",
+            backgroundPosition: 'left 40%',
+            transform: 'rotate(-5deg) translateY(-50px)'
+          }}>
+        </div>
+
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
@@ -75,6 +85,11 @@ function Home() {
               
               <p className="text-lg text-red-100 max-w-2xl leading-relaxed">
                 {projectInfo.description}
+              </p>
+              
+              {/* TEXTO NUEVO AGREGADO */}
+              <p className="text-base text-red-50 max-w-2xl leading-relaxed italic">
+                Proyecto desarrollado en el curso de "Taller de proyectos" de la Escuela Profesional de Ingeniería de Computación y Sistemas FIA USMP.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
@@ -158,6 +173,70 @@ function Home() {
                 </h3>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+{/* Docentes del Proyecto */}
+<section className="py-20 pt-0 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-[#333333] mb-4">Docentes del Proyecto</h2>
+            <p className="text-xl text-gray-600">
+              Profesores guía del curso "Taller de Proyectos"
+            </p>
+          </div>
+          
+          <div className="flex flex-wrap justify-center gap-8">
+            {/* Docente Principal */}
+            <div className="bg-gray-50 rounded-xl p-6 text-center hover:shadow-lg transition-shadow w-full sm:w-80">
+              <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden bg-gray-200 border-4 border-[#A4101A]">
+                <img 
+                  src="/assets/docente.jpg" 
+                  alt="Norma Virginia León Lescano"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-[#333333] mb-1">Norma Virginia León Lescano</h3>
+              <p className="text-[#A4101A] font-semibold mb-2">Docente Principal</p>
+              <p className="text-gray-600 text-sm mb-3">Escuela Profesional de Ingeniería de Computación y Sistemas</p>
+              <a 
+                href="https://www.linkedin.com/in/norma-le%C3%B3n-519830236/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-[#0077B5] hover:text-[#005885] transition-colors text-sm font-medium"
+              >
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+                Ver LinkedIn
+              </a>
+            </div>
+
+            {/* Decano */}
+            <div className="bg-gray-50 rounded-xl p-6 text-center hover:shadow-lg transition-shadow w-full sm:w-80">
+              <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden bg-gray-200 border-4 border-[#A4101A]">
+                <img 
+                  src="/assets/decano.jpg" 
+                  alt="Rubén García Farje"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-[#333333] mb-1">Rubén García Farje</h3>
+              <p className="text-[#A4101A] font-semibold mb-2">Decano de la Escuela</p>
+              <p className="text-gray-600 text-sm mb-3">Escuela Profesional de Ingeniería de Computación y Sistemas</p>
+              <a 
+                href="https://www.linkedin.com/in/rub%C3%A9n-garc%C3%ADa-farje-345152bb/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-[#0077B5] hover:text-[#005885] transition-colors text-sm font-medium"
+              >
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+                Ver LinkedIn
+              </a>
+            </div>
           </div>
         </div>
       </section>

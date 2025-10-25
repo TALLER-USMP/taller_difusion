@@ -43,7 +43,11 @@ const wikiData = {
         content: [
           'Semanas 1-2: Establecimiento exitoso de roles y capacitación del equipo.',
           'Semanas 3-4: División eficiente en equipos AS IS/TO BE para análisis paralelo.',
-          'Semanas 5-6: Aprobación formal de procesos y transición a desarrollo activo.'
+          'Semanas 5-6: Aprobación formal de procesos y transición a desarrollo activo.',
+          'Semanas 7-8: Gestión efectiva de pausa académica respetando prioridades del equipo.',
+          'Semana 9: Implementación exitosa de herramientas de comunicación (Slack) y procesos DevSecOps/QA.',
+          'Semana 10: Inicio estructurado del desarrollo con primer microfrontend (Login) implementado.',
+          'Semana 11: Resolución efectiva de problemas técnicos y desarrollo paralelo de Dashboard con integración exitosa.'
         ],
         note: 'La metodología Scrum ha demostrado ser efectiva para coordinar 12+ miembros en 6 áreas especializadas.'
       }

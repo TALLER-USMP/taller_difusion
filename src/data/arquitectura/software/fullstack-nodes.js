@@ -12,7 +12,7 @@ export const fullStackNodes = [
     "data": {
       "label": "FULL STACK DEVELOPER",
       "type": "client",
-      "icon": `${BASE_URL}assets/images/icons/fullstack/fullstack.svg`,
+      "icon": "/assets/images/icons/fullstack/fullstack.svg"
     },
     "style": undefined,
     "width": undefined,
@@ -31,7 +31,7 @@ export const fullStackNodes = [
     },
     "data": {
       "type": "client",
-      "icon": `${BASE_URL}assets/images/icons/fullstack/azure.svg`,
+      "icon": "/assets/images/icons/fullstack/azure.svg"
     },
     "style": undefined,
     "width": undefined,
@@ -45,12 +45,12 @@ export const fullStackNodes = [
     "id": "admin-portal",
     "type": "custom",
     "position": {
-      "x": 3401.5374430852034,
-      "y": 12.412143155506683
+      "x": 4197.968302549814,
+      "y": 11.454894526342478
     },
     "data": {
       "type": "client",
-      "icon": `${BASE_URL}assets/images/icons/fullstack/developer.svg`,
+      "icon": "/assets/images/icons/fullstack/developer.svg"
     },
     "style": undefined,
     "width": undefined,
@@ -90,7 +90,7 @@ export const fullStackNodes = [
     "data": {
       "label": "NODE.JS",
       "type": "gateway",
-      "icon": `${BASE_URL}assets/images/icons/fullstack/node.svg`,
+      "icon": "/assets/images/icons/fullstack/node.svg"
     },
     "style": undefined,
     "width": undefined,
@@ -110,7 +110,7 @@ export const fullStackNodes = [
     "data": {
       "label": "TAILWIND CSS",
       "type": "gateway",
-      "icon": `${BASE_URL}assets/images/icons/fullstack/talwind.svg`,
+      "icon": "/assets/images/icons/fullstack/talwind.svg"
     },
     "style": undefined,
     "width": undefined,
@@ -130,7 +130,7 @@ export const fullStackNodes = [
     "data": {
       "label": "REACT 18",
       "type": "security",
-      "icon": `${BASE_URL}assets/images/icons/fullstack/react.svg`,
+      "icon": "/assets/images/icons/fullstack/react.svg"
     },
     "style": undefined,
     "width": undefined,
@@ -150,7 +150,7 @@ export const fullStackNodes = [
     "data": {
       "label": "JAVASCRIPT",
       "type": "compute",
-      "icon": `${BASE_URL}assets/images/icons/fullstack/js.svg`,
+      "icon": "/assets/images/icons/fullstack/js.svg"
     },
     "style": undefined,
     "width": undefined,
@@ -170,7 +170,7 @@ export const fullStackNodes = [
     "data": {
       "label": "JAVASCRIPT",
       "type": "compute",
-      "icon": `${BASE_URL}assets/images/icons/fullstack/js.svg`,
+      "icon": "/assets/images/icons/fullstack/js.svg"
     },
     "style": undefined,
     "width": undefined,
@@ -190,7 +190,7 @@ export const fullStackNodes = [
     "data": {
       "label": "Blob Storage",
       "type": "compute",
-      "icon": `${BASE_URL}assets/images/icons/fullstack/store.svg`,
+      "icon": "/assets/images/icons/fullstack/store.svg"
     },
     "style": undefined,
     "width": undefined,
@@ -210,7 +210,7 @@ export const fullStackNodes = [
     "data": {
       "label": "TYPESCRIPT",
       "type": "serverless",
-      "icon": `${BASE_URL}assets/images/icons/fullstack/ts.svg`,
+      "icon": "/assets/images/icons/fullstack/ts.svg"
     },
     "style": undefined,
     "width": undefined,
@@ -230,7 +230,7 @@ export const fullStackNodes = [
     "data": {
       "label": "TYPESCRIPT",
       "type": "compute",
-      "icon": `${BASE_URL}assets/images/icons/fullstack/ts.svg`,
+      "icon": "/assets/images/icons/fullstack/ts.svg"
     },
     "style": undefined,
     "width": undefined,
@@ -244,13 +244,13 @@ export const fullStackNodes = [
     "id": "analytics-service",
     "type": "custom",
     "position": {
-      "x": 2941.132515499438,
-      "y": 247.14758099854788
+      "x": 3370.806593609963,
+      "y": 251.6206911090065
     },
     "data": {
       "label": "GITHUB",
       "type": "serverless",
-      "icon": `${BASE_URL}assets/images/icons/fullstack/github.svg`,
+      "icon": "/assets/images/icons/fullstack/github.svg"
     },
     "style": undefined,
     "width": undefined,
@@ -264,12 +264,12 @@ export const fullStackNodes = [
     "id": "message-queue",
     "type": "custom",
     "position": {
-      "x": 3040.0625520328185,
-      "y": 467.9586148785437
+      "x": 3593.1248052572832,
+      "y": 472.7147687008703
     },
     "data": {
       "type": "compute",
-      "icon": `${BASE_URL}assets/images/icons/devsecops/cypress.svg`,
+      "icon": "/assets/images/icons/devsecops/cypress.svg"
     },
     "style": undefined,
     "width": undefined,
@@ -283,12 +283,12 @@ export const fullStackNodes = [
     "id": "event-hub",
     "type": "custom",
     "position": {
-      "x": 2804.503687646837,
-      "y": 635.7259876737253
+      "x": 3347.8129186386927,
+      "y": 638.6880015317013
     },
     "data": {
       "type": "compute",
-      "icon": `${BASE_URL}assets/images/icons/devsecops/postman.svg`,
+      "icon": "/assets/images/icons/devsecops/postman.svg"
     },
     "style": undefined,
     "width": undefined,
@@ -302,12 +302,12 @@ export const fullStackNodes = [
     "id": "workflow-engine",
     "type": "custom",
     "position": {
-      "x": 3105.649002344348,
-      "y": 781.3205211227246
+      "x": 3655.526376645958,
+      "y": 780.6340764050109
     },
     "data": {
       "type": "serverless",
-      "icon": `${BASE_URL}assets/images/icons/devsecops/jest.svg`,
+      "icon": "/assets/images/icons/devsecops/jest.svg"
     },
     "style": undefined,
     "width": undefined,
@@ -321,12 +321,12 @@ export const fullStackNodes = [
     "id": "user-db",
     "type": "custom",
     "position": {
-      "x": 2811.6271449951623,
-      "y": 1034.3700895125503
+      "x": 3357.285108938905,
+      "y": 1041.948672345102
     },
     "data": {
       "type": "database",
-      "icon": `${BASE_URL}assets/images/icons/devsecops/grafana.svg`,
+      "icon": "/assets/images/icons/devsecops/grafana.svg"
     },
     "style": undefined,
     "width": undefined,
@@ -340,12 +340,12 @@ export const fullStackNodes = [
     "id": "order-db",
     "type": "custom",
     "position": {
-      "x": 3072.568698778371,
-      "y": 1030.5354404290288
+      "x": 3630.8576341097005,
+      "y": 1040.6402175390983
     },
     "data": {
       "type": "database",
-      "icon": `${BASE_URL}assets/images/icons/devsecops/prometheus.svg`,
+      "icon": "/assets/images/icons/devsecops/prometheus.svg"
     },
     "style": undefined,
     "width": undefined,
@@ -359,12 +359,12 @@ export const fullStackNodes = [
     "id": "analytics-db",
     "type": "custom",
     "position": {
-      "x": 2999.6369550892655,
-      "y": 636.1780710218736
+      "x": 3557.678227200936,
+      "y": 638.7968625209929
     },
     "data": {
       "type": "database",
-      "icon": `${BASE_URL}assets/images/icons/devsecops/issues.svg`,
+      "icon": "/assets/images/icons/devsecops/issues.svg"
     },
     "style": undefined,
     "width": undefined,
@@ -383,7 +383,7 @@ export const fullStackNodes = [
     },
     "data": {
       "type": "cache",
-      "icon": `${BASE_URL}assets/images/icons/fullstack/figma.svg`,
+      "icon": "/assets/images/icons/fullstack/figma.svg"
     },
     "style": undefined,
     "width": undefined,
@@ -397,12 +397,12 @@ export const fullStackNodes = [
     "id": "blob-storage",
     "type": "custom",
     "position": {
-      "x": 2807.8042952221003,
-      "y": 802.4936504649746
+      "x": 3356.1884227943046,
+      "y": 801.8495348711729
     },
     "data": {
       "type": "storage",
-      "icon": `${BASE_URL}assets/images/icons/devsecops/selenium.svg`,
+      "icon": "/assets/images/icons/devsecops/selenium.svg"
     },
     "style": undefined,
     "width": undefined,
@@ -416,12 +416,12 @@ export const fullStackNodes = [
     "id": "backup-storage",
     "type": "custom",
     "position": {
-      "x": 2804.907461887094,
-      "y": 468.24487880129027
+      "x": 3369.173654949662,
+      "y": 468.7084584541252
     },
     "data": {
       "type": "storage",
-      "icon": `${BASE_URL}assets/images/icons/devsecops/playwright.svg`,
+      "icon": "/assets/images/icons/devsecops/playwright.svg"
     },
     "style": undefined,
     "width": undefined,
@@ -441,7 +441,7 @@ export const fullStackNodes = [
     "data": {
       "label": "Visual Studio Code",
       "type": "monitoring",
-      "icon": `${BASE_URL}assets/images/icons/fullstack/visual.svg`,
+      "icon": "/assets/images/icons/fullstack/visual.svg"
     },
     "style": undefined,
     "width": undefined,
@@ -460,7 +460,7 @@ export const fullStackNodes = [
     },
     "data": {
       "type": "security",
-      "icon": `${BASE_URL}assets/images/icons/fullstack/balsamiq.svg`,
+      "icon": "/assets/images/icons/fullstack/balsamiq.svg"
     },
     "style": undefined,
     "width": undefined,
@@ -479,7 +479,7 @@ export const fullStackNodes = [
     },
     "data": {
       "type": "security",
-      "icon": `${BASE_URL}assets/images/icons/fullstack/supabase.svg`,
+      "icon": "/assets/images/icons/fullstack/supabase.svg"
     },
     "style": undefined,
     "width": undefined,
@@ -637,8 +637,8 @@ export const fullStackNodes = [
     "id": "container-8",
     "type": "container",
     "position": {
-      "x": 2743.3606073692767,
-      "y": 155.2950637732713
+      "x": 3303.5177473610606,
+      "y": 154.05591081496266
     },
     "data": {
       "label": "CI/CD DEVOPS",
@@ -877,8 +877,8 @@ export const fullStackNodes = [
     "id": "container-19",
     "type": "container",
     "position": {
-      "x": 2771.186069099425,
-      "y": 212.22028506829142
+      "x": 3330.172350039842,
+      "y": 206.4166146463173
     },
     "data": {
       "label": "CI/CD",
@@ -901,8 +901,8 @@ export const fullStackNodes = [
     "id": "container-20",
     "type": "container",
     "position": {
-      "x": 2771.9278030394903,
-      "y": 416.40033330729875
+      "x": 3329.9267460272486,
+      "y": 413.37814080233363
     },
     "data": {
       "label": "QA",
@@ -925,8 +925,8 @@ export const fullStackNodes = [
     "id": "container-21",
     "type": "container",
     "position": {
-      "x": 2769.585237323187,
-      "y": 970.7193908052321
+      "x": 3330.4003669320336,
+      "y": 974.5086822215081
     },
     "data": {
       "label": "Monitoreo",
@@ -943,6 +943,70 @@ export const fullStackNodes = [
     "measured": {
       "width": 523,
       "height": 214
+    }
+  },
+  {
+    "id": "container-1",
+    "type": "container",
+    "position": {
+      "x": 2742.3736392032806,
+      "y": 157.36896932931938
+    },
+    "data": {
+      "label": "INFRAESTRUCTURE",
+      "backgroundColor": "#FFFFFF",
+      "icon": undefined
+    },
+    "style": {
+      "width": 300,
+      "height": 200,
+      "zIndex": -1
+    },
+    "width": 442,
+    "height": 465,
+    "measured": {
+      "width": 442,
+      "height": 465
+    }
+  },
+  {
+    "id": "custom-node-26",
+    "type": "custom",
+    "position": {
+      "x": 3608.333333333334,
+      "y": 249.41449725832842
+    },
+    "data": {
+      "type": "compute",
+      "icon": "/assets/images/icons/fullstack/slack.svg",
+      "description": undefined
+    },
+    "style": undefined,
+    "width": undefined,
+    "height": undefined,
+    "measured": {
+      "width": 200,
+      "height": 120
+    }
+  },
+  {
+    "id": "custom-node-27",
+    "type": "custom",
+    "position": {
+      "x": 2856.452909812488,
+      "y": 244.0427513708358
+    },
+    "data": {
+      "type": "compute",
+      "icon": "/assets/images/icons/fullstack/Bicep.svg",
+      "description": undefined
+    },
+    "style": undefined,
+    "width": undefined,
+    "height": undefined,
+    "measured": {
+      "width": 200,
+      "height": 104
     }
   }
 ];
@@ -1106,6 +1170,50 @@ export const fullStackEdges = [
     "id": "xy-edge__web-appright-container-8top",
     "source": "web-app",
     "target": "container-8",
+    "sourceHandle": "right",
+    "targetHandle": "top",
+    "type": "smoothstep",
+    "animated": true,
+    "style": {
+      "stroke": "#ffffff",
+      "strokeWidth": 2
+    },
+    "markerEnd": {
+      "type": "arrowclosed",
+      "color": "#ffffff"
+    },
+    "label": "",
+    "labelStyle": {
+      "fontSize": 12,
+      "fontWeight": 600
+    }
+  },
+  {
+    "id": "xy-edge__web-appright-container-1top",
+    "source": "web-app",
+    "target": "container-1",
+    "sourceHandle": "right",
+    "targetHandle": "top",
+    "type": "smoothstep",
+    "animated": true,
+    "style": {
+      "stroke": "#ffffff",
+      "strokeWidth": 2
+    },
+    "markerEnd": {
+      "type": "arrowclosed",
+      "color": "#ffffff"
+    },
+    "label": "",
+    "labelStyle": {
+      "fontSize": 12,
+      "fontWeight": 600
+    }
+  },
+  {
+    "id": "xy-edge__web-appright-container-1top",
+    "source": "web-app",
+    "target": "container-1",
     "sourceHandle": "right",
     "targetHandle": "top",
     "type": "smoothstep",

@@ -611,7 +611,7 @@ export const nodeTypes = {
           </div>
         </div>
 
-        {/* CONTENEDORES - COMENTADO
+        {/* CONTENEDORES - COMENTADO 
         <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-slate-200">
           <div className="font-bold text-slate-800 mb-3 flex items-center gap-2">
             <span className="text-lg">📦</span> Contenedores
@@ -625,7 +625,7 @@ export const nodeTypes = {
               className="w-full px-2 py-1 border border-gray-300 rounded text-xs focus:outline-none focus:border-blue-500"
             />
             
-            Selector de color
+            * Selector de color*
             <div>
               <label className="block text-xs font-medium text-gray-700 mb-1">Color de fondo:</label>
               <div className="grid grid-cols-3 gap-1">
@@ -658,7 +658,7 @@ export const nodeTypes = {
             <p>• Bordes animados automáticos</p>
             <p>• Selecciona para redimensionar</p>
           </div>
-        </div> */}
+        </div>*/}
 
         {/* AÑADIR NODOS - COMENTADO
         <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-slate-200">
@@ -712,7 +712,7 @@ export const nodeTypes = {
           </div>
         </div>*/}
 
-        {/* EDITOR - COMENTADO
+        {/* EDITOR - COMENTADO 
         <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-slate-200">
           <div className="font-bold text-slate-800 mb-3 flex items-center gap-2">
             <span className="text-lg">✏️</span> Editor

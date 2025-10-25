@@ -55,7 +55,7 @@ const Avances = () => {
       fechaInicio: "15 Sep 2025",
       fechaFin: "24 Oct 2025",
       estado: "en_progreso",
-      progreso: 15
+      progreso: 95
     },
     {
       id: 5,
