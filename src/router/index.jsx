@@ -1,17 +1,19 @@
-// src/router/index.jsx
-import { createBrowserRouter } from 'react-router-dom'
+// RUTA: src/router/index.jsx
+import { createBrowserRouter } from 'react-router-dom';
 
 // Layout principal
-import App from '../App'
+import App from '../App';
 
 // Páginas principales
-import Home from '../pages/Home'
-import Proyecto from '../pages/Proyecto'
-import Equipo from '../pages/Equipo'
-import Avances from '../pages/Avances'
-import Arquitectura from '../pages/Arquitectura'
-import Wiki from '../pages/Wiki'
+import Home from '../pages/Home';
+import Proyecto from '../pages/Proyecto';
+import Equipo from '../pages/Equipo';
+import Avances from '../pages/Avances';
+import Arquitectura from '../pages/Arquitectura';
+import Wiki from '../pages/Wiki';
 
+// Páginas de error
+import NotFound from '../pages/NotFound'; // Esta página necesitarás crearla
 
 // Configuración del router
 const router = createBrowserRouter([
@@ -44,12 +46,13 @@ const router = createBrowserRouter([
         path: "wiki",
         element: <Wiki />
       },
+      // Rutas adicionales que podrías necesitar
       {
-        path: "wiki/:articleId",
+        path: "wiki/:articleId", // Para artículos específicos de la wiki
         element: <Wiki />
       }
     ]
   }
-])
+]);
 
-export default router
+export default router;
