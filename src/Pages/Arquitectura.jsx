@@ -56,9 +56,6 @@ const Arquitectura = () => {
           <p className="text-gray-600">
             Sistema de Gestión Académica - Arquitectura técnica, metodológica y organizacional
           </p>
-          <p className="text-sm font-semibold text-red-600 italic mt-1">
-            ⚠️ Arquitectura temporal / en pruebas - puede cambiar en próximas versiones
-          </p>
         </div>
       </div>
 
