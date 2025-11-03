@@ -17,10 +17,11 @@ import Wiki from '../pages/Wiki'
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <App />, // Layout principal que contiene Navbar, Footer, etc.
+    errorElement: <NotFound />, // Página de error 404
     children: [
       {
-        path: "/",
+        index: true, // Ruta raíz "/"
         element: <Home />
       },
       {
