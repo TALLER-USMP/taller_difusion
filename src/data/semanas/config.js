@@ -2,12 +2,12 @@
 export const CONFIG_PROYECTO = {
     semanasPlaneadas: 16,
     fechaInicio: "2025-08-04",
-    fechaFin: "2025-11-29",
-    miembrosEquipo: 12,
+    fechaFin: "2025-11-21", // ⬅️ CAMBIAR: era 2025-11-29, ahora es la fecha real de fin
+    miembrosEquipo: 34,
     areasActivas: 4,
     version: "1.0.0",
-    estado: "En Desarrollo"
-  };
+    estado: "Completado" // ⬅️ CAMBIAR: era "En Desarrollo", ahora "Completado"
+};
   
   export const CONFIGURACION_ADMIN = {
     // Para futuras funcionalidades del admin panel

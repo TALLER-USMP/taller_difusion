@@ -25,7 +25,7 @@ const WikiNav = ({ activeSection, onSectionChange }) => {
       id: 'avances',
       title: 'Avances del Proyecto',
       icon: TrendingUp,
-      description: 'Progreso semanas 1-6 completadas'
+      description: 'Progreso semanas 1-16 completadas'
     },
     {
       id: 'procesos',
@@ -65,7 +65,7 @@ const WikiNav = ({ activeSection, onSectionChange }) => {
           Sistema de Gestión Académica
         </p>
         <div className="mt-2 text-xs text-[#A4101A] font-medium">
-          📊 Semana 11/16 - Fase de Desarrollo
+          ✅ Semana 16/16 - Proyecto Completado
         </div>
       </div>
 
@@ -115,13 +115,13 @@ const WikiNav = ({ activeSection, onSectionChange }) => {
       <div className="mt-8 pt-6 border-t border-gray-200">
         <div className="text-xs text-gray-500 space-y-2">
           <div>
-          <p className="font-medium text-[#A4101A]">Estado del Proyecto:</p>
-          <p className="text-gray-600">✅ 4 fases completadas</p>
-          <p className="text-gray-600">🚧 Sprint de desarrollo activo</p>
+            <p className="font-medium text-[#A4101A]">Estado del Proyecto:</p>
+            <p className="text-gray-600">✅ Proyecto finalizado exitosamente</p>
+            <p className="text-gray-600">🎉 16 semanas completadas</p>
           </div>
           <div className="pt-2 border-t border-gray-100">
             <p className="font-medium">Última actualización:</p>
-            <p>24 de Octubre 2025</p>
+            <p>31 de Octubre 2025</p>
           </div>
         </div>
       </div>

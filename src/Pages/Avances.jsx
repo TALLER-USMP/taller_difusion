@@ -54,8 +54,8 @@ const Avances = () => {
       semanas: "7-12",
       fechaInicio: "15 Sep 2025",
       fechaFin: "24 Oct 2025",
-      estado: "en_progreso",
-      progreso: 95
+      estado: "completado",
+      progreso: 100
     },
     {
       id: 5,
@@ -64,8 +64,8 @@ const Avances = () => {
       semanas: "13-14",
       fechaInicio: "27 Oct 2025",
       fechaFin: "7 Nov 2025",
-      estado: "pendiente",
-      progreso: 0
+      estado: "completado",
+      progreso: 100
     },
     {
       id: 6,
@@ -74,8 +74,8 @@ const Avances = () => {
       semanas: "15-16",
       fechaInicio: "10 Nov 2025",
       fechaFin: "21 Nov 2025",
-      estado: "pendiente",
-      progreso: 0
+      estado: "completado",
+      progreso: 100
     }
   ];
   

@@ -1,7 +1,7 @@
 // src/pages/Equipo.jsx
 import React, { useState } from 'react';
 import { equipoData, equipoPorArea } from '../data/equipo';
-import { Mail, Linkedin, Users, Award, Code, Shield, Palette, MessageSquare } from 'lucide-react';
+import { Linkedin, Users, Award, Code, Shield, Palette, MessageSquare, TestTube, Workflow, Layers } from 'lucide-react';
 
 const Equipo = () => {
   const [vistaActual, setVistaActual] = useState('todos');
@@ -15,6 +15,9 @@ const Equipo = () => {
       case 'Infraestructura': return <Shield className="w-5 h-5" />;
       case 'Calidad y UX': return <Palette className="w-5 h-5" />;
       case 'Comunicación': return <MessageSquare className="w-5 h-5" />;
+      case 'Desarrolladores UX': return <Palette className="w-5 h-5" />;
+      case 'Testers': return <TestTube className="w-5 h-5" />;
+      case 'Full Stack': return <Layers className="w-5 h-5" />;
       default: return <Users className="w-5 h-5" />;
     }
   };
@@ -27,19 +30,34 @@ const Equipo = () => {
       case 'Infraestructura': return 'from-red-400 to-red-600';
       case 'Calidad y UX': return 'from-red-300 to-red-500';
       case 'Comunicación': return 'from-red-200 to-red-400';
+      case 'Desarrolladores UX': return 'from-purple-500 to-purple-700';
+      case 'Testers': return 'from-green-500 to-green-700';
+      case 'Full Stack': return 'from-blue-500 to-blue-700';
       default: return 'from-gray-400 to-gray-600';
     }
   };
 
-  const MiembroCard = ({ miembro, showArea = false }) => (
+  const MiembroCard = ({ miembro }) => (
     <div 
       className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group cursor-pointer transform hover:scale-105"
       onClick={() => setMiembroSeleccionado(miembro)}
     >
-      {/* Avatar y fondo con gradiente */}
-      <div className="relative h-48 bg-gradient-to-br from-red-50 to-red-100 flex items-center justify-center">
-        <div className="w-24 h-24 rounded-full bg-gradient-to-br from-red-200 to-red-400 flex items-center justify-center text-red-800 font-bold text-2xl shadow-lg">
-          {miembro.nombre.split(' ').map(n => n[0]).join('').slice(0, 2)}
+    {/* Avatar con imagen */}
+    <div className="relative h-48 bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center">
+        <div className="relative">
+          <img 
+            src={miembro.avatar} 
+            alt={miembro.nombre}
+            className="w-32 h-32 rounded-full object-cover shadow-lg border-4 border-white"
+            onError={(e) => {
+              // Si la imagen no carga, mostrar iniciales
+              e.target.style.display = 'none';
+              e.target.nextSibling.style.display = 'flex';
+            }}
+          />
+          <div className="w-32 h-32 rounded-full bg-gradient-to-br from-red-200 to-red-400 items-center justify-center text-red-800 font-bold text-2xl shadow-lg border-4 border-white hidden">
+            {miembro.nombre.split(' ').map(n => n[0]).join('').slice(0, 2)}
+          </div>
         </div>
         <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-lg px-3 py-1">
           <span className="text-xs font-medium text-red-600">ID: {miembro.id}</span>
@@ -73,24 +91,18 @@ const Equipo = () => {
           </div>
         </div>
 
-        {/* Contactos */}
+        {/* LinkedIn únicamente */}
         <div className="flex items-center gap-3">
-          <a 
-            href={`mailto:${miembro.email}`}
-            className="flex items-center gap-1 text-gray-500 hover:text-red-600 transition-colors"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <Mail className="w-4 h-4" />
-          </a>
           {miembro.linkedin && miembro.linkedin !== '#' && (
             <a 
               href={miembro.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1 text-gray-500 hover:text-blue-600 transition-colors"
+              className="flex items-center gap-2 text-blue-600 hover:text-blue-700 transition-colors font-medium text-sm"
               onClick={(e) => e.stopPropagation()}
             >
-              <Linkedin className="w-4 h-4" />
+              <Linkedin className="w-5 h-5" />
+              <span>LinkedIn</span>
             </a>
           )}
         </div>
@@ -109,13 +121,24 @@ const Equipo = () => {
             <div className="bg-gradient-to-r from-red-600 to-red-800 text-white p-8 rounded-t-2xl">
               <button 
                 onClick={onClose}
-                className="absolute top-4 right-4 text-white/80 hover:text-white w-8 h-8 flex items-center justify-center rounded-full hover:bg-white/20 transition-colors"
+                className="absolute top-4 right-4 text-white/80 hover:text-white w-8 h-8 flex items-center justify-center rounded-full hover:bg-white/20 transition-colors text-2xl"
               >
                 ×
               </button>
               <div className="flex items-center gap-6">
-                <div className="w-20 h-20 rounded-full bg-white/20 flex items-center justify-center text-white font-bold text-2xl">
-                  {miembro.nombre.split(' ').map(n => n[0]).join('').slice(0, 2)}
+                <div className="w-20 h-20 rounded-full overflow-hidden bg-white/20 flex items-center justify-center">
+                  <img 
+                    src={miembro.avatar} 
+                    alt={miembro.nombre}
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                      e.target.nextSibling.style.display = 'flex';
+                    }}
+                  />
+                  <div className="w-full h-full items-center justify-center text-white font-bold text-2xl hidden">
+                    {miembro.nombre.split(' ').map(n => n[0]).join('').slice(0, 2)}
+                  </div>
                 </div>
                 <div>
                   <h2 className="text-2xl font-bold mb-2">{miembro.nombre}</h2>
@@ -148,15 +171,6 @@ const Equipo = () => {
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">Contacto</h3>
                 <div className="space-y-3">
-                  <a 
-                    href={`mailto:${miembro.email}`}
-                    className="flex items-center gap-3 text-gray-700 hover:text-red-600 transition-colors group"
-                  >
-                    <div className="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center group-hover:bg-red-200 transition-colors">
-                      <Mail className="w-5 h-5 text-red-600" />
-                    </div>
-                    <span>{miembro.email}</span>
-                  </a>
                   {miembro.linkedin && miembro.linkedin !== '#' && (
                     <a 
                       href={miembro.linkedin}
@@ -167,7 +181,7 @@ const Equipo = () => {
                       <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center group-hover:bg-blue-200 transition-colors">
                         <Linkedin className="w-5 h-5 text-blue-600" />
                       </div>
-                      <span>Perfil de LinkedIn</span>
+                      <span>Ver Perfil de LinkedIn</span>
                     </a>
                   )}
                 </div>
@@ -221,7 +235,7 @@ const Equipo = () => {
               }`}
             >
               {getAreaIcon(area)}
-              {area} ({equipoPorArea[area].filter(Boolean).length})
+              {area} ({equipoPorArea[area].length})
             </button>
           ))}
         </div>
@@ -237,18 +251,10 @@ const Equipo = () => {
 
         {/* Vista por áreas */}
         {vistaActual !== 'todos' && (
-          <div className="space-y-8">
-            <div className="text-center mb-8">
-              <div className={`inline-flex items-center gap-3 bg-gradient-to-r ${getAreaGradient(vistaActual)} text-white px-8 py-4 rounded-2xl shadow-lg`}>
-                {getAreaIcon(vistaActual)}
-                <h2 className="text-2xl font-bold">{vistaActual}</h2>
-              </div>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {equipoPorArea[vistaActual].filter(Boolean).map((miembro) => (
-                <MiembroCard key={miembro.id} miembro={miembro} />
-              ))}
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {equipoPorArea[vistaActual].map((miembro) => (
+              <MiembroCard key={miembro.id} miembro={miembro} />
+            ))}
           </div>
         )}
 

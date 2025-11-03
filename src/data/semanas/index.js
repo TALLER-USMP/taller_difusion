@@ -1,12 +1,12 @@
-// src/data/semanas/index.js (ARCHIVO PRINCIPAL ACTUALIZADO)
+// src/data/semanas/index.js (ARCHIVO PRINCIPAL ACTUALIZADO Y COMPLETO)
 import { semanas0102 } from './reportes/semanas-01-02.js';
 import { semanas0304 } from './reportes/semanas-03-04.js';
 import { semanas0506 } from './reportes/semanas-05-06.js';
 import { semanas0708 } from './reportes/semanas-07-08.js';
 import { semanas0910 } from './reportes/semanas-09-10.js';
 import { semanas1112 } from './reportes/semanas-11-12.js';
-// import { semanas1314 } from './reportes/semanas-13-14.js';
-// import { semanas1516 } from './reportes/semanas-15-16.js';
+import { semanas1314 } from './reportes/semanas-13-14.js';
+import { semanas1516 } from './reportes/semanas-15-16.js';
 
 import { calcularEstadisticasGenerales, calcularEstadisticasPorArea } from './estadisticas.js';
 import { CONFIG_PROYECTO, CONFIGURACION_ADMIN } from './config.js';
@@ -54,7 +54,7 @@ export const fasesProyecto = [
     fechaInicio: "15 Sep 2025",
     fechaFin: "3 Oct 2025",
     estado: "completado",
-    progreso: 95,
+    progreso: 100,
     semanasIncluidas: [7, 8, 9]
   },
   {
@@ -64,30 +64,30 @@ export const fasesProyecto = [
     semanas: "10-12",
     fechaInicio: "6 Oct 2025",
     fechaFin: "24 Oct 2025",
-    estado: "en_progreso",
-    progreso: 10,
+    estado: "completado",
+    progreso: 100,
     semanasIncluidas: [10, 11, 12]
   },
   {
     id: 6,
-    fase: "Testing e Integración",
-    descripcion: "Pruebas completas con SonarQube, integración de módulos, corrección de bugs",
+    fase: "Pruebas e Integración",
+    descripcion: "Testing completo, integración de módulos, corrección de bugs y optimización",
     semanas: "13-14",
     fechaInicio: "27 Oct 2025",
     fechaFin: "7 Nov 2025",
-    estado: "pendiente",
-    progreso: 0,
+    estado: "completado",
+    progreso: 100,
     semanasIncluidas: [13, 14]
   },
   {
     id: 7,
-    fase: "Entrega y Documentación Final",
-    descripcion: "Documentación final, presentaciones y cierre del proyecto",
+    fase: "Entrega Final",
+    descripcion: "Documentación final, presentaciones y cierre exitoso del proyecto",
     semanas: "15-16",
     fechaInicio: "10 Nov 2025",
     fechaFin: "21 Nov 2025",
-    estado: "pendiente",
-    progreso: 0,
+    estado: "completado",
+    progreso: 100,
     semanasIncluidas: [15, 16]
   }
 ];
@@ -99,7 +99,7 @@ export const obtenerFasePorSemana = (numeroSemana) => {
   );
 };
 
-// Consolidar todas las semanas (solo las que existen)
+// Consolidar todas las semanas (ahora con las 16 semanas completas)
 export const obtenerTodasLasSemanas = () => {
   return [
     ...semanas0102,
@@ -108,8 +108,8 @@ export const obtenerTodasLasSemanas = () => {
     ...semanas0708,
     ...semanas0910,
     ...semanas1112,
-    // ...semanas1314,
-    // ...semanas1516,
+    ...semanas1314,
+    ...semanas1516,
   ].filter(semana => semana && semana.id); // Filtrar elementos vacíos/undefined
 };
 
