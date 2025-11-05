@@ -19,7 +19,7 @@ function Home() {
     ],
     tecnologias: [
       { name: "React v18", icon: <Code className="w-6 h-6" />, color: "#61DAFB" },
-      { name: "Azure Cosmos DB", icon: <Database className="w-6 h-6" />, color: "#0078D4" },
+      { name: "PostgreSQL", icon: <Database className="w-6 h-6" />, color: "#0078D4" },
       { name: "Node.js", icon: <Settings className="w-6 h-6" />, color: "#339933" },
       { name: "Serverless Azure", icon: <Cloud className="w-6 h-6" />, color: "#0078D4" },
       { name: "API Gateway", icon: <Zap className="w-6 h-6" />, color: "#FF9900" },
@@ -36,7 +36,7 @@ function Home() {
     {
       fecha: "Agosto 2025", 
       titulo: "Definición de Arquitectura",
-      descripcion: "Arquitectura serverless definida con Azure Cosmos DB como base de datos principal"
+      descripcion: "Arquitectura serverless definida con PostgreSQL como base de datos principal"
     },
     {
       fecha: "Septiembre 2025",

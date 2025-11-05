@@ -285,25 +285,6 @@ export const devsecopsNodes = [
     }
   },
   {
-    "id": "custom-node-19",
-    "type": "custom",
-    "position": {
-      "x": 921.2857625949407,
-      "y": 341.4848279915791
-    },
-    "data": {
-      "type": "repository",
-      "icon": `${BASE_URL}assets/images/icons/devsecops/prometheus.svg`,
-    },
-    "style": undefined,
-    "width": undefined,
-    "height": undefined,
-    "measured": {
-      "width": 168,
-      "height": 102
-    }
-  },
-  {
     "id": "custom-node-20",
     "type": "custom",
     "position": {
@@ -323,29 +304,10 @@ export const devsecopsNodes = [
     }
   },
   {
-    "id": "custom-node-21",
-    "type": "custom",
-    "position": {
-      "x": 672.0036324243822,
-      "y": -347.42323135192765
-    },
-    "data": {
-      "type": "monitoring",
-      "icon": `${BASE_URL}assets/images/icons/devsecops/playwright.svg`,
-    },
-    "style": undefined,
-    "width": undefined,
-    "height": undefined,
-    "measured": {
-      "width": 164,
-      "height": 126
-    }
-  },
-  {
     "id": "custom-node-22",
     "type": "custom",
     "position": {
-      "x": 910.6165969130199,
+      "x": 810.6165969130199,
       "y": -339.17823845209216
     },
     "data": {
@@ -358,25 +320,6 @@ export const devsecopsNodes = [
     "measured": {
       "width": 213,
       "height": 117
-    }
-  },
-  {
-    "id": "custom-node-23",
-    "type": "custom",
-    "position": {
-      "x": 651.0424525592599,
-      "y": 343.07298230039515
-    },
-    "data": {
-      "type": "security",
-      "icon": `${BASE_URL}assets/images/icons/devsecops/grafana.svg`,
-    },
-    "style": undefined,
-    "width": undefined,
-    "height": undefined,
-    "measured": {
-      "width": 223,
-      "height": 100
     }
   },
   {
@@ -396,30 +339,6 @@ export const devsecopsNodes = [
     "measured": {
       "width": 128,
       "height": 133
-    }
-  },
-  {
-    "id": "container-1",
-    "type": "container",
-    "position": {
-      "x": 617.5371272810693,
-      "y": 288.85297935989155
-    },
-    "data": {
-      "label": "Monitoreo",
-      "backgroundColor": "#FFFFFF",
-      "icon": undefined
-    },
-    "style": {
-      "width": 300,
-      "height": 200,
-      "zIndex": -1
-    },
-    "width": 522,
-    "height": 196,
-    "measured": {
-      "width": 522,
-      "height": 196
     }
   },
   {

@@ -314,7 +314,7 @@ export const equipoData = [
     rol: "Desarrolladora Full Stack",
     descripcion: "Desarrolladora versátil con experiencia en desarrollo web completo y bases de datos.",
     linkedin: "https://www.linkedin.com/in/yesica-paredes-gutierrez-9bb46a318/?originalSubdomain=pe",
-    avatar: `${BASE_URL}assets/images/integrantes/yesica.jpg`,
+    avatar: `${BASE_URL}assets/images/integrantes/YesicaParedesGutierrrez.jpeg`,
     especialidades: ["JavaScript", "Python", "Django", "SQL Server"]
   },
   {

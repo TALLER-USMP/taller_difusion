@@ -264,7 +264,7 @@ export const fullStackNodes = [
     "id": "message-queue",
     "type": "custom",
     "position": {
-      "x": 3593.1248052572832,
+      "x": 3493.1248052572832,
       "y": 472.7147687008703
     },
     "data": {
@@ -410,25 +410,6 @@ export const fullStackNodes = [
     "measured": {
       "width": 251,
       "height": 87
-    }
-  },
-  {
-    "id": "backup-storage",
-    "type": "custom",
-    "position": {
-      "x": 3369.173654949662,
-      "y": 468.7084584541252
-    },
-    "data": {
-      "type": "storage",
-      "icon": `${BASE_URL}assets/images/icons/devsecops/playwright.svg`
-    },
-    "style": undefined,
-    "width": undefined,
-    "height": undefined,
-    "measured": {
-      "width": 164,
-      "height": 126
     }
   },
   {

@@ -121,7 +121,7 @@ const WikiNav = ({ activeSection, onSectionChange }) => {
           </div>
           <div className="pt-2 border-t border-gray-100">
             <p className="font-medium">Última actualización:</p>
-            <p>31 de Octubre 2025</p>
+            <p>5 de Noviembre 2025</p>
           </div>
         </div>
       </div>

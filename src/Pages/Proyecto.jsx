@@ -5,7 +5,7 @@ import {
   ChevronRight, ChevronDown, Target, Zap, Calendar, FileText, 
   Users, Code, Database, Cloud, Settings, CheckCircle, Clock,
   ArrowRight, PlayCircle, Download, ExternalLink, Lightbulb,
-  Eye, MessageSquare, Pencil, TestTube, Shield, Activity
+  Eye, MessageSquare, Pencil, TestTube, Shield, Activity, AlertTriangle
 } from 'lucide-react';
 
 const Proyecto = () => {
@@ -234,7 +234,8 @@ const Proyecto = () => {
               { id: 'objetivos', label: 'Objetivos', icon: Target },
               { id: 'tecnologias', label: 'Tecnologías', icon: Code },
               { id: 'proceso-ux', label: 'Proceso UX', icon: Users },
-              { id: 'devSecOps', label: 'DevSecOps', icon: Shield },
+              { id: 'proceso-devsecops', label: 'Proceso DevSecOps', icon: Shield },
+              { id: 'proceso-datos', label: 'Proceso de Datos', icon: Database },
               { id: 'modulos', label: 'Módulos', icon: Settings },
               { id: 'roadmap', label: 'Roadmap', icon: Calendar },
               { id: 'beneficios', label: 'Beneficios', icon: Zap }
@@ -528,177 +529,833 @@ const Proyecto = () => {
             </div>
           )}
 
-          {/* NUEVA SECCIÓN: DevSecOps */}
-          {seccionActiva === 'devSecOps' && (
+          {/* NUEVA SECCIÓN: Proceso DevSecOps */}
+          {seccionActiva === 'proceso-devsecops' && (
             <div className="p-8">
               <div className="mb-8">
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                  {proyectoInfo.devSecOps.titulo}
-                </h2>
-                <p className="text-lg text-gray-600 mb-4">
-                  {proyectoInfo.devSecOps.descripcion}
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">Proceso DevSecOps</h2>
+                <p className="text-lg text-gray-600 mb-2">
+                  Implementamos un <span className="font-semibold text-red-600">flujo de trabajo DevSecOps completo</span> que 
+                  integra desarrollo, seguridad y operaciones en un ciclo continuo, automatizado y seguro.
                 </p>
-                
-                {/* Banner de Arquitectura */}
-                <div className="bg-gradient-to-r from-slate-700 to-slate-900 text-white rounded-xl p-6 mb-6">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
-                      <Settings className="w-6 h-6" />
-                    </div>
-                    <h3 className="text-xl font-bold">
-                      {proyectoInfo.devSecOps.arquitectura.titulo}
-                    </h3>
-                  </div>
-                  <p className="text-slate-200 mb-2">
-                    {proyectoInfo.devSecOps.arquitectura.descripcion}
+                <div className="bg-slate-50 border-l-4 border-slate-500 p-4 mt-4">
+                  <p className="text-sm text-slate-800">
+                    <strong>🔒 Nota:</strong> Esta documentación está basada en el informe del equipo DevSecOps 
+                    y representa el flujo CI/CD implementado en el proyecto.
                   </p>
-                  <span className="inline-block bg-white/20 px-3 py-1 rounded-full text-sm">
-                    🛠️ Herramienta: {proyectoInfo.devSecOps.arquitectura.herramienta}
-                  </span>
                 </div>
               </div>
 
-              {/* Métricas DevSecOps */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-                {proyectoInfo.devSecOps.metricas.map((metrica, index) => (
-                  <div key={index} className="bg-gradient-to-br from-slate-50 to-slate-100 p-4 rounded-lg border border-slate-200 text-center">
-                    <div className="text-2xl font-bold text-slate-900 mb-1">
-                      {metrica.valor}
-                    </div>
-                    <div className="text-xs text-slate-600">{metrica.label}</div>
+              {/* Arquitectura Base */}
+              <div className="mb-8 bg-gradient-to-r from-slate-700 to-slate-900 text-white rounded-xl p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
+                    <Settings className="w-6 h-6" />
                   </div>
-                ))}
+                  <h3 className="text-2xl font-bold">Arquitectura del Flujo de Trabajo</h3>
+                </div>
+                <p className="text-slate-200 mb-3">
+                  Se diseñó una arquitectura completa utilizando <strong>Isoflow</strong> que representa el recorrido 
+                  de commits, Pull Requests y despliegues en la nube, sirviendo como guía de referencia para todo el equipo.
+                </p>
+                <div className="flex flex-wrap gap-3">
+                  <span className="bg-white/20 px-4 py-2 rounded-lg text-sm">✓ Control de Versiones (GitFlow)</span>
+                  <span className="bg-white/20 px-4 py-2 rounded-lg text-sm">✓ Revisión y Aprobación</span>
+                  <span className="bg-white/20 px-4 py-2 rounded-lg text-sm">✓ Pruebas Automatizadas</span>
+                  <span className="bg-white/20 px-4 py-2 rounded-lg text-sm">✓ Despliegue en Azure</span>
+                </div>
               </div>
 
-              {/* Prácticas Implementadas */}
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                Prácticas y Herramientas Implementadas
-              </h3>
-              
-              <div className="grid md:grid-cols-2 gap-6 mb-8">
-                {proyectoInfo.devSecOps.practicas.map((practica, index) => {
-                  const colorClasses = {
-                    blue: 'from-blue-50 to-blue-100 border-blue-200',
-                    purple: 'from-purple-50 to-purple-100 border-purple-200',
-                    red: 'from-red-50 to-red-100 border-red-200',
-                    orange: 'from-orange-50 to-orange-100 border-orange-200',
-                    green: 'from-green-50 to-green-100 border-green-200',
-                    indigo: 'from-indigo-50 to-indigo-100 border-indigo-200'
-                  };
+              {/* Fases del Proceso DevSecOps */}
+              <div className="space-y-6">
+                {[
+                  {
+                    numero: 1,
+                    titulo: "Estandarización de Control de Versiones (GitFlow)",
+                    descripcion: "Estructura de ramas y flujo de desarrollo organizado",
+                    icon: Code,
+                    color: "blue",
+                    contenido: {
+                      implementacion: "Se implementó la metodología GitFlow como estándar de gestión de versiones, estructurando el trabajo en ramas principales y auxiliares.",
+                      ramas: [
+                        { tipo: "main", descripcion: "Rama principal de producción" },
+                        { tipo: "develop", descripcion: "Rama de desarrollo e integración" },
+                        { tipo: "feature", descripcion: "Ramas para nuevas funcionalidades" },
+                        { tipo: "release", descripcion: "Ramas para preparar releases" },
+                        { tipo: "hotfix", descripcion: "Correcciones urgentes en producción" }
+                      ],
+                      practicas: [
+                        "Revisión obligatoria mediante Pull Requests (PRs)",
+                        "Plantilla estandarizada para PRs",
+                        "Guía de contribución con buenas prácticas",
+                        "Conventional Commits para mensajes claros"
+                      ],
+                      resultado: "Ciclo de desarrollo organizado con flujo claro para creación, validación y liberación de funcionalidades"
+                    }
+                  },
+                  {
+                    numero: 2,
+                    titulo: "Análisis SAST (Static Application Security Testing)",
+                    descripcion: "Análisis estático de seguridad del código fuente",
+                    icon: Shield,
+                    color: "red",
+                    contenido: {
+                      objetivo: "Identificar vulnerabilidades en el código antes de la compilación mediante análisis estático profundo.",
+                      herramientas: [
+                        { nombre: "CodeQL", uso: "Análisis de seguridad profundo del código fuente" },
+                        { nombre: "Dependabot", uso: "Monitoreo de dependencias vulnerables" }
+                      ],
+                      detecciones: [
+                        "Inyecciones SQL",
+                        "Vulnerabilidades XSS (Cross-Site Scripting)",
+                        "Desbordamientos de búfer",
+                        "Fallas de seguridad comunes en código"
+                      ],
+                      integracion: "Ejecutado automáticamente en el pipeline CI/CD antes de cada build",
+                      beneficio: "Prevención de vulnerabilidades críticas antes de llegar a producción"
+                    }
+                  },
+                  {
+                    numero: 3,
+                    titulo: "Build y Pruebas Automatizadas",
+                    descripcion: "Compilación, empaquetado y validación del código",
+                    icon: Settings,
+                    color: "purple",
+                    contenido: {
+                      fases: [
+                        "Compilación del proyecto",
+                        "Empaquetado de artefactos",
+                        "Ejecución de pruebas unitarias",
+                        "Validación de integridad y estabilidad"
+                      ],
+                      validaciones: [
+                        "Verificación de que el código compila sin errores",
+                        "Ejecución exitosa de todas las pruebas automáticas",
+                        "Validación de cobertura de código",
+                        "Comprobación de estándares de calidad"
+                      ],
+                      resultado: "Artefacto validado y listo para despliegue"
+                    }
+                  },
+                  {
+                    numero: 4,
+                    titulo: "Análisis DAST (Dynamic Application Security Testing)",
+                    descripcion: "Pruebas dinámicas en la aplicación en ejecución",
+                    icon: Activity,
+                    color: "orange",
+                    contenido: {
+                      objetivo: "Realizar escaneos de seguridad tipo 'caja negra' contra la aplicación desplegada.",
+                      herramienta: "OWASP ZAP (Zed Attack Proxy)",
+                      implementacion: "Ejecutado mediante contenedores Docker en GitHub Actions contra Azure Static Web Apps",
+                      detecciones: [
+                        "Configuraciones incorrectas de seguridad",
+                        "Vulnerabilidades de autenticación",
+                        "Problemas que solo se manifiestan en tiempo de ejecución",
+                        "Exposición de información sensible"
+                      ],
+                      reportes: "Almacenados automáticamente como artifacts en GitHub Actions por 30 días",
+                      colaboracion: "Implementado en conjunto con el Ingeniero de Nube y DevSecOps"
+                    }
+                  },
+                  {
+                    numero: 5,
+                    titulo: "Despliegue Automatizado en Azure",
+                    descripcion: "Deploy continuo en entornos de nube",
+                    icon: Cloud,
+                    color: "green",
+                    contenido: {
+                      plataforma: "Microsoft Azure (Azure Static Web Apps)",
+                      proceso: [
+                        "Autenticación segura mediante Azure Service Principal",
+                        "Gestión de secretos a través de GitHub Secrets",
+                        "Actualización automática de servicios",
+                        "Validación post-despliegue"
+                      ],
+                      seguridad: [
+                        "Credenciales sensibles protegidas y no expuestas",
+                        "Conexión cifrada con Azure",
+                        "Control de acceso basado en roles (RBAC)"
+                      ],
+                      resultado: "Despliegue automático bajo condiciones controladas con validaciones de calidad y seguridad"
+                    }
+                  },
+                  {
+                    numero: 6,
+                    titulo: "Monitoreo y Notificaciones",
+                    descripcion: "Visibilidad en tiempo real del pipeline",
+                    icon: MessageSquare,
+                    color: "indigo",
+                    contenido: {
+                      slack: {
+                        integracion: "Canal central de comunicación con notificaciones automáticas",
+                        eventos: [
+                          "Nuevos commits realizados",
+                          "Creación/actualización de Pull Requests",
+                          "Generación de releases",
+                          "Ejecución de workflows",
+                          "Resultado de despliegues (éxito/error)"
+                        ]
+                      },
+                      dashboard: {
+                        tecnologia: "Streamlit",
+                        metricas: [
+                          "Número total de commits por sprint",
+                          "Actividad individual por desarrollador",
+                          "Frecuencia y volumen de Pull Requests",
+                          "Desempeño del equipo",
+                          "Salud del repositorio"
+                        ]
+                      },
+                      beneficio: "Visibilidad completa, respuesta oportuna ante incidencias y análisis de mejora continua"
+                    }
+                  },
+                  {
+                    numero: 7,
+                    titulo: "Infraestructura de Respaldo (Backups)",
+                    descripcion: "Respaldos automáticos de infraestructura",
+                    icon: Database,
+                    color: "teal",
+                    contenido: {
+                      workflow: "Backup Infrastructure to GitHub Releases",
+                      programacion: "Ejecución automática al cierre de cada sprint",
+                      fases: [
+                        "Exportar Bicep templates desde Azure",
+                        "Limpiar backups antiguos automáticamente",
+                        "Crear release en GitHub con el respaldo",
+                        "Generar resumen y validación del proceso"
+                      ],
+                      garantias: [
+                        "Trazabilidad de cambios de infraestructura",
+                        "Disponibilidad histórica de versiones",
+                        "Recuperación ante incidentes",
+                        "Continuidad operativa asegurada"
+                      ]
+                    }
+                  }
+                ].map((fase, index) => {
+                  const colors = {
+                    blue: { bg: 'bg-blue-500', light: 'bg-blue-50', border: 'border-blue-200', text: 'text-blue-700' },
+                    red: { bg: 'bg-red-500', light: 'bg-red-50', border: 'border-red-200', text: 'text-red-700' },
+                    purple: { bg: 'bg-purple-500', light: 'bg-purple-50', border: 'border-purple-200', text: 'text-purple-700' },
+                    orange: { bg: 'bg-orange-500', light: 'bg-orange-50', border: 'border-orange-200', text: 'text-orange-700' },
+                    green: { bg: 'bg-green-500', light: 'bg-green-50', border: 'border-green-200', text: 'text-green-700' },
+                    indigo: { bg: 'bg-indigo-500', light: 'bg-indigo-50', border: 'border-indigo-200', text: 'text-indigo-700' },
+                    teal: { bg: 'bg-teal-500', light: 'bg-teal-50', border: 'border-teal-200', text: 'text-teal-700' }
+                  }[fase.color];
 
-                  const iconMap = {
-                    'git-branch': <Code className="w-6 h-6" />,
-                    'message-square': <MessageSquare className="w-6 h-6" />,
-                    'shield': <Shield className="w-6 h-6" />,
-                    'activity': <Activity className="w-6 h-6" />,
-                    'zap': <Zap className="w-6 h-6" />,
-                    'database': <Database className="w-6 h-6" />
-                  };
+                  const Icon = fase.icon;
 
                   return (
-                    <div 
-                      key={index}
-                      className={`bg-gradient-to-br ${colorClasses[practica.color]} border rounded-xl p-6`}
-                    >
-                      <div className="flex items-center gap-3 mb-4">
-                        <div className={`w-12 h-12 bg-${practica.color}-600 rounded-lg flex items-center justify-center text-white`}>
-                          {iconMap[practica.icono]}
-                        </div>
-                        <h4 className="text-lg font-bold text-gray-900">
-                          {practica.nombre}
-                        </h4>
-                      </div>
+                    <div key={index} className="relative">
+                      {index < 6 && (
+                        <div className="absolute left-6 top-16 w-0.5 h-20 bg-gray-300 z-0"></div>
+                      )}
                       
-                      <p className="text-gray-700 text-sm mb-4">
-                        {practica.descripcion}
-                      </p>
-                      
-                      <div className="space-y-2">
-                        {practica.implementaciones.map((impl, implIndex) => (
-                          <div key={implIndex} className="flex items-start gap-2">
-                            <CheckCircle className={`w-4 h-4 text-${practica.color}-600 mt-0.5 flex-shrink-0`} />
-                            <span className="text-sm text-gray-700">{impl}</span>
+                      <div className="relative z-10">
+                        <button
+                          onClick={() => setFaseExpandida(faseExpandida === index ? null : index)}
+                          className="w-full"
+                        >
+                          <div className="flex items-start gap-4">
+                            <div className={`w-12 h-12 ${colors.bg} rounded-full flex items-center justify-center text-white font-bold flex-shrink-0`}>
+                              {fase.numero}
+                            </div>
+                            
+                            <div className={`flex-1 ${colors.light} border ${colors.border} rounded-lg p-6 text-left hover:shadow-md transition-shadow`}>
+                              <div className="flex items-center justify-between mb-2">
+                                <div className="flex items-center gap-3">
+                                  <Icon className={`w-6 h-6 ${colors.text}`} />
+                                  <h3 className="text-xl font-bold text-gray-900">{fase.titulo}</h3>
+                                </div>
+                                {faseExpandida === index ? 
+                                  <ChevronDown className="w-5 h-5 text-gray-500" /> : 
+                                  <ChevronRight className="w-5 h-5 text-gray-500" />
+                                }
+                              </div>
+                              <p className={`${colors.text} font-medium`}>{fase.descripcion}</p>
+                            </div>
                           </div>
-                        ))}
+                        </button>
+
+                        {faseExpandida === index && (
+                          <div className="ml-16 mt-4 bg-white border border-gray-200 rounded-lg p-6">
+                            <div className="space-y-4">
+                              {/* Contenido específico por fase */}
+                              {fase.contenido.implementacion && (
+                                <div>
+                                  <p className="text-gray-700 text-sm mb-3">{fase.contenido.implementacion}</p>
+                                </div>
+                              )}
+
+                              {fase.contenido.ramas && (
+                                <div>
+                                  <h4 className="font-semibold text-gray-900 mb-3">Estructura de Ramas:</h4>
+                                  <div className="grid md:grid-cols-2 gap-3">
+                                    {fase.contenido.ramas.map((rama, i) => (
+                                      <div key={i} className="bg-blue-50 border border-blue-200 rounded-lg p-3">
+                                        <span className="font-mono text-blue-800 font-semibold">{rama.tipo}</span>
+                                        <p className="text-xs text-blue-700 mt-1">{rama.descripcion}</p>
+                                      </div>
+                                    ))}
+                                  </div>
+                                </div>
+                              )}
+
+                              {fase.contenido.practicas && (
+                                <div>
+                                  <h4 className="font-semibold text-gray-900 mb-2">Prácticas Implementadas:</h4>
+                                  <ul className="space-y-1">
+                                    {fase.contenido.practicas.map((practica, i) => (
+                                      <li key={i} className="flex items-start gap-2 text-gray-700 text-sm">
+                                        <CheckCircle className="w-4 h-4 text-green-500 mt-0.5" />
+                                        <span>{practica}</span>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              )}
+
+                              {fase.contenido.herramientas && (
+                                <div>
+                                  <h4 className="font-semibold text-gray-900 mb-3">Herramientas:</h4>
+                                  <div className="grid md:grid-cols-2 gap-3">
+                                    {fase.contenido.herramientas.map((herramienta, i) => (
+                                      <div key={i} className="bg-red-50 border border-red-200 rounded-lg p-3">
+                                        <h5 className="font-semibold text-red-900 text-sm">{herramienta.nombre}</h5>
+                                        <p className="text-xs text-red-700 mt-1">{herramienta.uso}</p>
+                                      </div>
+                                    ))}
+                                  </div>
+                                </div>
+                              )}
+
+                              {fase.contenido.detecciones && (
+                                <div>
+                                  <h4 className="font-semibold text-gray-900 mb-2">Detecciones:</h4>
+                                  <ul className="grid md:grid-cols-2 gap-2">
+                                    {fase.contenido.detecciones.map((det, i) => (
+                                      <li key={i} className="flex items-start gap-2 text-gray-700 text-sm">
+                                        <div className={`w-1.5 h-1.5 ${colors.bg} rounded-full mt-2`}></div>
+                                        <span>{det}</span>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              )}
+
+                              {fase.contenido.fases && (
+                                <div>
+                                  <h4 className="font-semibold text-gray-900 mb-2">Fases del Proceso:</h4>
+                                  <ul className="space-y-1">
+                                    {fase.contenido.fases.map((f, i) => (
+                                      <li key={i} className="flex items-start gap-2 text-gray-700 text-sm">
+                                        <ArrowRight className="w-4 h-4 text-purple-500 mt-0.5" />
+                                        <span>{f}</span>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              )}
+
+                              {fase.contenido.herramienta && (
+                                <div className="bg-orange-50 border border-orange-200 rounded-lg p-4">
+                                  <h4 className="font-semibold text-orange-900 mb-2">🔧 Herramienta Principal</h4>
+                                  <p className="text-orange-800 text-sm">{fase.contenido.herramienta}</p>
+                                </div>
+                              )}
+
+                              {fase.contenido.proceso && (
+                                <div>
+                                  <h4 className="font-semibold text-gray-900 mb-2">Proceso:</h4>
+                                  <ul className="space-y-1">
+                                    {fase.contenido.proceso.map((p, i) => (
+                                      <li key={i} className="flex items-start gap-2 text-gray-700 text-sm">
+                                        <CheckCircle className="w-4 h-4 text-green-500 mt-0.5" />
+                                        <span>{p}</span>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              )}
+
+                              {fase.contenido.slack && (
+                                <div className="bg-indigo-50 border border-indigo-200 rounded-lg p-4">
+                                  <h4 className="font-semibold text-indigo-900 mb-2">💬 Integración Slack</h4>
+                                  <p className="text-indigo-800 text-sm mb-2">{fase.contenido.slack.integracion}</p>
+                                  <div className="mt-2">
+                                    <h5 className="font-medium text-indigo-800 text-xs mb-1">Eventos Notificados:</h5>
+                                    <ul className="grid md:grid-cols-2 gap-1">
+                                      {fase.contenido.slack.eventos.map((ev, i) => (
+                                        <li key={i} className="flex items-center gap-1 text-indigo-700 text-xs">
+                                          <div className="w-1 h-1 bg-indigo-600 rounded-full"></div>
+                                          <span>{ev}</span>
+                                        </li>
+                                      ))}
+                                    </ul>
+                                  </div>
+                                </div>
+                              )}
+
+                              {fase.contenido.dashboard && (
+                                <div className="bg-indigo-50 border border-indigo-200 rounded-lg p-4">
+                                  <h4 className="font-semibold text-indigo-900 mb-2">📊 Dashboard de Monitoreo</h4>
+                                  <p className="text-indigo-800 text-sm mb-2">Tecnología: <strong>{fase.contenido.dashboard.tecnologia}</strong></p>
+                                  <div className="mt-2">
+                                    <h5 className="font-medium text-indigo-800 text-xs mb-1">Métricas Visualizadas:</h5>
+                                    <ul className="space-y-1">
+                                      {fase.contenido.dashboard.metricas.map((m, i) => (
+                                        <li key={i} className="flex items-start gap-2 text-indigo-700 text-xs">
+                                          <Activity className="w-3 h-3 mt-0.5" />
+                                          <span>{m}</span>
+                                        </li>
+                                      ))}
+                                    </ul>
+                                  </div>
+                                </div>
+                              )}
+
+                              {fase.contenido.workflow && (
+                                <div className="bg-teal-50 border border-teal-200 rounded-lg p-4">
+                                  <h4 className="font-semibold text-teal-900 mb-2">⚙️ Workflow Automatizado</h4>
+                                  <p className="text-teal-800 text-sm font-mono">{fase.contenido.workflow}</p>
+                                </div>
+                              )}
+
+                              {fase.contenido.garantias && (
+                                <div>
+                                  <h4 className="font-semibold text-gray-900 mb-2">Garantías:</h4>
+                                  <ul className="grid md:grid-cols-2 gap-2">
+                                    {fase.contenido.garantias.map((g, i) => (
+                                      <li key={i} className="flex items-start gap-2 text-gray-700 text-sm">
+                                        <Shield className="w-4 h-4 text-teal-500 mt-0.5" />
+                                        <span>{g}</span>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              )}
+
+                              {fase.contenido.resultado && (
+                                <div className="bg-green-50 border border-green-200 rounded-lg p-4 mt-3">
+                                  <h4 className="font-semibold text-green-900 mb-2">✅ Resultado</h4>
+                                  <p className="text-green-800 text-sm">{fase.contenido.resultado}</p>
+                                </div>
+                              )}
+
+                              {fase.contenido.beneficio && (
+                                <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mt-3">
+                                  <h4 className="font-semibold text-blue-900 mb-2">💡 Beneficio</h4>
+                                  <p className="text-blue-800 text-sm">{fase.contenido.beneficio}</p>
+                                </div>
+                              )}
+                            </div>
+                          </div>
+                        )}
                       </div>
                     </div>
                   );
                 })}
               </div>
 
-              {/* Integraciones */}
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                Integraciones y Monitoreo
-              </h3>
-              
-              <div className="grid md:grid-cols-2 gap-6 mb-8">
-                {/* Slack */}
-                <div className="bg-gradient-to-br from-purple-50 to-purple-100 border border-purple-200 rounded-xl p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center">
-                      <MessageSquare className="w-6 h-6 text-white" />
-                    </div>
-                    <h4 className="text-lg font-bold text-gray-900">
-                      {proyectoInfo.devSecOps.integraciones.slack.titulo}
-                    </h4>
+              {/* Métricas del Proceso */}
+              <div className="mt-12 grid md:grid-cols-4 gap-6">
+                <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg border border-blue-200">
+                  <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
+                    <Shield className="w-6 h-6 text-white" />
                   </div>
-                  <p className="text-gray-700 text-sm mb-4">
-                    {proyectoInfo.devSecOps.integraciones.slack.descripcion}
+                  <h4 className="font-bold text-blue-900 mb-2">2 Tipos de Análisis</h4>
+                  <p className="text-sm text-blue-700">
+                    SAST (Estático) y DAST (Dinámico)
                   </p>
-                  <div className="space-y-2">
-                    {proyectoInfo.devSecOps.integraciones.slack.beneficios.map((beneficio, index) => (
-                      <div key={index} className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 bg-purple-600 rounded-full"></div>
-                        <span className="text-sm text-gray-700">{beneficio}</span>
-                      </div>
-                    ))}
-                  </div>
                 </div>
 
-                {/* Dashboard */}
-                <div className="bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200 rounded-xl p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
-                      <Activity className="w-6 h-6 text-white" />
-                    </div>
-                    <h4 className="text-lg font-bold text-gray-900">
-                      {proyectoInfo.devSecOps.integraciones.dashboard.titulo}
-                    </h4>
+                <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-lg border border-green-200">
+                  <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
+                    <Cloud className="w-6 h-6 text-white" />
                   </div>
-                  <p className="text-gray-700 text-sm mb-4">
-                    {proyectoInfo.devSecOps.integraciones.dashboard.descripcion}
+                  <h4 className="font-bold text-green-900 mb-2">Despliegue en Azure</h4>
+                  <p className="text-sm text-green-700">
+                    Automatizado con validaciones
                   </p>
-                  <div className="space-y-2">
-                    {proyectoInfo.devSecOps.integraciones.dashboard.metricas.map((metrica, index) => (
-                      <div key={index} className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 bg-blue-600 rounded-full"></div>
-                        <span className="text-sm text-gray-700">{metrica}</span>
-                      </div>
-                    ))}
+                </div>
+
+                <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-lg border border-purple-200">
+                  <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-4">
+                    <Activity className="w-6 h-6 text-white" />
                   </div>
+                  <h4 className="font-bold text-purple-900 mb-2">Monitoreo 24/7</h4>
+                  <p className="text-sm text-purple-700">
+                    Slack + Dashboard Streamlit
+                  </p>
+                </div>
+
+                <div className="bg-gradient-to-br from-teal-50 to-teal-100 p-6 rounded-lg border border-teal-200">
+                  <div className="w-12 h-12 bg-teal-600 rounded-lg flex items-center justify-center mb-4">
+                    <Database className="w-6 h-6 text-white" />
+                  </div>
+                  <h4 className="font-bold text-teal-900 mb-2">Backups Automáticos</h4>
+                  <p className="text-sm text-teal-700">
+                    Al cierre de cada sprint
+                  </p>
                 </div>
               </div>
 
-              {/* Beneficios */}
-              <div className="bg-gradient-to-r from-slate-700 to-slate-900 text-white rounded-xl p-8">
-                <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+              {/* Banner Final */}
+              <div className="mt-8 bg-gradient-to-r from-red-600 to-red-800 text-white rounded-xl p-8">
+                <div className="flex items-center gap-4 mb-4">
                   <Shield className="w-8 h-8" />
-                  Beneficios de DevSecOps
-                </h3>
-                
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {proyectoInfo.devSecOps.beneficiosDevSecOps.map((beneficio, index) => (
-                    <div key={index} className="flex items-start gap-3 bg-white/10 rounded-lg p-4">
-                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
-                      <span className="text-sm text-slate-100">{beneficio}</span>
+                  <h3 className="text-2xl font-bold">Pipeline CI/CD Completo y Seguro</h3>
+                </div>
+                <p className="text-red-100 mb-4">
+                  Cada commit atraviesa un proceso completo de validación: desde análisis de seguridad estático (SAST), 
+                  compilación y pruebas, análisis dinámico (DAST), hasta el despliegue automatizado en Azure con 
+                  notificaciones en tiempo real y respaldos programados.
+                </p>
+                <div className="flex flex-wrap gap-3">
+                  <span className="bg-white/20 px-4 py-2 rounded-lg text-sm">✓ GitFlow Estandarizado</span>
+                  <span className="bg-white/20 px-4 py-2 rounded-lg text-sm">✓ Análisis SAST y DAST</span>
+                  <span className="bg-white/20 px-4 py-2 rounded-lg text-sm">✓ Deploy Automatizado</span>
+                  <span className="bg-white/20 px-4 py-2 rounded-lg text-sm">✓ Monitoreo Continuo</span>
+                  <span className="bg-white/20 px-4 py-2 rounded-lg text-sm">✓ Backups Programados</span>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* NUEVA SECCIÓN: Proceso de Datos */}
+          {seccionActiva === 'proceso-datos' && (
+            <div className="p-8">
+              <div className="mb-8">
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">Proceso de Ingeniería de Datos</h2>
+                <p className="text-lg text-gray-600 mb-2">
+                  Implementamos un <span className="font-semibold text-red-600">flujo estructurado de gestión de datos</span> que 
+                  garantiza la integridad, trazabilidad y calidad de la información en el Sistema de Gestión de Sílabos.
+                </p>
+                <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mt-4">
+                  <p className="text-sm text-blue-800">
+                    <strong>📊 Nota:</strong> Esta documentación está basada en el informe de la Semana 12 
+                    del equipo de Ingeniería de Datos (31 de octubre de 2025).
+                  </p>
+                </div>
+              </div>
+
+              {/* Actividades Principales */}
+              <div className="space-y-6 mb-8">
+                {[
+                  {
+                    numero: 1,
+                    titulo: "Incorporación del Equipo de Datos",
+                    descripcion: "Ampliación de capacidad con nuevos miembros",
+                    icon: Users,
+                    color: "blue",
+                    contenido: {
+                      objetivo: "Integrar 4 nuevos miembros al equipo para ampliar la capacidad de carga y validación de datos.",
+                      actividades: [
+                        "Entrega del diccionario de datos actualizado como herramienta de referencia",
+                        "Asignación de carga de 5 sílabos por integrante",
+                        "Capacitación en relaciones entre tablas (silabo, silabo_unidad, silabo_unidad_contenido, silabo_unidad_semana)",
+                        "Familiarización con el flujo completo de registro de información"
+                      ],
+                      resultado: "Mayor transparencia y control interno del sistema de datos"
+                    }
+                  },
+                  {
+                    numero: 2,
+                    titulo: "Carga Inicial e Identificación de Errores",
+                    descripcion: "Primeras pruebas y detección de problemas",
+                    icon: AlertTriangle,
+                    color: "yellow",
+                    contenido: {
+                      objetivo: "Ejecutar pruebas de carga con el nuevo equipo y validar comprensión del modelo.",
+                      problemaDetectado: "Mala interpretación del modelo de datos: solo se completó la tabla 'silabo', omitiendo las tablas dependientes.",
+                      impacto: [
+                        "Estructura incompleta de datos",
+                        "Afectación de la integridad referencial",
+                        "Pérdida de relaciones entre entidades"
+                      ],
+                      accion: "Revisión conjunta con el equipo para explicar nuevamente la relación entre entidades"
+                    }
+                  },
+                  {
+                    numero: 3,
+                    titulo: "Corrección de Duplicados",
+                    descripcion: "Intervención no autorizada y limpieza de datos",
+                    icon: Shield,
+                    color: "red",
+                    contenido: {
+                      incidente: "Intervención no identificada que sobreescribió registros con información duplicada",
+                      accionesTomadas: [
+                        "Limpieza completa de las tablas afectadas",
+                        "Eliminación de registros repetidos",
+                        "Restauración de la consistencia referencial del esquema",
+                        "Supervisión directa del líder del equipo de datos"
+                      ],
+                      prevencion: "Implementación de controles de acceso más estrictos"
+                    }
+                  },
+                  {
+                    numero: 4,
+                    titulo: "Elaboración de Consultas Guía",
+                    descripcion: "Estandarización del proceso de carga",
+                    icon: FileText,
+                    color: "green",
+                    contenido: {
+                      objetivo: "Evitar futuros errores mediante la creación de una consulta SQL modelo",
+                      caracteristicas: [
+                        "Ejemplifica el proceso correcto de inserción en cada tabla",
+                        "Considera las relaciones y llaves foráneas",
+                        "Incluye variables clave (código de curso, modalidad, ciclo, docente, horas)",
+                        "Ejecuta inserciones secuenciadas que evitan duplicados"
+                      ],
+                      resultado: "Recarga controlada exitosa finalizada el 31 de octubre de 2025",
+                      beneficio: "Validación de coherencia del modelo y mejor comprensión del flujo de datos"
+                    }
+                  },
+                  {
+                    numero: 5,
+                    titulo: "Actualización Estructural",
+                    descripcion: "Modificaciones solicitadas por Backend",
+                    icon: Settings,
+                    color: "purple",
+                    contenido: {
+                      solicitud: "El equipo backend solicitó modificaciones en la tabla 'silabo_unidad'",
+                      cambios: [
+                        "Agregación de campos para representar contenidos con mayor detalle",
+                        "Actualización del diccionario de datos (v12.1)",
+                        "Preservación de relaciones preexistentes"
+                      ],
+                      garantia: "Futuras integraciones sin conflictos ni pérdida de información"
+                    }
+                  }
+                ].map((actividad, index) => {
+                  const colors = {
+                    blue: { bg: 'bg-blue-500', light: 'bg-blue-50', border: 'border-blue-200', text: 'text-blue-700' },
+                    yellow: { bg: 'bg-yellow-500', light: 'bg-yellow-50', border: 'border-yellow-200', text: 'text-yellow-700' },
+                    red: { bg: 'bg-red-500', light: 'bg-red-50', border: 'border-red-200', text: 'text-red-700' },
+                    green: { bg: 'bg-green-500', light: 'bg-green-50', border: 'border-green-200', text: 'text-green-700' },
+                    purple: { bg: 'bg-purple-500', light: 'bg-purple-50', border: 'border-purple-200', text: 'text-purple-700' }
+                  }[actividad.color];
+
+                  const Icon = actividad.icon;
+
+                  return (
+                    <div key={index} className="relative">
+                      {index < 4 && (
+                        <div className="absolute left-6 top-16 w-0.5 h-20 bg-gray-300 z-0"></div>
+                      )}
+                      
+                      <div className="relative z-10">
+                        <button
+                          onClick={() => setFaseExpandida(faseExpandida === index ? null : index)}
+                          className="w-full"
+                        >
+                          <div className="flex items-start gap-4">
+                            <div className={`w-12 h-12 ${colors.bg} rounded-full flex items-center justify-center text-white font-bold flex-shrink-0`}>
+                              {actividad.numero}
+                            </div>
+                            
+                            <div className={`flex-1 ${colors.light} border ${colors.border} rounded-lg p-6 text-left hover:shadow-md transition-shadow`}>
+                              <div className="flex items-center justify-between mb-2">
+                                <div className="flex items-center gap-3">
+                                  <Icon className={`w-6 h-6 ${colors.text}`} />
+                                  <h3 className="text-xl font-bold text-gray-900">{actividad.titulo}</h3>
+                                </div>
+                                {faseExpandida === index ? 
+                                  <ChevronDown className="w-5 h-5 text-gray-500" /> : 
+                                  <ChevronRight className="w-5 h-5 text-gray-500" />
+                                }
+                              </div>
+                              <p className={`${colors.text} font-medium`}>{actividad.descripcion}</p>
+                            </div>
+                          </div>
+                        </button>
+
+                        {faseExpandida === index && (
+                          <div className="ml-16 mt-4 bg-white border border-gray-200 rounded-lg p-6">
+                            <div className="space-y-4">
+                              {actividad.contenido.objetivo && (
+                                <div>
+                                  <h4 className="font-semibold text-gray-900 mb-2 flex items-center gap-2">
+                                    <Target className="w-5 h-5 text-blue-500" />
+                                    Objetivo
+                                  </h4>
+                                  <p className="text-gray-700 text-sm">{actividad.contenido.objetivo}</p>
+                                </div>
+                              )}
+
+                              {actividad.contenido.actividades && (
+                                <div>
+                                  <h4 className="font-semibold text-gray-900 mb-2 flex items-center gap-2">
+                                    <CheckCircle className="w-5 h-5 text-green-500" />
+                                    Actividades Realizadas
+                                  </h4>
+                                  <ul className="space-y-1">
+                                    {actividad.contenido.actividades.map((act, i) => (
+                                      <li key={i} className="flex items-start gap-2 text-gray-700 text-sm">
+                                        <div className="w-1.5 h-1.5 bg-gray-400 rounded-full mt-2"></div>
+                                        <span>{act}</span>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              )}
+
+                              {actividad.contenido.problemaDetectado && (
+                                <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                                  <h4 className="font-semibold text-yellow-900 mb-2">⚠️ Problema Detectado</h4>
+                                  <p className="text-yellow-800 text-sm">{actividad.contenido.problemaDetectado}</p>
+                                </div>
+                              )}
+
+                              {actividad.contenido.incidente && (
+                                <div className="bg-red-50 border border-red-200 rounded-lg p-4">
+                                  <h4 className="font-semibold text-red-900 mb-2">🚨 Incidente</h4>
+                                  <p className="text-red-800 text-sm">{actividad.contenido.incidente}</p>
+                                </div>
+                              )}
+
+                              {actividad.contenido.impacto && (
+                                <div>
+                                  <h4 className="font-semibold text-gray-900 mb-2">Impacto</h4>
+                                  <ul className="space-y-1">
+                                    {actividad.contenido.impacto.map((imp, i) => (
+                                      <li key={i} className="flex items-start gap-2 text-gray-700 text-sm">
+                                        <div className="w-1.5 h-1.5 bg-red-500 rounded-full mt-2"></div>
+                                        <span>{imp}</span>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              )}
+
+                              {actividad.contenido.accionesTomadas && (
+                                <div>
+                                  <h4 className="font-semibold text-gray-900 mb-2 flex items-center gap-2">
+                                    <Shield className="w-5 h-5 text-blue-500" />
+                                    Acciones Tomadas
+                                  </h4>
+                                  <ul className="space-y-1">
+                                    {actividad.contenido.accionesTomadas.map((acc, i) => (
+                                      <li key={i} className="flex items-start gap-2 text-gray-700 text-sm">
+                                        <CheckCircle className="w-4 h-4 text-green-500 mt-0.5" />
+                                        <span>{acc}</span>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              )}
+
+                              {actividad.contenido.caracteristicas && (
+                                <div>
+                                  <h4 className="font-semibold text-gray-900 mb-2">Características</h4>
+                                  <ul className="space-y-1">
+                                    {actividad.contenido.caracteristicas.map((car, i) => (
+                                      <li key={i} className="flex items-start gap-2 text-gray-700 text-sm">
+                                        <div className={`w-1.5 h-1.5 ${colors.bg} rounded-full mt-2`}></div>
+                                        <span>{car}</span>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              )}
+
+                              {actividad.contenido.solicitud && (
+                                <div>
+                                  <h4 className="font-semibold text-gray-900 mb-2">Solicitud</h4>
+                                  <p className="text-gray-700 text-sm mb-3">{actividad.contenido.solicitud}</p>
+                                  <h5 className="font-medium text-gray-800 mb-2 text-sm">Cambios Implementados:</h5>
+                                  <ul className="space-y-1">
+                                    {actividad.contenido.cambios.map((cambio, i) => (
+                                      <li key={i} className="flex items-start gap-2 text-gray-700 text-sm">
+                                        <div className={`w-1.5 h-1.5 ${colors.bg} rounded-full mt-2`}></div>
+                                        <span>{cambio}</span>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              )}
+
+                              {actividad.contenido.resultado && (
+                                <div className="bg-green-50 border border-green-200 rounded-lg p-4 mt-3">
+                                  <h4 className="font-semibold text-green-900 mb-2">✅ Resultado</h4>
+                                  <p className="text-green-800 text-sm">{actividad.contenido.resultado}</p>
+                                </div>
+                              )}
+
+                              {actividad.contenido.garantia && (
+                                <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mt-3">
+                                  <h4 className="font-semibold text-blue-900 mb-2">🔒 Garantía</h4>
+                                  <p className="text-blue-800 text-sm">{actividad.contenido.garantia}</p>
+                                </div>
+                              )}
+                            </div>
+                          </div>
+                        )}
+                      </div>
                     </div>
-                  ))}
+                  );
+                })}
+              </div>
+
+              {/* Métricas Clave */}
+              <div className="mt-12 grid md:grid-cols-4 gap-6">
+                <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg border border-blue-200">
+                  <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
+                    <Users className="w-6 h-6 text-white" />
+                  </div>
+                  <h4 className="font-bold text-blue-900 mb-2">4 Nuevos Integrantes</h4>
+                  <p className="text-sm text-blue-700">
+                    Ampliación del equipo de datos
+                  </p>
                 </div>
 
-                <div className="mt-8 pt-6 border-t border-white/20">
-                  <p className="text-slate-200 text-center">
-                    <strong>🔒 Seguridad, 🤖 Automatización y 🚀 Eficiencia</strong> en cada etapa del desarrollo
+                <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-lg border border-green-200">
+                  <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
+                    <Database className="w-6 h-6 text-white" />
+                  </div>
+                  <h4 className="font-bold text-green-900 mb-2">5 Sílabos por Usuario</h4>
+                  <p className="text-sm text-green-700">
+                    Carga de prueba asignada
                   </p>
+                </div>
+
+                <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-lg border border-purple-200">
+                  <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-4">
+                    <FileText className="w-6 h-6 text-white" />
+                  </div>
+                  <h4 className="font-bold text-purple-900 mb-2">4 Tablas Principales</h4>
+                  <p className="text-sm text-purple-700">
+                    silabo, unidad, contenido, semana
+                  </p>
+                </div>
+
+                <div className="bg-gradient-to-br from-red-50 to-red-100 p-6 rounded-lg border border-red-200">
+                  <div className="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-white" />
+                  </div>
+                  <h4 className="font-bold text-red-900 mb-2">Carga Exitosa</h4>
+                  <p className="text-sm text-red-700">
+                    31 de octubre de 2025
+                  </p>
+                </div>
+              </div>
+
+              {/* Banner Final */}
+              <div className="mt-8 bg-gradient-to-r from-red-600 to-red-800 text-white rounded-xl p-8">
+                <div className="flex items-center gap-4 mb-4">
+                  <Database className="w-8 h-8" />
+                  <h3 className="text-2xl font-bold">Integridad y Calidad de Datos</h3>
+                </div>
+                <p className="text-red-100 mb-4">
+                  Cada proceso de carga está respaldado por controles de calidad, consultas estandarizadas 
+                  y un flujo de trabajo supervisado que garantiza la consistencia de la información académica.
+                </p>
+                <div className="flex flex-wrap gap-3">
+                  <span className="bg-white/20 px-4 py-2 rounded-lg text-sm">✓ Diccionario de Datos Actualizado</span>
+                  <span className="bg-white/20 px-4 py-2 rounded-lg text-sm">✓ Consultas SQL Estandarizadas</span>
+                  <span className="bg-white/20 px-4 py-2 rounded-lg text-sm">✓ Control de Integridad Referencial</span>
+                  <span className="bg-white/20 px-4 py-2 rounded-lg text-sm">✓ Supervisión Continua</span>
+                  <span className="bg-white/20 px-4 py-2 rounded-lg text-sm">✓ Trazabilidad Total</span>
                 </div>
               </div>
             </div>

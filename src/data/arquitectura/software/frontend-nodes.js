@@ -323,29 +323,10 @@ export const frontendNodes = [
     }
   },
   {
-    "id": "custom-node-21",
-    "type": "custom",
-    "position": {
-      "x": 672.0036324243822,
-      "y": -347.42323135192765
-    },
-    "data": {
-      "type": "monitoring",
-      "icon": `${BASE_URL}assets/images/icons/devsecops/playwright.svg`,
-    },
-    "style": undefined,
-    "width": undefined,
-    "height": undefined,
-    "measured": {
-      "width": 164,
-      "height": 126
-    }
-  },
-  {
     "id": "custom-node-22",
     "type": "custom",
     "position": {
-      "x": 910.6165969130199,
+      "x": 810.6165969130199,
       "y": -339.17823845209216
     },
     "data": {
@@ -465,7 +446,7 @@ export const frontendNodes = [
       "y": 562.0725580081252
     },
     "data": {
-      "label": "mf app service usmp fia",
+      "label": "AZURE STATIC WEB APP",
       "type": "monitoring",
       "icon": `${BASE_URL}assets/images/icons/infraestructura/worked.svg`,
     },
