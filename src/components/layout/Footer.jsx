@@ -1,4 +1,5 @@
 import { Github, Mail, Calendar, Code, Database } from 'lucide-react';
+import Link from './Link';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -118,6 +119,7 @@ const Footer = () => {
                 <Github className="w-4 h-4" />
                 <span className="text-sm">Repositorio</span>
               </a>
+              <Link />
             </div>
           </div>
         </div>
