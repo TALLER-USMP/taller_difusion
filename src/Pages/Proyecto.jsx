@@ -236,6 +236,7 @@ const Proyecto = () => {
               { id: 'proceso-ux', label: 'Proceso UX', icon: Users },
               { id: 'proceso-devsecops', label: 'Proceso DevSecOps', icon: Shield },
               { id: 'proceso-datos', label: 'Proceso de Datos', icon: Database },
+              { id: 'proceso-testing', label: 'Proceso QA', icon: TestTube },
               { id: 'modulos', label: 'Módulos', icon: Settings },
               { id: 'roadmap', label: 'Roadmap', icon: Calendar },
               { id: 'beneficios', label: 'Beneficios', icon: Zap }
@@ -1360,6 +1361,458 @@ const Proyecto = () => {
               </div>
             </div>
           )}
+          {/* NUEVA SECCIÓN: Proceso de Testing/QA */}
+          {seccionActiva === 'proceso-testing' && (
+            <div className="p-8">
+              <div className="mb-8">
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">Proceso de Testing y Aseguramiento de Calidad</h2>
+                <p className="text-lg text-gray-600 mb-2">
+                  Implementamos un <span className="font-semibold text-red-600">proceso integral de QA bajo metodología SCRUM</span> que 
+                  garantiza la calidad del sistema mediante pruebas continuas, validaciones y control de incidencias.
+                </p>
+                <div className="bg-purple-50 border-l-4 border-purple-500 p-4 mt-4">
+                  <p className="text-sm text-purple-800">
+                    <strong>🧪 Nota:</strong> Esta documentación está basada en el Reporte de Incidencias 
+                    del equipo QA durante los Sprints 1-3 del proyecto.
+                  </p>
+                </div>
+              </div>
+
+              {/* Contexto Metodológico */}
+              <div className="mb-8 bg-gradient-to-r from-purple-700 to-purple-900 text-white rounded-xl p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
+                    <TestTube className="w-6 h-6" />
+                  </div>
+                  <h3 className="text-2xl font-bold">Marco de Trabajo QA</h3>
+                </div>
+                <p className="text-purple-200 mb-3">
+                  El equipo QA opera bajo la <strong>metodología SCRUM</strong>, realizando pruebas continuas 
+                  en Frontend y Backend, validando Historias de Usuario y asegurando la calidad del producto 
+                  en cada iteración.
+                </p>
+                <div className="flex flex-wrap gap-3">
+                  <span className="bg-white/20 px-4 py-2 rounded-lg text-sm">✓ Pruebas Continuas</span>
+                  <span className="bg-white/20 px-4 py-2 rounded-lg text-sm">✓ Validación de HU</span>
+                  <span className="bg-white/20 px-4 py-2 rounded-lg text-sm">✓ Testing Funcional</span>
+                  <span className="bg-white/20 px-4 py-2 rounded-lg text-sm">✓ Gestión de Incidencias</span>
+                </div>
+              </div>
+
+              {/* Incidencias por Sprint */}
+              <div className="space-y-6">
+                {[
+                  {
+                    sprint: "Sprint 1",
+                    numero: 1,
+                    color: "blue",
+                    icon: Settings,
+                    incidencias: [
+                      {
+                        titulo: "Selección de herramientas de pruebas",
+                        descripcion: "Evaluación de herramientas de testing y gestión de costos",
+                        tipo: "decision",
+                        detalles: {
+                          problema: "Inicialmente se planificó utilizar Azure Test Plans para la gestión de pruebas, pero el costo resultó elevado.",
+                          impacto: "Fue necesario buscar alternativas viables para realizar pruebas de manera eficiente sin afectar el presupuesto.",
+                          solucion: "Se optó por herramientas gratuitas o de menor costo como Cypress, Selenium y Postman.",
+                          herramientas: ["Cypress", "Selenium", "Postman"]
+                        }
+                      },
+                      {
+                        titulo: "Documentación de la metodología SCRUM",
+                        descripcion: "Consolidación de artefactos SCRUM del proyecto",
+                        tipo: "documentacion",
+                        detalles: {
+                          problema: "El equipo necesitaba consolidar la documentación de Historias de Usuario (HU), Product Backlog, épicas, mapas de empatía y mapas de HU.",
+                          impacto: "La falta de documentación completa podía dificultar la planificación y seguimiento de sprints.",
+                          solucion: "El equipo QA, junto con el líder del proyecto, apoyó en la elaboración y estructuración de los artefactos SCRUM.",
+                          artefactos: ["Historias de Usuario", "Product Backlog", "Épicas", "Mapas de Empatía", "Mapas de HU"]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    sprint: "Sprint 2",
+                    numero: 2,
+                    color: "yellow",
+                    icon: AlertTriangle,
+                    incidencias: [
+                      {
+                        titulo: "Retrasos en el equipo UX",
+                        descripcion: "Problemas en los diseños iniciales y mapeo de procesos",
+                        tipo: "coordinacion",
+                        detalles: {
+                          problema: "Los diseños iniciales no eran convincentes y el equipo UX no tenía correctamente mapeado el proceso.",
+                          impacto: "Generó retrasos en las pruebas de los figmas y en la alineación con las Historias de Usuario.",
+                          solucion: "Un tester brindó apoyo en UX, se realizaron pruebas de figmas con observaciones y correcciones, y se capacitó al equipo UX para mejorar el mapeo de procesos.",
+                          acciones: [
+                            "Apoyo de tester en UX",
+                            "Pruebas de prototipos Figma",
+                            "Observaciones y correcciones",
+                            "Capacitación al equipo UX"
+                          ]
+                        }
+                      },
+                      {
+                        titulo: "Elaboración del diagrama AS IS y entrevistas a stakeholders",
+                        descripcion: "Análisis detallado de procesos actuales",
+                        tipo: "investigacion",
+                        detalles: {
+                          problema: "Se requirió un análisis más detallado de los procesos de sílabos en la universidad, incluyendo roles, stakeholders y flujo de procesos.",
+                          impacto: "La falta de información completa podía afectar la comprensión del proceso y el desarrollo de funcionalidades.",
+                          solucion: "Se realizaron entrevistas a docentes, coordinación académica y director de escuela, además de elaborar el diagrama AS IS.",
+                          entrevistados: ["Docentes", "Coordinación Académica", "Director de Escuela"],
+                          entregable: "Diagrama AS IS completo"
+                        }
+                      },
+                      {
+                        titulo: "Pruebas de aceptación (OK/NOK) no realizadas",
+                        descripcion: "Imposibilidad de ejecutar pruebas por cambios continuos",
+                        tipo: "bloqueo",
+                        detalles: {
+                          problema: "Las pruebas de aceptación no se pudieron realizar debido a que el equipo FullStack seguía modificando las Historias de Usuario.",
+                          impacto: "La falta de la versión final de las HU impidió evaluar funcionalidades completas.",
+                          solucion: "Las pruebas se pospusieron hasta contar con la actualización final de las HU.",
+                          decision: "Priorizar estabilización de requisitos antes de testing"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    sprint: "Sprint 3",
+                    numero: 3,
+                    color: "orange",
+                    icon: Users,
+                    incidencias: [
+                      {
+                        titulo: "Retrasos en los equipos UX y FullStack",
+                        descripcion: "Persistencia de retrasos en entregas",
+                        tipo: "coordinacion",
+                        detalles: {
+                          problema: "Persistieron retrasos en la entrega de tareas por parte de los equipos UX y FullStack.",
+                          impacto: "Esto generó impedimentos para la ejecución de pruebas y la integración de funcionalidades.",
+                          solucion: "Se ajustó la planificación del sprint y se coordinó seguimiento constante para minimizar los retrasos.",
+                          medidas: [
+                            "Ajuste de planificación del sprint",
+                            "Seguimiento constante",
+                            "Reuniones de sincronización"
+                          ]
+                        }
+                      },
+                      {
+                        titulo: "Coordinación interequipos",
+                        descripcion: "Mejora en la comunicación entre equipos",
+                        tipo: "proceso",
+                        detalles: {
+                          problema: "Se detectó necesidad de mayor comunicación entre equipos para asegurar la actualización de HU, pruebas y correcciones de diseño UX.",
+                          impacto: "Los retrasos y dependencias entre equipos podían afectar la entrega a tiempo de funcionalidades completas.",
+                          solucion: "Se implementaron reuniones periódicas de sincronización y revisión conjunta de avances.",
+                          implementado: [
+                            "Reuniones periódicas de sincronización",
+                            "Revisión conjunta de avances",
+                            "Canales de comunicación directa"
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ].map((sprintData, sprintIndex) => {
+                  const colors = {
+                    blue: { bg: 'bg-blue-500', light: 'bg-blue-50', border: 'border-blue-200', text: 'text-blue-700' },
+                    yellow: { bg: 'bg-yellow-500', light: 'bg-yellow-50', border: 'border-yellow-200', text: 'text-yellow-700' },
+                    orange: { bg: 'bg-orange-500', light: 'bg-orange-50', border: 'border-orange-200', text: 'text-orange-700' }
+                  }[sprintData.color];
+
+                  const SprintIcon = sprintData.icon;
+
+                  return (
+                    <div key={sprintIndex} className="border border-gray-200 rounded-xl overflow-hidden">
+                      {/* Header del Sprint */}
+                      <div className={`${colors.light} border-b ${colors.border} px-6 py-4`}>
+                        <div className="flex items-center gap-3">
+                          <div className={`w-10 h-10 ${colors.bg} rounded-lg flex items-center justify-center text-white`}>
+                            <SprintIcon className="w-5 h-5" />
+                          </div>
+                          <div>
+                            <h3 className="text-xl font-bold text-gray-900">{sprintData.sprint}</h3>
+                            <p className={`text-sm ${colors.text}`}>{sprintData.incidencias.length} incidencias identificadas</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Lista de Incidencias */}
+                      <div className="p-6 space-y-4">
+                        {sprintData.incidencias.map((incidencia, incIndex) => {
+                          const tipoIcons = {
+                            decision: { icon: Settings, color: 'blue' },
+                            documentacion: { icon: FileText, color: 'purple' },
+                            coordinacion: { icon: Users, color: 'yellow' },
+                            investigacion: { icon: Eye, color: 'green' },
+                            bloqueo: { icon: AlertTriangle, color: 'red' },
+                            proceso: { icon: Activity, color: 'indigo' }
+                          };
+
+                          const tipoData = tipoIcons[incidencia.tipo];
+                          const TipoIcon = tipoData.icon;
+                          const tipoColor = {
+                            blue: 'bg-blue-100 text-blue-800 border-blue-200',
+                            purple: 'bg-purple-100 text-purple-800 border-purple-200',
+                            yellow: 'bg-yellow-100 text-yellow-800 border-yellow-200',
+                            green: 'bg-green-100 text-green-800 border-green-200',
+                            red: 'bg-red-100 text-red-800 border-red-200',
+                            indigo: 'bg-indigo-100 text-indigo-800 border-indigo-200'
+                          }[tipoData.color];
+
+                          return (
+                            <div key={incIndex} className="relative">
+                              <button
+                                onClick={() => setFaseExpandida(faseExpandida === `${sprintIndex}-${incIndex}` ? null : `${sprintIndex}-${incIndex}`)}
+                                className="w-full"
+                              >
+                                <div className={`border-2 ${tipoColor} rounded-lg p-4 text-left hover:shadow-md transition-all`}>
+                                  <div className="flex items-start justify-between">
+                                    <div className="flex items-start gap-3 flex-1">
+                                      <TipoIcon className="w-5 h-5 mt-1" />
+                                      <div className="flex-1">
+                                        <h4 className="font-semibold text-gray-900 mb-1">{incidencia.titulo}</h4>
+                                        <p className="text-sm text-gray-600">{incidencia.descripcion}</p>
+                                      </div>
+                                    </div>
+                                    {faseExpandida === `${sprintIndex}-${incIndex}` ? 
+                                      <ChevronDown className="w-5 h-5 text-gray-500 flex-shrink-0 ml-2" /> : 
+                                      <ChevronRight className="w-5 h-5 text-gray-500 flex-shrink-0 ml-2" />
+                                    }
+                                  </div>
+                                </div>
+                              </button>
+
+                              {faseExpandida === `${sprintIndex}-${incIndex}` && (
+                                <div className="mt-3 ml-8 bg-white border-2 border-gray-200 rounded-lg p-5">
+                                  <div className="space-y-4">
+                                    {/* Problema */}
+                                    <div className="bg-red-50 border border-red-200 rounded-lg p-4">
+                                      <h5 className="font-semibold text-red-900 mb-2 flex items-center gap-2">
+                                        <AlertTriangle className="w-4 h-4" />
+                                        Problema Identificado
+                                      </h5>
+                                      <p className="text-sm text-red-800">{incidencia.detalles.problema}</p>
+                                    </div>
+
+                                    {/* Impacto */}
+                                    <div className="bg-orange-50 border border-orange-200 rounded-lg p-4">
+                                      <h5 className="font-semibold text-orange-900 mb-2 flex items-center gap-2">
+                                        <Activity className="w-4 h-4" />
+                                        Impacto
+                                      </h5>
+                                      <p className="text-sm text-orange-800">{incidencia.detalles.impacto}</p>
+                                    </div>
+
+                                    {/* Solución */}
+                                    <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                                      <h5 className="font-semibold text-green-900 mb-2 flex items-center gap-2">
+                                        <CheckCircle className="w-4 h-4" />
+                                        Solución Implementada
+                                      </h5>
+                                      <p className="text-sm text-green-800 mb-3">{incidencia.detalles.solucion}</p>
+
+                                      {/* Detalles adicionales según el tipo */}
+                                      {incidencia.detalles.herramientas && (
+                                        <div className="mt-3">
+                                          <p className="text-xs font-medium text-green-800 mb-2">Herramientas seleccionadas:</p>
+                                          <div className="flex flex-wrap gap-2">
+                                            {incidencia.detalles.herramientas.map((h, i) => (
+                                              <span key={i} className="bg-green-100 border border-green-300 px-3 py-1 rounded-full text-xs text-green-900">
+                                                {h}
+                                              </span>
+                                            ))}
+                                          </div>
+                                        </div>
+                                      )}
+
+                                      {incidencia.detalles.artefactos && (
+                                        <div className="mt-3">
+                                          <p className="text-xs font-medium text-green-800 mb-2">Artefactos documentados:</p>
+                                          <ul className="grid grid-cols-2 gap-1">
+                                            {incidencia.detalles.artefactos.map((a, i) => (
+                                              <li key={i} className="flex items-center gap-2 text-xs text-green-800">
+                                                <div className="w-1.5 h-1.5 bg-green-600 rounded-full"></div>
+                                                {a}
+                                              </li>
+                                            ))}
+                                          </ul>
+                                        </div>
+                                      )}
+
+                                      {incidencia.detalles.acciones && (
+                                        <div className="mt-3">
+                                          <p className="text-xs font-medium text-green-800 mb-2">Acciones realizadas:</p>
+                                          <ul className="space-y-1">
+                                            {incidencia.detalles.acciones.map((a, i) => (
+                                              <li key={i} className="flex items-start gap-2 text-xs text-green-800">
+                                                <CheckCircle className="w-3 h-3 mt-0.5 flex-shrink-0" />
+                                                <span>{a}</span>
+                                              </li>
+                                            ))}
+                                          </ul>
+                                        </div>
+                                      )}
+
+                                      {incidencia.detalles.entrevistados && (
+                                        <div className="mt-3">
+                                          <p className="text-xs font-medium text-green-800 mb-2">Stakeholders entrevistados:</p>
+                                          <div className="flex flex-wrap gap-2">
+                                            {incidencia.detalles.entrevistados.map((e, i) => (
+                                              <span key={i} className="bg-green-100 border border-green-300 px-3 py-1 rounded-full text-xs text-green-900">
+                                                {e}
+                                              </span>
+                                            ))}
+                                          </div>
+                                          {incidencia.detalles.entregable && (
+                                            <p className="text-xs text-green-800 mt-2">
+                                              <strong>Entregable:</strong> {incidencia.detalles.entregable}
+                                            </p>
+                                          )}
+                                        </div>
+                                      )}
+
+                                      {incidencia.detalles.medidas && (
+                                        <div className="mt-3">
+                                          <p className="text-xs font-medium text-green-800 mb-2">Medidas tomadas:</p>
+                                          <ul className="space-y-1">
+                                            {incidencia.detalles.medidas.map((m, i) => (
+                                              <li key={i} className="flex items-start gap-2 text-xs text-green-800">
+                                                <div className="w-1.5 h-1.5 bg-green-600 rounded-full mt-1.5"></div>
+                                                <span>{m}</span>
+                                              </li>
+                                            ))}
+                                          </ul>
+                                        </div>
+                                      )}
+
+                                      {incidencia.detalles.implementado && (
+                                        <div className="mt-3">
+                                          <p className="text-xs font-medium text-green-800 mb-2">Implementado:</p>
+                                          <ul className="space-y-1">
+                                            {incidencia.detalles.implementado.map((impl, i) => (
+                                              <li key={i} className="flex items-start gap-2 text-xs text-green-800">
+                                                <CheckCircle className="w-3 h-3 mt-0.5 flex-shrink-0" />
+                                                <span>{impl}</span>
+                                              </li>
+                                            ))}
+                                          </ul>
+                                        </div>
+                                      )}
+                                    </div>
+                                  </div>
+                                </div>
+                              )}
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+
+              {/* Resumen de Áreas Principales */}
+              <div className="mt-12">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">Áreas de Enfoque del Equipo QA</h3>
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg border border-blue-200">
+                    <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
+                      <Settings className="w-6 h-6 text-white" />
+                    </div>
+                    <h4 className="font-bold text-blue-900 mb-2">Herramientas de Testing</h4>
+                    <p className="text-sm text-blue-700 mb-3">
+                      Selección estratégica de herramientas gratuitas y eficientes
+                    </p>
+                    <div className="space-y-1">
+                      <div className="text-xs text-blue-800">✓ Cypress</div>
+                      <div className="text-xs text-blue-800">✓ Selenium</div>
+                      <div className="text-xs text-blue-800">✓ Postman</div>
+                    </div>
+                  </div>
+
+                  <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-lg border border-purple-200">
+                    <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-4">
+                      <FileText className="w-6 h-6 text-white" />
+                    </div>
+                    <h4 className="font-bold text-purple-900 mb-2">Documentación SCRUM</h4>
+                    <p className="text-sm text-purple-700 mb-3">
+                      Apoyo en la estructuración de artefactos ágiles
+                    </p>
+                    <div className="space-y-1">
+                      <div className="text-xs text-purple-800">✓ Historias de Usuario</div>
+                      <div className="text-xs text-purple-800">✓ Product Backlog</div>
+                      <div className="text-xs text-purple-800">✓ Mapas de Empatía</div>
+                    </div>
+                  </div>
+
+                  <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-lg border border-green-200">
+                    <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
+                      <Users className="w-6 h-6 text-white" />
+                    </div>
+                    <h4 className="font-bold text-green-900 mb-2">Coordinación Interequipos</h4>
+                    <p className="text-sm text-green-700 mb-3">
+                      Facilitación de comunicación y sincronización
+                    </p>
+                    <div className="space-y-1">
+                      <div className="text-xs text-green-800">✓ QA + UX</div>
+                      <div className="text-xs text-green-800">✓ QA + FullStack</div>
+                      <div className="text-xs text-green-800">✓ Reuniones periódicas</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Métricas del Proceso */}
+              <div className="mt-8 grid md:grid-cols-4 gap-6">
+                <div className="bg-white border-2 border-blue-200 p-6 rounded-lg text-center">
+                  <div className="text-3xl font-bold text-blue-600 mb-2">3</div>
+                  <div className="text-sm text-gray-600">Sprints Documentados</div>
+                </div>
+
+                <div className="bg-white border-2 border-purple-200 p-6 rounded-lg text-center">
+                  <div className="text-3xl font-bold text-purple-600 mb-2">7</div>
+                  <div className="text-sm text-gray-600">Incidencias Gestionadas</div>
+                </div>
+
+                <div className="bg-white border-2 border-green-200 p-6 rounded-lg text-center">
+                  <div className="text-3xl font-bold text-green-600 mb-2">100%</div>
+                  <div className="text-sm text-gray-600">Incidencias Resueltas</div>
+                </div>
+
+                <div className="bg-white border-2 border-orange-200 p-6 rounded-lg text-center">
+                  <div className="text-3xl font-bold text-orange-600 mb-2">3</div>
+                  <div className="text-sm text-gray-600">Herramientas Adoptadas</div>
+                </div>
+              </div>
+
+              {/* Banner Final */}
+              <div className="mt-8 bg-gradient-to-r from-red-600 to-red-800 text-white rounded-xl p-8">
+                <div className="flex items-center gap-4 mb-4">
+                  <TestTube className="w-8 h-8" />
+                  <h3 className="text-2xl font-bold">Calidad Asegurada en Cada Sprint</h3>
+                </div>
+                <p className="text-red-100 mb-4">
+                  El equipo QA ha identificado, documentado y resuelto cada incidencia surgida durante 
+                  el desarrollo, garantizando la calidad del sistema mediante pruebas continuas, 
+                  coordinación efectiva y mejora constante de procesos.
+                </p>
+                <div className="flex flex-wrap gap-3">
+                  <span className="bg-white/20 px-4 py-2 rounded-lg text-sm">✓ Testing Continuo</span>
+                  <span className="bg-white/20 px-4 py-2 rounded-lg text-sm">✓ Gestión de Incidencias</span>
+                  <span className="bg-white/20 px-4 py-2 rounded-lg text-sm">✓ Validación de Prototipos</span>
+                  <span className="bg-white/20 px-4 py-2 rounded-lg text-sm">✓ Apoyo en Documentación</span>
+                  <span className="bg-white/20 px-4 py-2 rounded-lg text-sm">✓ Coordinación Interequipos</span>
+                </div>
+              </div>
+            </div>
+          )}
+
+
 
           {/* Módulos */}
           {seccionActiva === 'modulos' && (
